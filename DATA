@@ -1,6 +1,6 @@
  // --- Phần I: Trắc nghiệm (Từ ảnh 1 & 2 & 3) ---
             {
-                type: 'mc',
+                type: 'mc', 
                 question: '1. Mạng không dây được kết nối bằng:',
                 options: ['Bluetooth', 'Dây mạng', 'Cáp điện', 'Cáp quang'],
                 answer: 'Bluetooth' // Đáp án A
