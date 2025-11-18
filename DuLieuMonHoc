@@ -29,3 +29,180 @@
     options: ['Những truyện thần thoại', 'Những gì diễn ra trong quá khứ', 'Những truyền thuyết', 'Sự tưởng tượng của con người về tương lai'],
     answer: 'Những gì diễn ra trong quá khứ'
 },
+ {
+                type: 'tf',
+                question: 'Câu 17. Hãy chọn Đúng hoặc Sai cho câu sau đây: Đọc đoạn thông tin sau:Nhờ có công cụ lao động bằng kim loại, vào cuối thời nguyên thủy, con người có thể làm ra sản phẩm dư thừa. Những sản phẩm như này thuộc về một số người. Quá trình phân hóa và tan rã của xã hội nguyên thủy ở các nơi trên thế giới không giống nhau. Vào cuối thời nguyên thủy, cư dân phương Đông sinh sống và làm nông nghiệp chủ yếu bên các dòng sông, đất phù sa màu mỡ, thuận tiện để sử dụng công cụ đá và đồng đỏ. Trong điều kiện đó, họ thường sống quần tụ, cùng đào mương, đắp đê, chống giặc ngoại xăm. Do vậy, sự liên kết giữa các cộng đồng và nhiều tập tục của xã hội nguyên thủy vẫn tiếp tục được bảo lưu.',
+                
+                statements: [
+                    { text: 'a. Nhờ có công cụ lao động bằng kim loại, vào cuối thời nguyên thủy, con người có thể làm ra sản phẩm dư thừa.', answer: true },
+                    { text: 'b. Những sản phẩm dư thừa trong xã hội nguyên thủy đều thuộc về mọi người trong cộng đồng, không có sự phân hóa.', answer: false },
+                    { text: 'c. Quá trình phân hóa và tan rã của xã hội nguyên thủy ở các nơi trên thế giới diễn ra giống nhau.', answer: false },
+                    { text: 'd. Ở phương Đông, cư dân cuối thời nguyên thủy thường sinh sống ven các dòng sông, cùng nhau đào mương, đắp đê và chống giặc ngoại xâm.', answer: true }
+                ]
+            },
+            // Câu 18 Lịch sử bị bỏ qua
+            {
+                type: 'tf',
+                question: 'Câu 19. Hãy chọn Đúng hoặc Sai cho câu sau đây: Đọc đoạn thông tin sau: Ai Cập cổ đại nằm ở phía đông bắc châu Phi, là vùng đất dài nằm dọc hai bên bờ sông Nin. Phía bắc là vùng Hạ Ai Cập, nơi sông Nin đổ ra biển Địa Trung Hải. Phía nam là vùng Thượng Ai Cập với nhiều núi và đồi cát. Phía đông và phía tây giáp sa mạc. Sông Nin mang đến nguồn nước thuận lợi cho sản xuất nông nghiệp của Ai Cập cổ đại.',
+                statements: [
+                    { text: 'a. Ai Cập cổ đại nằm ở phía đông bắc châu Phi.', answer: true }, // Trong ảnh check Sai, nhưng câu 19d check Đúng. Câu 19a rõ ràng là Đúng theo văn bản. Giả sử người check Sai là nhầm.
+                    { text: 'b. Phía nam là vùng Hạ Ai Cập, phía bắc là vùng Thượng Ai Cập.', answer: false },
+                    { text: 'c. Phía đông và phía tây không giáp sa mạc.', answer: false },
+                    { text: 'd. Sông Nin mang đến nguồn nước thuận lợi cho sản xuất nông nghiệp của Ai Cập cổ đại.', answer: true }
+                ]
+            },
+            // Câu 20 Lịch sử bị bỏ qua
+
+            // === B. TRẮC NGHIỆM ĐỊA LÍ ===
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 1. Các đường nối liền hai điểm Cực Bắc và Cực Nam trên bề mặt quả Địa Cầu là những đường?',
+                options: ['Kinh tuyến', 'Vĩ tuyến', 'Kinh tuyến gốc', 'Vĩ tuyến gốc'],
+                answer: 'Kinh tuyến'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 2. Đường kinh tuyến gốc 0° đi qua đài thiên văn Grin-uýt thuộc quốc gia nào sau đây?',
+                options: ['Anh', 'Đức', 'Bồ Đào Nha', 'Tây Ban Nha'],
+                answer: 'Anh'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 3. Để thể hiện ranh giới quốc gia, người ta dùng loại kí hiệu?',
+                options: ['Điểm', 'Đường', 'Diện tích', 'Hình học'],
+                answer: 'Đường'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 4. Trái Đất có dạng hình gì?',
+                options: ['Hình cầu', 'Hình tròn', 'Hình vuông', 'Hình chữ nhật'],
+                answer: 'Hình cầu'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 5. Muốn xác định phương hướng trên bản đồ cần phải dựa vào?',
+                options: ['Bảng chú giải, tỉ lệ bản đồ', 'Các đường kinh tuyến, vĩ tuyến', 'Các mũi tên chỉ hướng', 'Mép bên trái tờ bản đồ'],
+                answer: 'Các đường kinh tuyến, vĩ tuyến'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 6. Theo thứ tự xa dần xích đạo, Trái Đất nằm ở vị trí thứ?',
+                options: ['Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6'],
+                answer: 'Thứ 3'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 7. Thời gian Trái Đất chuyển động quanh trục tưởng tượng hết một vòng là?',
+                options: ['365 ngày', '1 ngày đêm', '366 ngày', '1 đêm'],
+                answer: '1 ngày đêm'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 8. Hướng tự quay quanh trục của Trái Đất là?',
+                options: ['Đông sang Tây', 'Phải sang Trái', 'Bắc xuống Nam', 'Tây sang Đông'],
+                answer: 'Tây sang Đông'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 9. Đường Xích đạo chia quả Địa cầu thành?',
+                options: ['Nửa cầu Đông và nửa cầu Tây', 'Nửa cầu Bắc và nửa cầu Tây', 'Nửa cầu Đông và nửa cầu Nam', 'Nửa cầu Bắc và nửa cầu Nam'],
+                answer: 'Nửa cầu Bắc và nửa cầu Nam'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 10. Kinh tuyến gốc và vĩ tuyến gốc có điểm chung là cùng mang số độ bằng?',
+                options: ['0°', '90°', '180°', '60°'],
+                answer: '0°'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 11. Kí hiệu bản đồ có mấy loại?',
+                options: ['2 loại', '3 loại', '4 loại', '5 loại'],
+                answer: '3 loại'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 12. Khi biểu hiện các vùng trồng trọt và chăn nuôi thường dùng loại kí hiệu nào?',
+                options: ['Hình học', 'Đường', 'Điểm', 'Diện tích'],
+                answer: 'Diện tích'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 13. Theo quy ước, đầu phía trên của kinh tuyến gốc chỉ hướng nào?',
+                options: ['Tây', 'Bắc', 'Nam', 'Đông'],
+                answer: 'Bắc'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 14. Bán kính Trái Đất tại Xích đạo có độ dài là?',
+                options: ['6378 km', '6376 km', '6387 km', '6388 km'],
+                answer: '6378 km'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 15. Bề mặt Trái Đất được chia làm bao nhiêu khu vực giờ?',
+                options: ['12 khu vực giờ', '24 khu vực giờ', '9 khu vực giờ', '6 khu vực giờ'],
+                answer: '24 khu vực giờ'
+            },
+            {
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 16. Trên mặt phẳng quỹ đạo, trục Trái Đất nghiêng một góc?',
+                options: ['23°27\'', '32°27\'', '66°33\'', '23°33\''],
+                answer: '66°33\'' // Câu này người dùng khoanh C (66 33) nhưng A (23 27) cũng là một góc nghiêng quan trọng. Tùy cách hỏi "nghiêng (so với mặt phẳng quỹ đạo)" hay "nghiêng (so với đường thẳng vuông góc)". Thường thì 23 27 là góc nghiêng của trục, 66 33 là góc với mặt phẳng quỹ đạo. Tuy nhiên, theo đáp án khoanh C, tôi sẽ để là C.
+            },
+            {
+                type: 'tf',
+                question: 'ĐỊA LÍ - Câu 17. Hãy chọn Đúng hoặc Sai cho câu sau đây: Đọc đoạn thông tin sau: Quả Địa Cầu là mô hình thu nhỏ của Trái Đất dưới dạng hình cầu. Một mạng lưới các đường tưởng tượng bao phủ toàn bộ quả Địa Cầu giúp chúng ta có thể xác định được vị trí của tất cả các điểm gọi là hệ thống kinh, vĩ tuyến. Kinh tuyến là các đường nối cực Bắc với cực Nam trên bề mặt quả Địa Cầu. Vĩ tuyến là các đường tròn bao quanh quả Địa Cầu, song song với đường Xích đạo. Xích đạo hay vĩ tuyến gốc (0°), chia quả Địa Cầu thành hai phần bằng nhau, phần phía bắc là bán cầu Bắc và phần phía nam là bán cầu Nam.',
+                statements: [
+                    { text: 'a. Quả Địa Cầu không phải mô hình thu nhỏ của Trái Đất dưới dạng hình cầu.', answer: false },
+                    { text: 'b. Kinh tuyến là các đường nối cực Bắc với cực Nam trên bề mặt quả Địa Cầu.', answer: true },
+                    { text: 'c. Vĩ tuyến là các đường tròn bao quanh quả Địa Cầu, không song song với đường Xích đạo.', answer: false },
+                    { text: 'd. Xích đạo hay vĩ tuyến gốc (0°), chia quả Địa Cầu thành hai phần bằng nhau.', answer: true }
+                ]},
+            // Câu 18 Địa lí bị bỏ qua
+            {
+                type: 'tf',
+                question: 'ĐỊA LÍ - Câu 19. Hãy chọn Đúng hoặc Sai cho câu sau đây: Đọc đoạn thông tin sau: Các địa điểm nằm trên cùng một kinh tuyến sẽ có cùng một giờ, đó gọi là giờ địa phương hay giờ Mặt Trời. Để tiện cho việc tính giờ và giao dịch quốc tế, người ta thống nhất cho từng khu vực. Giờ đó gọi là giờ khu vực. Bề mặt Trái Đất được chia làm 24 khu vực giờ khác nhau. Mỗi khu vực giờ là một múi giờ, tương ứng với 15° kinh tuyến. ',
+                statements: [
+                    { text: 'a. Các địa điểm nằm trên cùng một kinh tuyến sẽ có cùng một giờ.', answer: true },
+                    { text: 'b. Để tiện cho việc tính giờ và giao dịch quốc tế, người ta không quy định giờ thống nhất cho từng khu vực.', answer: false },
+                    { text: 'c. Bề mặt Trái Đất được chia ra làm 24 khu vực giờ khác nhau.', answer: true }, // Ảnh check Sai, nhưng văn bản ghi rõ "24 khu vực giờ". Theo văn bản.
+                    { text: 'd. Mỗi khu vực giờ là một múi giờ, tương ứng với 15° kinh tuyến.', answer: true }  // Ảnh check Sai, nhưng đây là kiến thức chuẩn. Theo kiến thức chuẩn.
+                ]
+            },
+
+            // === C. TỰ LUẬN ===
+            {
+                type: 'fill',
+                question: 'TỰ LUẬN - Câu 1. Một trận bóng đá được tường thuật trực tiếp từ thủ đô London nước Anh (múi giờ số 0) vào lúc 13h ngày 15/5/2022. Khi đó ở Hà Nội (múi giờ 7), Bắc Kinh (múi giờ 8), Tokyo (múi giờ 9) là mấy giờ?',
+                fills: [
+                    { q: '- Hà Nội:', a: '20', s: 'giờ' },
+                    { q: '- Bắc Kinh:', a: '21', s: 'giờ' },
+                    { q: '- Tokyo:', a: '22', s: 'giờ' }
+                ]
+            },
+            // Tự luận 2 bị bỏ qua vì thiếu context câu hỏi
+            {
+                type: 'short',
+                question: 'TỰ LUẬN - Câu 2a. Em hãy liệt kê 4 địa điểm có dấu tích người tối cổ ở Việt Nam và In-đô-nê-xi-a?',
+                explanation: '<b>Việt Nam:</b> An Khê, Thẩm Khuyên, Thẩm Hai, Núi Đọ.<br><b>In-đô-nê-xi-a:</b> Tri - Nio, Li - ang - Bua.',
+                keywords: ['an khê', 'thẩm khuyên', 'thẩm hai', 'núi đọ', 'Tri - Nio', 'Li - ang -Bua']
+            },
+            {
+                type: 'short',
+                question: 'TỰ LUẬN - Câu 2b. Việc phát hiện ra công cụ đá và răng hóa thạch của Người tối cổ ở Việt Nam chứng tỏ điều gì?',
+                explanation: 'Chứng tỏ người tối cổ xuất hiện khá sớm ở Việt Nam.',
+                keywords: ['Chứng tỏ người tối cổ xuất hiện khá sớm ở Việt Nam']
+            },
+            {
+                type: 'short',
+                question: 'TỰ LUẬN - Câu 3a. Nguyên nhân dẫn đến sự tan rã của xã hội nguyên thủy?',
+                explanation: 'Sự xuất hiện của kim loại.',
+                keywords: ['Sự xuất hiện của kim loại']
+            },
+            {
+                type: 'short',
+                question: 'TỰ LUẬN - Câu 3b. Vai trò của kim loại đối với sự chuyển biến và phân hóa từ xã hội nguyên thủy sang xã hội có giai cấp?',
+                explanation: '- Năng suất lao động tăng của cải dư thừa <br>- Phân hóa giàu nghèo, tạo tiền đề cho sự ra đời của xã hội có giai cấp',
+                keywords: ['- Năng xuất lao động tăng của cải dư thừa', '- Phân hóa giàu nghèo, tạo tiền đề cho sự ra đời của xã hội có giai cấp']
+            }
