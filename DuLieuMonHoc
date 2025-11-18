@@ -37,7 +37,24 @@
                 options: ['Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6'],
                 answer: 'Thứ 3'
             }
-
+ {
+                type: 'short',
+                question: 'TỰ LUẬN - Câu 2a. Em hãy liệt kê 4 địa điểm có dấu tích người tối cổ ở Việt Nam và In-đô-nê-xi-a?',
+                explanation: '<b>Việt Nam:</b> An Khê, Thẩm Khuyên, Thẩm Hai, Núi Đọ.<br><b>In-đô-nê-xi-a:</b> Tri - Nio, Li - ang - Bua.',
+                keywords: ['an khê', 'thẩm khuyên', 'thẩm hai', 'núi đọ', 'Tri - Nio', 'Li - ang -Bua']
+            },
+            {
+                type: 'short',
+                question: 'TỰ LUẬN - Câu 2b. Việc phát hiện ra công cụ đá và răng hóa thạch của Người tối cổ ở Việt Nam chứng tỏ điều gì?',
+                explanation: 'Chứng tỏ người tối cổ xuất hiện khá sớm ở Việt Nam.',
+                keywords: ['Chứng tỏ người tối cổ xuất hiện khá sớm ở Việt Nam']
+            },
+            {
+                type: 'short',
+                question: 'TỰ LUẬN - Câu 3a. Nguyên nhân dẫn đến sự tan rã của xã hội nguyên thủy?',
+                explanation: 'Sự xuất hiện của kim loại.',
+                keywords: ['Sự xuất hiện của kim loại']
+            }
 // KHTN
 {
     type: 'mc',
