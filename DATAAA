@@ -1,0 +1,19 @@
+{
+                type: 'mc',
+                question: '1. Mạng không dây được kết nối bằng:',
+                options: ['Bluetooth', 'Dây mạng', 'Cáp điện', 'Cáp quang'],
+                answer: 'Bluetooth' // Đáp án A
+            },
+            {
+                type: 'mc',
+                question: '2. Thiết bị cơ bản của mạng có dây là:',
+                options: ['Cáp mạng, Switch', 'Access Point, Modem', 'Switch, Modem', 'Access Point, cáp mạng'],
+                answer: 'Cáp mạng, Switch' // *** ĐÃ SỬA *** (Đáp án A)
+            },
+            {
+                type: 'mc',
+                question: '3. Chiếc điều khiển ti vi vi điều khiển ti vi bằng gì?',
+                options: ['Dây cáp', 'Bluetooth', 'Sóng điện từ', 'Mạng không dây'],
+                answer: 'Sóng điện từ' // Đáp án C
+            },
+            {
