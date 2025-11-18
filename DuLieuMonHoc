@@ -1,60 +1,21 @@
-- "TIN HỌC"
+// TIN HỌC
 {
-                type: 'mc',
-                question: '1. Mạng không dây được kết nối bằng:',
-                options: ['Bluetooth', 'Dây mạng', 'Cáp điện', 'Cáp quang'],
-                answer: 'Bluetooth' // Đáp án A
-            },
-            {
-                type: 'mc',
-                question: '2. Thiết bị cơ bản của mạng có dây là:',
-                options: ['Cáp mạng, Switch', 'Access Point, Modem', 'Switch, Modem', 'Access Point, cáp mạng'],
-                answer: 'Cáp mạng, Switch' // *** ĐÃ SỬA *** (Đáp án A)
-            },
-            {
-                type: 'mc',
-                question: '3. Chiếc điều khiển ti vi vi điều khiển ti vi bằng gì?',
-                options: ['Dây cáp', 'Bluetooth', 'Sóng điện từ', 'Mạng không dây'],
-                answer: 'Sóng điện từ' // Đáp án C
-            },
-            {
-
-
-
-- "LỊCH SỬ ĐỊA LÝ"
+    type: 'mc',
+    question: '1. Mạng không dây được kết nối bằng:',
+    options: ['Bluetooth', 'Dây mạng', 'Cáp điện', 'Cáp quang'],
+    answer: 'Bluetooth'
+},
 {
-                type: 'mc',
-                question: 'Câu 1. Lịch sử là gì?',
-                options: ['Những truyện thần thoại', 'Những gì diễn ra trong quá khứ', 'Những truyền thuyết', 'Sự tưởng tượng của con người về tương lai'],
-                answer: 'Những gì diễn ra trong quá khứ'
-            },
-            {
-                type: 'mc',
-                question: 'Câu 2. Cơ sở nào để con người xác định được thời gian và tạo ra lịch?',
-                options: ['Quan sát sự chuyển động của mặt trăng, mặt trời', 'Đếm số ngày trong một năm', 'Quan sát các hiện tượng xã hội', 'Dựa trên lịch của người nguyên thủy'],
-                answer: 'Quan sát sự chuyển động của mặt trăng, mặt trời'
-            },
-            {
-                type: 'mc',
-                question: 'Câu 3. Những chiếc răng của Người tối cổ được tìm thấy ở đâu trên đất nước Việt Nam?',
-                options: ['Núi Đọ (Thanh Hoá)', 'Xuân Lộc (Đồng Nai)', 'An Khê (Gia Lai)', 'Thẩm Khuyên, Thẩm Hai (Lạng Sơn)'],
-                answer: 'Thẩm Khuyên, Thẩm Hai (Lạng Sơn)'
-            },
-            {
-                type: 'mc',
-                question: 'Câu 4. Một trong những biểu hiện về đời sống tinh thần của người nguyên thủy là?',
-                options: ['Biết trồng trọt, chăn nuôi', 'Biết săn bắt, hái lượm', 'Biết tạo ra lửa', 'Có tục chôn người chết'],
-                answer: 'Có tục chôn người chết'
-            },
-            {
-                type: 'mc',
-                question: 'Câu 5. Cư dân Ai Cập cổ đại đã viết chữ trên?',
-                options: ['Đất sét', 'Mai rùa', 'Thẻ tre', 'Giấy Pa-pi-rút'],
-                answer: 'Giấy Pa-pi-rút'
-            },
-            {
-                type: 'mc',
-                question: 'Câu 6. Nguyên nhân sâu xa nào dẫn tới sự tan rã của xã hội nguyên thủy?',
-                options: ['Sự phát triển đời sống tinh thần của con người', 'Công cụ đá đã phát triển', 'Phát minh ra lửa của người tối cổ', 'Công cụ kim loại được phát hiện và sử dụng phổ biến'],
-                answer: 'Công cụ kim loại được phát hiện và sử dụng phổ biến'
-            },
+    type: 'mc',
+    question: '2. Thiết bị cơ bản của mạng có dây là:',
+    options: ['Cáp mạng, Switch', 'Access Point, Modem', 'Switch, Modem', 'Access Point, cáp mạng'],
+    answer: 'Cáp mạng, Switch'
+},
+
+// LỊCH SỬ ĐỊA LÝ
+{
+    type: 'mc',
+    question: 'Câu 1. Lịch sử là gì?',
+    options: ['Những truyện thần thoại', 'Những gì diễn ra trong quá khứ', 'Những truyền thuyết', 'Sự tưởng tượng của con người về tương lai'],
+    answer: 'Những gì diễn ra trong quá khứ'
+},
