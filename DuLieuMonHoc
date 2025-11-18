@@ -32,11 +32,11 @@
     answer: 'Bluetooth'
 }
 {
-    type: 'mc',
-    question: 'Câu 1. Lịch sử là gì?',
-    options: ['Những truyện thần thoại', 'Những gì diễn ra trong quá khứ', 'Những truyền thuyết', 'Sự tưởng tượng của con người về tương lai'],
-    answer: 'Những gì diễn ra trong quá khứ'
-}
+                type: 'mc',
+                question: 'ĐỊA LÍ - Câu 6. Theo thứ tự xa dần xích đạo, Trái Đất nằm ở vị trí thứ?',
+                options: ['Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6'],
+                answer: 'Thứ 3'
+            }
 
 // KHTN
 {
