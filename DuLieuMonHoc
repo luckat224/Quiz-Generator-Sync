@@ -11,6 +11,12 @@
     options: ['Cáp mạng, Switch', 'Access Point, Modem', 'Switch, Modem', 'Access Point, cáp mạng'],
     answer: 'Cáp mạng, Switch'
 },
+{
+    type: 'mc',
+    question: '1. Mạng không dây được kết nối bằng:',
+    options: ['Bluetooth', 'Dây mạng', 'Cáp điện', 'Cáp quang'],
+    answer: 'Bluetooth'
+}
 
 // LỊCH SỬ ĐỊA LÝ
 {
