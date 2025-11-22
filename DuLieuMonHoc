@@ -2430,3 +2430,1760 @@
     answer: "Có hành vi vi phạm kỷ luật lao động, có thiệt hại về tài sản của người sử dụng lao động, có lỗi, có mối quan hệ nhân quả giữa hành vi vi phạm kỷ luật lao động và thiệt hại về tài sản của người sử dụng lao động."
   }
 
+
+
+
+
+// LUẬT LAO ĐỘNG 2
+[
+  {
+    "type": "mc",
+    "question": "Câu 1: Luật Lao động điều chỉnh quan hệ lao động giữa các chủ thể nào?",
+    "options": [
+      "Người sử dụng lao động với người lao động, người sử dụng lao động với người học nghề, công nhân Việt Nam làm việc cho người nước ngoài, công nhân nước ngoài làm việc cho người Việt Nam.",
+      "Người sử dụng lao động với người lao động, với người học nghề, người giúp việc trong gia đình, công nhân Việt Nam làm việc cho người nước ngoài, công nhân nước ngoài làm việc cho người Việt Nam.",
+      "Người sử dụng lao động với người lao động, với người học nghề, công nhân Việt Nam làm việc cho người nước ngoài, công nhân nước ngoài làm việc cho người Việt Nam, công đoàn.",
+      "Người sử dụng lao động với người lao động, với đại diện người lao động, công nhân Việt Nam làm việc ở nước ngoài, công nhân nước ngoài làm việc ở Việt Nam, công đoàn."
+    ],
+    "answer": "Người sử dụng lao động với người lao động, với người học nghề, công nhân Việt Nam làm việc cho người nước ngoài, công nhân nước ngoài làm việc cho người Việt Nam, công đoàn."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 2: Trình bày khái niệm Luật Lao động.",
+    "options": [
+      "Toàn bộ các quy phạm pháp luật được điều chỉnh các quan hệ lao động trong đời sống.",
+      "Toàn bộ các quy phạm pháp luật điều chỉnh các quan hệ lao động trong đời sống Kinh tế – xã hội.",
+      "Toàn bộ các quy phạm pháp luật về các quan hệ lao động trong đời sống trong cả nước.",
+      "Toàn bộ các quy phạm pháp luật về các quan hệ lao động trong đời sống kinh tế, xã hội, an ninh, quốc phòng trong cả nước và lao động nước ngoài ở Việt Nam."
+    ],
+    "answer": "Toàn bộ các quy phạm pháp luật điều chỉnh các quan hệ lao động trong đời sống Kinh tế – xã hội."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 3: Hợp đồng lao động và hợp đồng kinh tế khác nhau như thế nào?",
+    "options": [
+      "Hợp đồng lao động cam kết các quan hệ việc làm, học nghề, tiền lương, bảo hiểm – hợp đồng kinh tế cam kết các quan hệ kinh doanh, kiếm lãi.",
+      "Hợp đồng lao động cam kết các quan hệ lao động – hợp đồng kinh tế cam kết các quan hệ sản xuất, kinh doanh, dịch vụ.",
+      "Hợp đồng lao động cam kết các quan hệ liên quan đến chủ và thợ – hợp đồng kinh tế cam kết các quan hệ giữa các nhà kinh doanh.",
+      "Hợp đồng lao động cam kết các quan hệ lao động – hợp đồng kinh tế cam kết các quan hệ kinh doanh giữa pháp nhân kinh doanh."
+    ],
+    "answer": "Hợp đồng lao động cam kết các quan hệ lao động – hợp đồng kinh tế cam kết các quan hệ sản xuất, kinh doanh, dịch vụ."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 4: Hợp đồng lao động và hợp đồng dân sự khác nhau thế nào?",
+    "options": [
+      "Chủ thể của hợp đồng lao động là chủ và thợ, nội dung là công ăn việc làm và tiền lương. Chủ thể của hợp đồng dân sự là cá nhân, các pháp nhân. Nội dung là các quan hệ tài sản và nhân thân phi tài sản.",
+      "Chủ thể của hợp đồng lao động là cá nhân, pháp nhân, hộ gia đình, tổ hợp tác. Nội dung hợp đồng là quan hệ kinh doanh. Chủ thể của hợp đồng lao động là chủ và thợ, nội dung là công ăn việc làm và tiền lương.",
+      "Chủ thể của hợp đồng lao động là chủ và thợ, nội dung của hợp đồng là việc làm, tiền lương. Chủ thể của hợp đồng dân sự là cá nhân, pháp nhân, tổ hợp tác, hộ gia đình. Nội dung hợp đồng là quan hệ tài sản và quan hệ nhân thân phi tài sản.",
+      "Chủ thể của Hợp đồng lao động là chủ, thợ, công đoàn, đại diện người lao động. Quan hệ của hợp đồng lao động là việc làm, tiền lương. Chủ thể hợp đồng dân sự là cá nhân, pháp nhân, nội dung là quan hệ tài sản."
+    ],
+    "answer": "Chủ thể của Hợp đồng lao động là chủ và thợ, nội dung của hợp đồng là việc làm, tiền lương. Chủ thể của hợp đồng dân sự là cá nhân, pháp nhân, tổ hợp tác, hộ gia đình. Nội dung hợp đồng là quan hệ tài sản và quan hệ nhân thân phi tài sản."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 5: Các hình thức xử lý vi phạm pháp luật Lao động:",
+    "options": [
+      "Phạt tiền, đình chỉ thu hồi giấy phép, buộc bồi thường, đóng cửa doanh nghiệp, khiển trách.",
+      "Cảnh cáo, phạt tiền, đình chỉ thu hồi giấy phép, đóng cửa doanh nghiệp.",
+      "Đình chỉ thu hồi giấy phép, đóng cửa doanh nghiệp, cảnh cáo, khiển trách, phạt tiền.",
+      "Cảnh cáo, phạt tiền, đình chỉ thu hồi giấy phép, buộc bồi thường thiệt hại, đóng cửa doanh nghiệp."
+    ],
+    "answer": "Cảnh cáo, phạt tiền, đình chỉ thu hồi giấy phép, buộc bồi thường thiệt hại, đóng cửa doanh nghiệp."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 6: Nhiệm vụ của thanh tra Nhà nước về lao động:",
+    "options": [
+      "Thanh tra việc chấp hành các quy định về lao động an toàn lao động, vệ sinh lao động. Điều tra tai nạn lao động. Giải quyết khiếu nại tố cáo về lao động. Xử lý các vi phạm pháp luật lao động trong phạm vi thẩm quyền.",
+      "Thanh tra việc chấp hành quy định lao động, an toàn lao động, vệ sinh lao động. Giải quyết khiếu nại tố cáo về lao động. Điều tra tai nạn lao động – Xét các đề nghị về tiêu chuẩn an toàn lao động, cho phép hoặc không cho phép.",
+      "Thanh tra việc chấp hành pháp luật lao động. Điều tra tai nạn lao động – Giải quyết khiếu nại tố cáo về lao động – Xem xét các đề nghị về an toàn lao động – Xử lý vi phạm pháp luật lao động.",
+      "Thanh tra việc chấp hành pháp luật lao động. Điều tra tai nạn lao động – Giải quyết khiếu nại tố cáo về lao động – Xem xét chấp thuận các đề nghị về tiêu chuẩn, giải pháp an toàn, vệ sinh lao động – xử lý vi phạm."
+    ],
+    "answer": "Thanh tra việc chấp hành các quy định về lao động an toàn lao động, vệ sinh lao động. Điều tra tai nạn lao động. Giải quyết khiếu nại tố cáo về lao động. Xử lý các vi phạm pháp luật lao động trong phạm vi thẩm quyền."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 7: Thanh tra Nhà nước về lao động gồm mấy loại?",
+    "options": [
+      "Thanh tra lao động, thanh tra an toàn lao động, thanh tra bảo hộ lao động.",
+      "Thanh tra lao động, thanh tra bảo hộ lao động, thanh tra vệ sinh lao động.",
+      "Thanh tra lao động, thanh tra an toàn lao động, thanh tra vệ sinh lao động.",
+      "Thanh tra lao động, thanh tra bảo hộ lao động, thanh tra thiết bị lao động."
+    ],
+    "answer": "Thanh tra lao động, thanh tra an toàn lao động, thanh tra vệ sinh lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 8: Cơ quan nào có quyền quyết định cuối cùng tính hợp pháp của các cuộc đình công?",
+    "options": [
+      "Toà án nhân dân – Sở Lao động thương binh xã hội.",
+      "Toà án nhân dân – Thanh tra lao động – Sở Lao động thương binh xã hội.",
+      "Toà án nhân dân – Thanh tra lao động – Bộ Lao động.",
+      "Toà án nhân dân."
+    ],
+    "answer": "Toà án nhân dân."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 9: Những cuộc đình công nào bị coi là bất hợp pháp:",
+    "options": [
+      "Vượt ra ngoài phạm vi doanh nghiệp, không phát sinh từ tranh chấp lao động, do Toà án nhân dân kết luận.",
+      "Vượt ra ngoài phạm vi quan hệ lao động trong doanh nghiệp, không phát sinh từ tranh chấp lao động tập thể, do Toà án nhân dân kết luận.",
+      "Vượt ra ngoài phạm vi quan hệ lao động, ngoài phạm vi doanh nghiệp, ngoài phạm vi tranh chấp lao động tập thể, do Toà án nhân dân kết luận.",
+      "Vượt ra ngoài phạm vi quan hệ lao động tập thể, ngoài phạm vi quản lý của doanh nghiệp do Toà án nhân dân kết luận."
+    ],
+    "answer": "Vượt ra ngoài phạm vi quan hệ lao động tập thể, ngoài phạm vi quản lý của doanh nghiệp do Toà án nhân dân kết luận."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 10: Người lao động có quyền đình công không? Trường hợp nào không được đình công?",
+    "options": [
+      "Có quyền – Không được đình công ở doanh nghiệp phục vụ công cộng.",
+      "Có quyền – Không được đình công ở các doanh nghiệp theo danh mục do Chính phủ quy định.",
+      "Có quyền – Không được đình công ở doanh nghiệp công ích, doanh nghiệp thiết yếu cho nền Kinh tế.",
+      "Có quyền – Không được đình công ở doanh nghiệp Nhà nước thiết yếu cho nền Kinh tế do Chính phủ quy định."
+    ],
+    "answer": "Có quyền – Không được đình công ở các doanh nghiệp theo danh mục do Chính phủ quy định."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 11: Thẩm quyền giải quyết tranh chấp lao động của Toà án nhân dân tỉnh, thành phố trực thuộc Trung ương:",
+    "options": [
+      "Xét xử sơ thẩm các tranh chấp lao động tập thể, các vụ đình công.",
+      "Xét xử sơ thẩm các vụ đình công, các vụ tranh chấp lao động đã hoà giải mà không thành.",
+      "Xét xử sơ thẩm các tranh chấp lao động tập thể, đã hoà giải qua hội đồng hoà giải cơ sở mà không thành.",
+      "Xét xử sơ thẩm các vụ đình công, các tranh chấp lao động tập thể đã hoà giải tại hội đồng hoà giải tỉnh mà không thành."
+    ],
+    "answer": "Xét xử sơ thẩm các vụ đình công, các vụ tranh chấp lao động đã hoà giải mà không thành."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 12: Thẩm quyền giải quyết tranh chấp lao động của Toà án nhân dân cấp huyện:",
+    "options": [
+      "Xét xử sơ thẩm về tranh chấp lao động cá nhân giữa người lao động với người sử dụng lao động đã hoà giải qua hội đồng hoà giải cơ sở không thành.",
+      "Xét xử sơ thẩm các vụ tranh chấp lao động đã hoà giải qua Hội đồng hoà giải cơ sở tại doanh nghiệp mà không thành.",
+      "Xét xử sơ thẩm các vụ tranh chấp lao động về sa thải, về đơn phương chấm dứt hợp đồng đối với người lao động.",
+      "Xét xử sơ thẩm các vụ tranh chấp lao động trong địa phương."
+    ],
+    "answer": "Xét xử sơ thẩm về tranh chấp lao động cá nhân giữa người lao động với người sử dụng lao động đã hoà giải qua hội đồng hoà giải cơ sở không thành."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 13: Hội đồng trọng tài lao động cấp tỉnh được thành lập thế nào?",
+    "options": [
+      "Gồm đại diện một số cơ quan lao động, công đoàn, một số luật gia, hình thành theo số lẻ, không quá 9 người do đại diện cơ quan lao động làm chủ tịch.",
+      "Gồm đại diện các cơ quan cần thiết, các luật gia, các nhà quản lý có uy tín ở địa phương hình thành theo số lẻ do đại diện cơ quan lao động làm chủ tịch.",
+      "Gồm đại diện cơ quan lao động, công đoàn, đại diện người sử dụng lao động, các luật gia, các nhà quản lý có uy tín tham gia do đại diện cơ quan lao động làm chủ tịch.",
+      "Gồm đại diện cơ quan lao động, công đoàn, đại diện các người sử dụng lao động, một số người có uy tín ở địa phương tham gia do đại diện cơ quan lao động tỉnh làm chủ tịch. Số lượng ít nhất là 15 người."
+    ],
+    "answer": "Gồm đại diện cơ quan lao động, công đoàn, đại diện người sử dụng lao động, các luật gia, các nhà quản lý có uy tín tham gia do đại diện cơ quan lao động làm chủ tịch."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 14: Hội đồng hoà giải lao động ở cơ sở được thành lập như thế nào?",
+    "options": [
+      "Trong các doanh nghiệp có 10 lao động trở lên. Do người lao động và người sử dụng lao động thoả thuận lập nên, số thành viên của hai bên ngang nhau. Hai năm bầu lại hội đồng.",
+      "Trong các doanh nghiệp có 10 lao động trở lên, do sự thỏa thuận của hai bên về số lượng thành viên về người làm chủ tịch Hội đồng.",
+      "Trong các doanh nghiệp có 10 lao động trở lên, do sự thoả thuận của người lao động và người sử dụng lao động cử số đại diện ngang nhau, nhiệm kỳ hai năm, đại diện mỗi bên luân phiên làm chủ tịch Hội đồng.",
+      "Trong tất cả các doanh nghiệp – Hai bên thoả thuận cử người tham gia, số lượng thành viên do hai bên quyết định, hai năm bầu lại một lần."
+    ],
+    "answer": "Trong các doanh nghiệp có 10 lao động trở lên. Do người lao động và người sử dụng lao động thoả thuận lập nên, số thành viên của hai bên ngang nhau. Hai năm bầu lại hội đồng."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 15: Cơ quan, tổ chức giải quyết tranh chấp lao động cá nhân:",
+    "options": [
+      "Hội đồng trọng tài lao động – Hoà giải viên lao động, Toà án.",
+      "Hội đồng hoà giải cơ sở – Hội đồng trọng tài cấp huyện, quận và tỉnh. Toà án.",
+      "Hội đồng hoà giải tại doanh nghiệp. Hoà giải viên lao động cấp huyện, quận. Hội đồng trọng tài tỉnh.",
+      "Tổ hoà giải ở cơ sở. Hoà giải viên lao động cấp huyện, quận. Hội đồng trọng tài tỉnh – Toà án."
+    ],
+    "answer": "Hội đồng hoà giải cơ sở – Hội đồng trọng tài cấp huyện, quận và tỉnh. Toà án."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 16: Nghĩa vụ người lao động, người sử dụng lao động trong việc giải quyết tranh chấp lao động:",
+    "options": [
+      "Cung cấp đầy đủ tài liệu cho cơ quan có thẩm quyền và thi hành mọi quyết định giải quyết tranh chấp của các cơ quan, tổ chức có thẩm quyền.",
+      "Cung cấp đầy đủ tài liệu, thi hành mọi quyết định của cơ quan, tổ chức có thẩm quyền giải quyết tranh chấp.",
+      "Cung cấp đầy đủ tài liệu chứng cứ cho cơ quan giải quyết tranh chấp. Thi hành mọi thoả thuận đã đạt, biên bản hoà giải có kết quả, quyết định, bản án đã có hiệu lực.",
+      "Cung cấp đầy đủ mọi chứng cứ, tài liệu cho các cơ quan có thẩm quyền, thi hành tốt mọi quyết định giải quyết tranh chấp của cơ quan có thẩm quyền."
+    ],
+    "answer": "Cung cấp đầy đủ tài liệu chứng cứ cho cơ quan giải quyết tranh chấp. Thi hành mọi thoả thuận đã đạt, biên bản hoà giải có kết quả, quyết định, bản án đã có hiệu lực."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 17: Quyền của người lao động, người sử dụng lao động trong việc giải quyết tranh chấp lao động:",
+    "options": [
+      "Tham gia trực tiếp hoặc rút đơn không tham gia giải quyết tranh chấp. Có thể cử người đại diện thay mình tham gia quá trình giải quyết tranh chấp.",
+      "Trực tiếp hoặc cử đại diện tham gia giải quyết tranh chấp – Rút đơn, thay đổi nội dung tranh chấp. Thay người đại diện.",
+      "Trực tiếp tham gia giải quyết tranh chấp hoặc cử đại diện tham gia – Rút đơn không tham gia giải quyết tranh chấp nữa.",
+      "Trực tiếp tham gia hoặc cử đại diện tham gia hoặc thay đổi người đại diện hoặc rút đơn không tham gia giải quyết tranh chấp nữa."
+    ],
+    "answer": "Trực tiếp tham gia hoặc cử đại diện tham gia hoặc thay đổi người đại diện hoặc rút đơn không tham gia giải quyết tranh chấp nữa."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 18: Thế nào là bệnh nghề nghiệp?",
+    "options": [
+      "Bệnh nghề nghiệp là bệnh phát sinh từ nghề nghiệp của người lao động do Bộ Y tế – Bộ Lao động quy định.",
+      "Bệnh nghề nghiệp là bệnh phát sinh do điều kiện lao động độc hại, được Bộ Y tế – Bộ Lao động quy định.",
+      "Là bệnh phát sinh do điều kiện lao động độc hại của nghề nghiệp ảnh hưởng đến người lao động. Danh mục bệnh được 2 Bộ Y tế – Lao động quy định.",
+      "Bệnh nghề nghiệp là bệnh phát sinh từ nghề nghiệp của người lao động. Danh mục bệnh nghề nghiệp do Bộ Y tế – Bộ Lao động quy định."
+    ],
+    "answer": "Bệnh nghề nghiệp là bệnh phát sinh từ nghề nghiệp của người lao động. Danh mục bệnh nghề nghiệp do Bộ Y tế – Bộ Lao động quy định."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 19: Thế nào là tai nạn lao động?",
+    "options": [
+      "Tai nạn gây tổn thương cho cơ thể hoặc chết người, xảy ra trong quá trình người lao động đang thực hiện công việc lao động do người sử dụng lao động giao.",
+      "Tai nạn gây tổn thương cho các bộ phận của người lao động, xảy ra trong quá trình người lao động thực hiện các nhiệm vụ lao động cho người sử dụng lao động giao trách nhiệm.",
+      "Tai nạn gây tổn thương cho cơ thể của người lao động, xảy ra trong quá trình thực hiện công việc lao động do pháp luật lao động quy định.",
+      "Tai nạn gây tổn thương cho người lao động hoặc làm cho người lao động bị chết, do thực hiện các nhiệm vụ của doanh nghiệp."
+    ],
+    "answer": "Tai nạn gây tổn thương cho cơ thể hoặc chết người, xảy ra trong quá trình người lao động đang thực hiện công việc lao động do người sử dụng lao động giao."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 20: Hình thức sa thải người lao động chỉ được áp dụng trong trường hợp nào?",
+    "options": [
+      "Người lao động tự ý bỏ việc không có lý do chính đáng, đang bị xử một hình thức kỷ luật mà tái phạm, trộm cắp, tham ô tài sản của doanh nghiệp.",
+      "Trộm cắp, tham ô, tiết lộ bí mật công nghệ – kinh doanh của doanh nghiệp, đang bị kỷ luật chuyển làm việc khác lại tái phạm, tự ý bỏ việc.",
+      "Người lao động tự ý bỏ việc 5 ngày 1 tháng, 20 ngày 1 năm không có lý do chính đáng, trộm cắp tham ô, tiết lộ bí mật của doanh nghiệp, đang bị kỷ luật chuyển làm việc khác lại tái phạm.",
+      "Người lao động tự ý bỏ việc từ 5 đến 20 ngày không có lý do chính đáng, trộm cắp, tiết lộ bí mật, tái phạm nhiều lần mà không xử."
+    ],
+    "answer": "Người lao động tự ý bỏ việc 5 ngày 1 tháng, 20 ngày 1 năm không có lý do chính đáng, trộm cắp tham ô, tiết lộ bí mật của doanh nghiệp, đang bị kỷ luật chuyển làm việc khác lại tái phạm."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 21: Người sử dụng lao động có nghĩa vụ gì đối với người lao động có trình độ chuyên môn, kỹ thuật cao?",
+    "options": [
+      "Bảo hộ các quyền tác giả, phát sinh, sáng chế của người lao động.",
+      "Phải giữ gìn và bảo vệ các quyền phát minh, sáng chế, giải pháp hữu ích của người lao động.",
+      "Bảo hộ quyền tác giả, phát minh sáng chế, bảo đảm cho hưởng một phần lương để nghiên cứu khoa học.",
+      "Phải bảo hộ các quyền phát minh sáng chế, quyền tác giả, quyền về nhãn hiệu hàng hóa của người lao động."
+    ],
+    "answer": "Phải bảo hộ các quyền phát minh sáng chế, quyền tác giả, quyền về nhãn hiệu hàng hóa của người lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 22: Người sử dụng lao động có quyền và nghĩa vụ gì khi thu nhận người tàn tật vào làm việc, học nghề?",
+    "options": [
+      "Áp dụng thời giờ làm việc 7 tiếng một ngày, 42 tiếng một tuần. Được xét giảm hoặc miễn thuế.",
+      "Được xét giảm hoặc miễn thuế, được vay vốn với lãi suất thấp, phải áp dụng thời giờ làm việc 7 tiếng một ngày.",
+      "Áp dụng thời giờ làm việc 7 tiếng một ngày, được vay vốn ngân hàng với lãi suất thấp.",
+      "Được vay vốn với lãi suất thấp, được xét giảm hoặc miễn thuế."
+    ],
+    "answer": "Được vay vốn với lãi suất thấp, được xét giảm hoặc miễn thuế."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 23: Người sử dụng lao động có nghĩa vụ gì đối với người lao động cao tuổi làm việc tại cơ sở của mình?",
+    "options": [
+      "Khi đã nghỉ hưu, nếu làm việc theo hợp đồng lao động mới, thì ngoài quyền lợi đang hưởng theo chế độ hưu trí, người lao động cao tuổi vẫn được hưởng quyền lợi đã thoả thuận theo hợp đồng lao động.",
+      "Áp dụng thời giờ làm việc mềm dẻo trong một năm trước khi nghỉ hưu. Có thể tiếp tục sử dụng những người lưu theo chế độ hợp đồng lao động mới.",
+      "Áp dụng chế độ và thời giờ làm việc mềm dẻo, một ngày không làm trọn 8 tiếng, một tuần không làm quá 35 tiếng.",
+      "Áp dụng thời giờ làm việc mềm dẻo, một ngày không làm quá 7 tiếng, 1 tuần không làm trọn 5 ngày."
+    ],
+    "answer": "Khi đã nghỉ hưu, nếu làm việc theo hợp đồng lao động mới, thì ngoài quyền lợi đang hưởng theo chế độ hưu trí, người lao động cao tuổi vẫn được hưởng quyền lợi đã thoả thuận theo hợp đồng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 24: Người sử dụng lao động có nghĩa vụ gì đối với lao động chưa thành niên làm việc ở cơ sở mình?",
+    "options": [
+      "Giao việc phù hợp với sức khỏe, có sổ theo dõi riêng, một ngày làm việc không quá 7 tiếng.",
+      "Lao động chưa thành niên là người chưa đến 18 tuổi nên chỉ được giao 1 số việc theo quy định của Bộ Lao động.",
+      "Giao việc phù hợp với sức khỏe, chỉ giao 1 số việc theo quy định của Bộ Lao động, có sổ theo dõi riêng.",
+      "Chỉ được giao công việc theo đúng quy định của Bộ Lao động và có sổ theo dõi riêng."
+    ],
+    "answer": "Giao việc phù hợp với sức khỏe, có sổ theo dõi riêng, một ngày làm việc không quá 7 tiếng."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 25: Người sử dụng lao động có nghĩa vụ gì đối với lao động nữ làm việc tại cơ sở của mình?",
+    "options": [
+      "Đối xử bình đẳng, không giao việc độc hại, nặng nhọc, bảo đảm quyền nghỉ ngơi khi có thai và sinh con, bảo đảm các điều kiện vệ sinh.",
+      "Không giao việc độc hại, nặng nhọc, nguy hiểm, bảo đảm quyền lợi khi có thai, sinh con, bảo đảm các điều kiện vệ sinh tối thiểu.",
+      "Đối xử bình đẳng giữa nam và nữ, không giao việc độc hại, nặng nhọc, bảo đảm quyền nghỉ ngơi và các quyền lợi khác khi có thai, sinh con và các điều kiện vệ sinh.",
+      "Không giao việc nặng nhọc, độc hại, nguy hiểm hoặc các điều kiện lao động khắc nghiệt, bảo đảm chế độ thai sản và các quyền lợi khác."
+    ],
+    "answer": "Đối xử bình đẳng, không giao việc độc hại, nặng nhọc, bảo đảm quyền nghỉ ngơi khi có thai và sinh con, bảo đảm các điều kiện vệ sinh."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 26: Theo Luật Lao động, tiền lương của người lao động được trả như thế nào?",
+    "options": [
+      "Do hai bên thoả thuận trong hợp đồng, mức lương không được thấp hơn mức lương tối thiểu do Nhà nước quy định.",
+      "Trả theo năng suất lao động, chất lượng, hiệu quả công việc, do hai bên thoả thuận.",
+      "Trả theo năng suất, chất lượng, hiệu quả công việc, mức lương không thể thấp hơn mức tối thiểu do Nhà nước quy định.",
+      "Theo năng suất, chất lượng, hiệu quả công việc do hai bên thoả thuận trong hợp đồng nhưng không được thấp hơn mức tối thiểu do Nhà nước quy định."
+    ],
+    "answer": "Do hai bên thoả thuận trong hợp đồng, mức lương không được thấp hơn mức lương tối thiểu do Nhà nước quy định."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 27: Cách thức giải quyết tranh chấp lao động:",
+    "options": [
+      "Hai bên tự dàn xếp, thương lượng trực tiếp, thông qua trọng tài hoà giải.",
+      "Thương lượng trực tiếp, thông qua trọng tài hoà giải, tham gia của công đoàn.",
+      "Thương lượng trực tiếp, tham gia của công đoàn, thông qua trọng tài hoà giải.",
+      "Thương lượng trực tiếp, tham gia của công đoàn, công khai, khách quan, kịp thời, thông qua trọng tài hoà giải."
+    ],
+    "answer": "Thương lượng trực tiếp, tham gia của công đoàn, công khai, khách quan, kịp thời, thông qua trọng tài hoà giải."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 28: Có mấy loại tranh chấp lao động?",
+    "options": [
+      "Tranh chấp giữa người lao động với người sử dụng lao động, giữa chủ và thợ.",
+      "Tranh chấp giữa chủ và thợ, giữa công đoàn với chủ.",
+      "Tranh chấp giữa công đoàn với người sử dụng lao động, giữa chủ và thợ.",
+      "Tranh chấp giữa cá nhân người lao động với người sử dụng lao động, giữa tập thể lao động với người sử dụng lao động."
+    ],
+    "answer": "Tranh chấp giữa cá nhân người lao động với người sử dụng lao động, giữa tập thể lao động với người sử dụng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 29: Tranh chấp lao động là những tranh chấp:",
+    "options": [
+      "Giữa chủ và thợ về tất cả những điều khoản đã ký trong hợp đồng lao động.",
+      "Giữa chủ và thợ liên quan đến các quyền lợi, nghĩa vụ của hai bên.",
+      "Về việc làm, tiền lương, thu nhập, các điều kiện lao động, thực hiện hợp đồng lao động.",
+      "Về việc làm, tiền lương, thu nhập, các điều kiện lao động khác, về học nghề, thực hiện hợp đồng lao động và thoả ước tập thể."
+    ],
+    "answer": "Về việc làm, tiền lương, thu nhập, các điều kiện lao động khác, về học nghề, thực hiện hợp đồng lao động và thoả ước tập thể."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 30: Nguồn thu của quỹ bảo hiểm xã hội:",
+    "options": [
+      "Người lao động đóng 5% tiền lương, người sử dụng lao động đóng 15% tổng quỹ lương, ngân sách Nhà nước, các nguồn thu khác.",
+      "Người lao động đóng tối đa 5% tiền lương, người sử dụng lao động đóng 15% tổng quỹ lương, ngân sách Nhà nước, các nguồn thu khác.",
+      "Người lao động đóng 5% tiền lương, người sử dụng lao động đóng tối đa 15% các nguồn thu khác.",
+      "Người lao động đóng 5% tiền lương, người sử dụng lao động đóng 15%, ngân sách Nhà nước, các nguồn thu khác."
+    ],
+    "answer": "Người lao động đóng 5% tiền lương, người sử dụng lao động đóng 15% tổng quỹ lương, ngân sách Nhà nước, các nguồn thu khác."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 31: Các chế độ bảo hiểm xã hội hiện hành?",
+    "options": [
+      "Ốm đau, tai nạn lao động, nghỉ mất sức, thai sản, hưu trí, tử tuất.",
+      "Ốm đau, thai sản, tai nạn lao động, bệnh nghề nghiệp, hưu trí, nghỉ mát.",
+      "Nghỉ ốm, nghỉ thai sản, nghỉ mát, tai nạn lao động, nghỉ hưu.",
+      "Ốm đau, tai nạn lao động, bệnh nghề nghiệp, thai sản, hưu trí, tử tuất."
+    ],
+    "answer": "Ốm đau, tai nạn lao động, bệnh nghề nghiệp, thai sản, hưu trí, tử tuất."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 32: Bảo hiểm xã hội gồm mấy loại?",
+    "options": [
+      "Loại bắt buộc áp dụng cho tất cả các doanh nghiệp sử dụng 10 lao động trở lên, loại không bắt buộc áp dụng cho các doanh nghiệp từ 10 lao động trở xuống.",
+      "Loại bắt buộc và loại không bắt buộc. Đối với loại bắt buộc thì người sử dụng lao động và người lao động đều phải đóng bảo hiểm.",
+      "Loại bắt buộc và loại không bắt buộc. Đối với loại không bắt buộc thì người lao động tự lo về bảo hiểm.",
+      "Loại bắt buộc, có 10 lao động trở lên thì người sử dụng lao động, người lao động phải đóng bảo hiểm. Loại không bắt buộc, có 10 lao động trở xuống thì bảo hiểm được tính vào lương, do người lao động tự lo. và bảo hiểm hưu trí bổ sung."
+    ],
+    "answer": "Loại bắt buộc, có 10 lao động trở lên thì người sử dụng lao động, người lao động phải đóng bảo hiểm. Loại không bắt buộc, có 10 lao động trở xuống thì bảo hiểm được tính vào lương, do người lao động tự lo. và bảo hiểm hưu trí bổ sung."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 33: Thủ tục xem xét kỷ luật lao động:",
+    "options": [
+      "Phải ghi thành văn bản, có đại diện công đoàn và cơ quan thương binh xã hội tham dự.",
+      "Phải ghi thành văn bản, có đại diện công đoàn tham dự và sự có mặt của đương sự.",
+      "Phải ghi thành văn bản, có mặt đương sự, đại diện công đoàn và cơ quan thương binh xã hội tham dự.",
+      "Phải có mặt đương sự, đại diện công đoàn, đại diện cơ quan thương binh xã hội tham dự."
+    ],
+    "answer": "Phải ghi thành văn bản, có mặt đương sự, đại diện công đoàn và cơ quan thương binh xã hội tham dự."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 34: Các hình thức kỷ luật về vi phạm nội quy lao động:",
+    "options": [
+      "Sa thải, khiển trách, cảnh cáo, chuyển làm công việc khác có mức lương thấp hơn.",
+      "Sa thải, khiển trách, phê bình cảnh cáo, hạ mức lương.",
+      "Sa thải, khiển trách, cách chức, chuyển làm công việc có mức lương thấp hơn tối đa 6 tháng.",
+      "Sa thải, cảnh cáo, phê bình. Chuyển làm công việc khác có mức lương thấp hơn không quá 6 tháng."
+    ],
+    "answer": "Sa thải, khiển trách, cách chức, chuyển làm công việc có mức lương thấp hơn tối đa 6 tháng."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 35: Nội dung chủ yếu của Nội quy lao động:",
+    "options": [
+      "Thời giờ làm việc, thời gian nghỉ ngơi, trật tự trong doanh nghiệp, an toàn nơi làm việc, vệ sinh nơi làm việc, bảo vệ tài sản, bí mật kinh doanh, các hành vi vi phạm nội quy và hình thức xử lý.",
+      "Thời giờ làm việc, nghỉ ngơi, trật tự, vệ sinh nơi làm việc, bảo vệ tài sản, bí mật công nghệ, các hành vi vi phạm nội quy và hình thức xử lý.",
+      "Thời giờ làm việc, nghỉ ngơi, trật tự, vệ sinh nơi làm việc, bảo vệ tài sản và bí mật kinh doanh, các hành vi vi phạm nội quy và hình thức xử lý vi phạm.",
+      "Thời giờ làm việc, nghỉ ngơi, trật tự, bí mật kinh doanh, vệ sinh nơi làm việc, xử lý khi có vi phạm nội quy."
+    ],
+    "answer": "Thời giờ làm việc, thời gian nghỉ ngơi, trật tự trong doanh nghiệp, an toàn nơi làm việc, vệ sinh nơi làm việc, bảo vệ tài sản, bí mật kinh doanh, các hành vi vi phạm nội quy và hình thức xử lý."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 36: Luật lao động quy định về thời giờ làm việc của người lao động:",
+    "options": [
+      "Trong điều kiện lao động bình thường 8 giờ 1 ngày, điều kiện nặng nhọc, độc hại, nguy hiểm 6 đến 7 giờ một ngày, hai bên có thể thoả thuận làm thêm giờ.",
+      "Trong điều kiện lao động bình thường 8 giờ 1 ngày, điều kiện nặng nhọc 6 đến 7 giờ một ngày, hai bên có thể thoả thuận làm thêm giờ nhưng không quá 200 giờ một năm.",
+      "Trong điều kiện độc hại từ 6 đến 7 giờ một ngày, điều kiện bình thường 8 giờ 1 ngày, điều kiện khác thì hai bên có thể thỏa thuận nhưng không quá 200 giờ.",
+      "Trong điều kiện lao động bình thường 8 giờ 1 ngày, điều kiện nguy hiểm 6 đến 7 giờ một ngày, điều kiện khác thì hai bên thỏa thuận."
+    ],
+    "answer": "Trong điều kiện lao động bình thường 8 giờ 1 ngày, điều kiện nặng nhọc 6 đến 7 giờ một ngày, hai bên có thể thoả thuận làm thêm giờ nhưng không quá 200 giờ một năm."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 37: Trường hợp phải ngừng việc, người lao động được trả lương thế nào?",
+    "options": [
+      "Nếu do lỗi của người sử dụng lao động thì người lao động đựơc trả đủ lương, nếu do lỗi của người lao động thì hai bên thoả thuận.",
+      "Nếu do lỗi của người lao động thì người lao động không được trả lương, nếu do lỗi của người sử dụng lao động thì người lao động đựơc trả đủ lương, do khách quan được trả lương.",
+      "Nếu do lỗi của người lao động thì người lao động không được trả lương, do lỗi của người sử dụng lao động thì đựơc trả đủ lương, do khách quan (mất điện, nước…..) thì hai bên thỏa thuận.",
+      "Nếu do sự cố điện nước hoặc các nguyên nhân bất khả kháng thì hai bên thương lượng, nếu do lỗi của người sử dụng lao động thì người lao động đựơc trả đủ lương."
+    ],
+    "answer": "Nếu do lỗi của người lao động thì người lao động không được trả lương, do lỗi của người sử dụng lao động thì đựơc trả đủ lương, do khách quan (mất điện, nước…..) thì hai bên thỏa thuận."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 38: Nội dung chủ yếu của một bản thoả ước lao động tập thể:",
+    "options": [
+      "Việc làm, thời gian làm việc, nghỉ ngơi, tiền lương, tiền thưởng, phụ cấp, định mức lao động, bảo hiểm xã hội, an toàn, vệ sinh lao động.",
+      "Việc làm, phúc lợi tập thể, ăn giữa ca, tiền lương, thời giờ làm việc, bảo hiểm xã hội, giải quyết tranh chấp lao động.",
+      "Việc làm, thời giờ làm việc, tiền lương, tiền thưởng, bảo hiểm, ăn giữa ca, phúc lợi tập thể, nghỉ ngơi.",
+      "Việc làm, thời giờ làm việc, thời gian nghỉ ngơi, tiền lương, tiền thưởng, bảo hiểm, phúc lợi tập thể."
+    ],
+    "answer": "Việc làm, thời gian làm việc, nghỉ ngơi, tiền lương, tiền thưởng, phụ cấp, định mức lao động, bảo hiểm xã hội, an toàn, vệ sinh lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 39: Thoả ước lao động tập thể là một văn bản:",
+    "options": [
+      "Ký kết giữa tập thể người lao động với người sử dụng lao động về các quyền và nghĩa vụ qua lại giữa hai bên về các quan hệ lao động.",
+      "Ký kết trên cơ sở tự nguyện, bình đẳng giữa công đoàn với người sử dụng lao động về việc thực hiện các quyền và nghĩa vụ trong quan hệ lao động.",
+      "Ký kết giữa hai bên về các điều kiện lao động và các quyền, nghĩa vụ qua lại.",
+      "Thoả thuận trên cơ sở tự nguyện, bình đẳng giữa tập thể người lao động với người sử dụng lao động về các điều kiện lao động, quyền lợi và nghĩa vụ hai bên trong quan hệ lao động."
+    ],
+    "answer": "Thoả thuận trên cơ sở tự nguyện, bình đẳng giữa tập thể người lao động với người sử dụng lao động về các điều kiện lao động, quyền lợi và nghĩa vụ hai bên trong quan hệ lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 40: Theo quy định của pháp luật lao động, tuổi lao động là bao nhiêu?",
+    "options": [
+      "Ít nhất đủ 15 tuổi",
+      "Ít nhất đủ 16 tuổi",
+      "Ít nhất đủ 17 tuổi",
+      "Ít nhất đủ 18 tuổi"
+    ],
+    "answer": "Ít nhất đủ 15 tuổi"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 41: Theo quy định của pháp luật lao động, người lao động có nghĩa vụ như thế nào?",
+    "options": [
+      "Có nghĩa vụ thực hiện hợp đồng lao động, thỏa ước lao động tập thể.",
+      "Có nghĩa vụ chấp hành kỷ luật lao động, nội quy lao động và tuân theo sự điều hành hợp pháp của người sử dụng lao động.",
+      "Có nghĩa vụ thực hiện hợp đồng lao động, thỏa ước lao động tập thể; chấp hành kỷ luật lao động, nội quy lao động và tuân theo sự điều hành hợp pháp của người sử dụng lao động.",
+      "Có nghĩa vụ thực hiện hợp đồng lao động, thỏa ước lao động tập thể; Có nghĩa vụ chấp hành kỷ luật lao động, nội quy lao động."
+    ],
+    "answer": "Có nghĩa vụ thực hiện hợp đồng lao động, thỏa ước lao động tập thể; chấp hành kỷ luật lao động, nội quy lao động và tuân theo sự điều hành hợp pháp của người sử dụng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 42: Lao động nữ đi làm trước khi hết thời hạn nghỉ sinh con theo đúng quy định, được hưởng tiền lương, tiền công của những ngày làm việc đó như thế nào?",
+    "options": [
+      "Chỉ hưởng lương thai sản do BHXH chi trả.",
+      "Chỉ được hưởng tiền lương của những ngày làm việc.",
+      "Ngoài tiền lương, tiền công của những ngày làm việc do người sử dụng lao động trả, lao động nữ vẫn tiếp tục được hưởng chế độ thai sản theo quy định của pháp luật về Bảo hiểm xã hội.",
+      "Ngoài tiền lương, tiền công của những ngày làm việc do người sử dụng lao động trả, lao động nữ được hưởng thêm 02 tháng lương cơ bản."
+    ],
+    "answer": "Ngoài tiền lương, tiền công của những ngày làm việc do người sử dụng lao động trả, lao động nữ vẫn tiếp tục được hưởng chế độ thai sản theo quy định của pháp luật về Bảo hiểm xã hội."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 43: Người sử dụng lao động không được đơn phương chấm dứt hợp đồng lao động đối với lao động nữ vì các lý do nào sau đây?",
+    "options": [
+      "Lao động nữ bị tạm giữ, tạm giam, nuôi con dưới 12 tháng tuổi",
+      "Lao động nữ mang thai, kết hôn, nghỉ thai sản, nuôi con dưới 10 tháng tuổi",
+      "Lao động nữ kết hôn, mang thai, nghỉ thai sản",
+      "Lao động nữ kết hôn, mang thai, nghỉ thai sản, nuôi con dưới 12 tháng tuổi"
+    ],
+    "answer": "Lao động nữ kết hôn, mang thai, nghỉ thai sản, nuôi con dưới 12 tháng tuổi"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 44: Cấm sử dụng người tàn tật làm thêm giờ, làm việc ban đêm trong trường hợp nào?",
+    "options": [
+      "Người tàn tật đã bị suy giảm khả năng lao động từ 51% trở lên.",
+      "Người tàn tật bị suy giảm khả năng lao động từ 61% trở lên.",
+      "Người tàn tật bị suy giảm khả năng lao động từ 71% trở lên."
+    ],
+    "answer": "Người tàn tật đã bị suy giảm khả năng lao động từ 51% trở lên."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 45: Tranh chấp lao động được giải quyết theo những nguyên tắc nào?",
+    "options": [
+      "Thương lượng trực tiếp, tự dàn xếp và tự quyết định của hai bên tranh chấp tại nơi phát sinh tranh chấp.",
+      "Thông qua hòa giải, trọng tài trên cơ sở tôn trọng quyền và lợi ích của hai bên tranh chấp, tôn trọng lợi ích chung của xã hội và tuân theo pháp luật.",
+      "Giải quyết công khai, khách quan, kịp thời, nhanh chóng và đúng pháp luật; có sự tham gia của đại diện người lao động và đại diện người sử dụng lao động trong quá trình giải quyết tranh chấp.",
+      "Tất cả các nguyên tắc trên."
+    ],
+    "answer": "Tất cả các nguyên tắc trên."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 46: Trong quá trình giải quyết tranh chấp lao động, hai bên tranh chấp có quyền gì?",
+    "options": [
+      "Trực tiếp hoặc thông qua người đại diện của mình tham gia quá trình giải quyết tranh chấp",
+      "Rút đơn hoặc thay đổi nội dung tranh chấp",
+      "Yêu cầu thay người trực tiếp tiến hành giải quyết tranh chấp, nếu có lý do chính đáng cho rằng người đó không thể bảo đảm tính khách quan, công bằng trong việc giải quyết tranh chấp.",
+      "Tất cả các quyền trên"
+    ],
+    "answer": "Tất cả các quyền trên"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 47: Trong quá trình giải quyết tranh chấp lao động, hai bên tranh chấp có nghĩa vụ gì?",
+    "options": [
+      "Cung cấp đầy đủ tài liệu, chứng cứ theo yêu cầu của cơ quan, tổ chức giải quyết tranh chấp lao động;",
+      "Nghiêm chỉnh chấp hành các thoả thuận đã đạt được, biên bản hoà giải thành, quyết định đã có hiệu lực của cơ quan, tổ chức giải quyết tranh chấp lao động, bản án hoặc quyết định đã có hiệu lực của Tòa án nhân dân.",
+      "Tất cả các nghĩa vụ trên."
+    ],
+    "answer": "Tất cả các nghĩa vụ trên."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 48: Hội đồng trọng tài lao động do cơ quan nào thành lập?",
+    "options": [
+      "Ủy ban nhân dân cấp huyện thành lập.",
+      "Ủy ban nhân dân cấp tỉnh thành lập.",
+      "Sở Lao động – Thương binh và Xã hội thành lập."
+    ],
+    "answer": "Ủy ban nhân dân cấp tỉnh thành lập."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 49: Cơ quan, tổ chức nào có thẩm quyền giải quyết tranh chấp lao động cá nhân?",
+    "options": [
+      "Hội đồng hòa giải lao động cơ sở hoặc hòa giải viên lao động;",
+      "Toà án nhân dân.",
+      "Cả ba trường hợp trên"
+    ],
+    "answer": "Cả ba trường hợp trên"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 50: Những tranh chấp lao động cá nhân nào do Toà án nhân dân giải quyết mà không bắt buộc phải qua hoà giải tại cơ sở:",
+    "options": [
+      "Tranh chấp về xử lý kỷ luật lao động theo hình thức sa thải hoặc về trường hợp bị đơn phương chấm dứt hợp đồng lao động;",
+      "Tranh chấp về bồi thường thiệt hại, trợ cấp khi chấm dứt hợp đồng lao động;",
+      "Tranh chấp giữa người giúp việc gia đình với người sử dụng lao động;",
+      "Cả ba trường hợp trên"
+    ],
+    "answer": "Cả ba trường hợp trên"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 51: Thời hiệu yêu cầu giải quyết tranh chấp lao động cá nhân được quy định như thế nào?",
+    "options": [
+      "Sáu tháng, kể từ ngày xảy ra hành vi mà mỗi bên tranh chấp cho rằng quyền, lợi ích của mình bị vi phạm.",
+      "Một năm, kể từ ngày xảy ra hành vi mà mỗi bên tranh chấp cho rằng quyền, lợi ích của mình bị vi phạm.",
+      "Ba năm, kể từ ngày xảy ra hành vi mà mỗi bên tranh chấp cho rằng quyền, lợi ích của mình bị vi phạm."
+    ],
+    "answer": "Một năm, kể từ ngày xảy ra hành vi mà mỗi bên tranh chấp cho rằng quyền, lợi ích của mình bị vi phạm."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 52: Cơ quan, tổ chức nào có thẩm quyền giải quyết tranh chấp lao động tập thể về quyền?",
+    "options": [
+      "Hội đồng hòa giải lao động cơ sở hoặc hòa giải viên lao động.",
+      "Chủ tịch Uỷ ban nhân dân cấp huyện.",
+      "Tòa án nhân dân.",
+      "Cả A, B, C đều đúng"
+    ],
+    "answer": "Cả A, B, C đều đúng"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 53: Cơ quan, tổ chức nào có thẩm quyền giải quyết tranh chấp lao động tập thể về lợi ích?",
+    "options": [
+      "Tòa án nhân dân.",
+      "Hội đồng trọng tài lao động, hội đồng hòa giải lao động cơ sở hoặc hòa giải viên lao động.",
+      "Cả A và B đều đúng."
+    ],
+    "answer": "Hội đồng trọng tài lao động, hội đồng hòa giải lao động cơ sở hoặc hòa giải viên lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 54: Thời hiệu yêu cầu giải quyết tranh chấp lao động tập thể về quyền tại tòa án được quy định như thế nào?",
+    "options": [
+      "Sáu tháng, kể từ ngày xảy ra hành vi mà mỗi bên tranh chấp cho rằng quyền và lợi ích của mình bị vi phạm.",
+      "Một năm, kể từ ngày xảy ra hành vi mà mỗi bên tranh chấp cho rằng quyền và lợi ích của mình bị vi phạm.",
+      "Hai năm, kể từ ngày xảy ra hành vi mà mỗi bên tranh chấp cho rằng quyền và lợi ích của mình bị vi phạm."
+    ],
+    "answer": "Một năm, kể từ ngày xảy ra hành vi mà mỗi bên tranh chấp cho rằng quyền và lợi ích của mình bị vi phạm."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 55: Đình công là gì?",
+    "options": [
+      "Đình công là sự ngừng việc tạm thời, tự nguyện và có tổ chức của tập thể lao động để giải quyết tranh chấp lao động tập thể.",
+      "Đình công là việc tập thể người lao động nghỉ làm việc để gây sức ép buộc người sử dụng lao động đáp ứng những yêu cầu mà họ đưa ra.",
+      "Đình công là hình thức người lao động đấu tranh để bảo vệ quyền, lợi ích hợp pháp của mình."
+    ],
+    "answer": "Đình công là sự ngừng việc tạm thời, tự nguyện và có tổ chức của tập thể lao động để giải quyết tranh chấp lao động tập thể."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 56: Cuộc đình công như thế nào là bất hợp pháp?",
+    "options": [
+      "Không phát sinh từ tranh chấp lao động tập thể.",
+      "Không do những người lao động cùng làm việc trong một doanh nghiệp tiến hành.",
+      "Khi vụ tranh chấp lao động tập thể chưa được hoặc đang được cơ quan, tổ chức giải quyết theo quy định của pháp luật.",
+      "Cả A, B, C đều đúng."
+    ],
+    "answer": "Cả A, B, C đều đúng."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 57: Người nào sau đây có thẩm quyền quyết định hoãn đình công?",
+    "options": [
+      "Thủ tướng Chính phủ.",
+      "Bộ trưởng Bộ Lao động – Thương binh và Xã hội.",
+      "Chánh án Tòa án nhân dân cấp tỉnh."
+    ],
+    "answer": "Chủ tịch Ủy ban nhân dân cấp tỉnh."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 58: Cơ quan nào có thẩm quyền xét tính hợp pháp của cuộc đình công?",
+    "options": [
+      "Sở Lao động – Thương binh và Xã hội nơi diễn ra cuộc đình công.",
+      "Liên đoàn lao động cấp tỉnh nơi diễn ra cuộc đình công.",
+      "Tòa án nhân dân cấp tỉnh nơi diễn ra cuộc đình công."
+    ],
+    "answer": "Tòa án nhân dân cấp tỉnh nơi diễn ra cuộc đình công."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 59: Theo quy định của Bộ luật Lao động sửa đổi, bổ sung năm 2019 thì “người lao động” là người:",
+    "options": [
+      "Người lao động là người từ đủ 15 tuổi trở lên, có khả năng lao động, làm việc theo hợp đồng lao động, được trả lương và chịu sự quản lý, điều hành của người sử dụng lao động.",
+      "Người lao động là người từ đủ 16 tuổi trở lên, có khả năng lao động, làm việc theo hợp đồng lao động, được trả lương và chịu sự quản lý, điều hành của người sử dụng lao động.",
+      "Người lao động là người từ đủ 18 tuổi trở lên, có khả năng lao động, làm việc theo hợp đồng lao động, được trả lương và chịu sự quản lý, điều hành của người sử dụng lao động.",
+      "Tất cả các ý trên đều sai."
+    ],
+    "answer": "Người lao động là người từ đủ 15 tuổi trở lên, có khả năng lao động, làm việc theo hợp đồng lao động, được trả lương và chịu sự quản lý, điều hành của người sử dụng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 60: Theo quy định của Bộ luật Lao động sửa đổi, bổ sung năm 2019 thì tổ chức đại diện tập thể lao động tại cơ sở là:",
+    "options": [
+      "Ban chấp hành công đoàn cơ sở.",
+      "Ban chấp hành công đoàn cấp trên.",
+      "Ban chấp hành công đoàn cơ sở hoặc Ban chấp hành công đoàn cấp trên trực tiếp cơ sở ở nơi chưa thành lập công đoàn cơ sở.",
+      "a đúng."
+    ],
+    "answer": "Ban chấp hành công đoàn cơ sở hoặc Ban chấp hành công đoàn cấp trên trực tiếp cơ sở ở nơi chưa thành lập công đoàn cơ sở."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 61: Người lao động làm việc từ 06 giờ trở lên trong một ngày thì được nghỉ giữa giờ bao nhiêu phút?",
+    "options": [
+      "Ít nhất 35 phút liên tục.",
+      "Ít nhất 30 phút liên tục.",
+      "Ít nhất 40 phút liên tục.",
+      "Ít nhất 45 phút liên tục."
+    ],
+    "answer": "Ít nhất 30 phút liên tục."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 62: Khi tổ chức làm thêm vượt quá 200 giờ nhưng không quá 300 giờ trong một năm người sử dụng lao động phải thông báo…",
+    "options": [
+      "Bằng văn bản hoặc bằng lời nói cho Sở Lao động Thương binh và Xã hội.",
+      "Bằng văn bản cho Sở Lao động Thương binh và Xã hội.",
+      "Bằng văn bản hoặc bằng lời nói cho UBND phường nơi đơn vị tổ chức làm thêm.",
+      "Bằng văn bản cho UBND phường nơi đơn vị tổ chức làm thêm."
+    ],
+    "answer": "Bằng văn bản cho Sở Lao động Thương binh và Xã hội."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 63: Người lao động được nhận tiền trợ cấp thôi việc khi…",
+    "options": [
+      "Bị trục xuất theo bản án, quyết định của Tòa án đã có hiệu lực pháp luật, quyết định của cơ quan nhà nước có thẩm quyền.",
+      "Nghỉ hưu.",
+      "Bị sa thải.",
+      "Bị cấm làm công việc ghi trong hợp đồng lao động theo bản án, quyết định của Tòa án đã có hiệu lực pháp luật."
+    ],
+    "answer": "Bị cấm làm công việc ghi trong hợp đồng lao động theo bản án, quyết định của Tòa án đã có hiệu lực pháp luật."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 64: Chế độ nâng lương, nâng bậc, phụ cấp, trợ cấp được thỏa thuận trong…",
+    "options": [
+      "Hợp đồng lao động, thỏa ước lao động tập thể hoặc quy định của người sử dụng lao động.",
+      "Hợp đồng lao động.",
+      "Hợp đồng lao động, thỏa ước lao động tập thể.",
+      "Quy định của người sử dụng lao động."
+    ],
+    "answer": "Hợp đồng lao động, thỏa ước lao động tập thể hoặc quy định của người sử dụng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 65: Tiền lương của người lao động ngừng việc do dịch bệnh nguy hiểm theo yêu cầu của cơ quan nhà nước được xác định như sau:",
+    "options": [
+      "Do hai bên thỏa thuận nhưng không thấp hơn mức lương tối thiểu.",
+      "Do hai bên thỏa thuận có thể thấp hơn mức lương tối thiểu nhưng không quá 14 ngày làm việc trong tổng số ngày nghỉ.",
+      "Do hai bên thỏa thuận nhưng tiền lương ngừng việc trong 14 ngày đầu tiên không thấp hơn mức lương tối thiểu nếu phải ngừng việc trên 14 ngày làm việc.",
+      "Do hai bên thỏa thuận tùy theo khả năng tài chính của từng doanh nghiệp."
+    ],
+    "answer": "Do hai bên thỏa thuận nhưng tiền lương ngừng việc trong 14 ngày đầu tiên không thấp hơn mức lương tối thiểu nếu phải ngừng việc trên 14 ngày làm việc."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 66: Người sử dụng lao động có thể thưởng dưới hình thức…",
+    "options": [
+      "Tiền hoặc tài sản.",
+      "Tiền hoặc tài sản hoặc hình thức khác.",
+      "Tiền.",
+      "Tài sản."
+    ],
+    "answer": "Tiền hoặc tài sản hoặc hình thức khác."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 67: Đâu KHÔNG PHẢI là căn cứ để đưa ra mức lương tối thiểu?",
+    "options": [
+      "Mức sống tối thiểu của người lao động và gia đình họ.",
+      "Việc làm và thất nghiệp; năng suất lao động; khả năng chi trả của doanh nghiệp.",
+      "Số lượng doanh nghiệp và trình độ bằng cấp của người lao động được đào tạo.",
+      "Chỉ số giá tiêu dùng, tốc độ tăng trưởng kinh tế."
+    ],
+    "answer": "Số lượng doanh nghiệp và trình độ bằng cấp của người lao động được đào tạo."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 68: Mức lương tối thiểu là gì?",
+    "options": [
+      "Là mức lương thấp nhất được trả cho người lao động làm công việc giản đơn nhất trong điều kiện lao động bình thường và nặng nhọc.",
+      "Là mức lương thấp nhất được trả cho người lao động làm công việc giản đơn nhất trong điều kiện lao động bình thường.",
+      "Là mức lương thấp nhất được trả cho người lao động làm công việc giản đơn nhất trong điều kiện lao động bình thường, nặng nhọc, độc hại và nguy hiểm.",
+      "Là mức lương thấp nhất được trả cho người lao động làm công việc giản đơn nhất trong điều kiện lao động nặng nhọc."
+    ],
+    "answer": "Là mức lương thấp nhất được trả cho người lao động làm công việc giản đơn nhất trong điều kiện lao động bình thường."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 69: Anh K tốt nghiệp 12, làm việc tại thành phố Trà Vinh tháng 6 năm 2020, tính mức lương tối thiểu anh K được nhận là bao nhiêu?",
+    "options": [
+      "3.920.000 đồng/tháng.",
+      "3.486.000 đồng/tháng.",
+      "3.430.000 đồng/tháng.",
+      "3.670.000 đồng/tháng."
+    ],
+    "answer": "3.920.000 đồng/tháng."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 70: Người sử dụng lao động có thể trả lương gộp đối với người lao động hưởng lương theo giờ, ngày, tuần tối đa không quá…",
+    "options": [
+      "7 ngày.",
+      "10 ngày.",
+      "20 ngày.",
+      "15 ngày."
+    ],
+    "answer": "15 ngày."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 71: Đơn vị nào xây dựng thang lương, bảng lương và định mức lao động?",
+    "options": [
+      "Hội đồng tiền lương quốc gia.",
+      "Tổng liên đoàn Lao động Việt Nam.",
+      "Chính phủ.",
+      "Người sử dụng lao động."
+    ],
+    "answer": "Người sử dụng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 72: Mức lương tối thiểu được chia thành…",
+    "options": [
+      "05 vùng",
+      "04 vùng",
+      "03 vùng",
+      "02 vùng"
+    ],
+    "answer": "04 vùng"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 73: Lao động nữ trong thời gian nuôi con dưới 12 tháng tuổi được nghỉ bao lâu trong thời gian làm việc?",
+    "options": [
+      "30 phút",
+      "15 phút",
+      "45 phút",
+      "60 phút"
+    ],
+    "answer": "60 phút"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 74: Người lao động làm việc theo ca được nghỉ ít nhất bao lâu trước khi chuyển sang ca làm việc khác?",
+    "options": [
+      "10 giờ",
+      "6 giờ",
+      "12 giờ",
+      "24 giờ"
+    ],
+    "answer": "12 giờ"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 75: Người lao động có thể thỏa thuận nghỉ không hưởng lương với người sử dụng lao động…",
+    "options": [
+      "Tối đa không quá 06 tháng.",
+      "Tối đa không quá 01 năm.",
+      "Tối đa không quá 03 tháng.",
+      "Không giới hạn mức tối đa."
+    ],
+    "answer": "Không giới hạn mức tối đa."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 76: Lao động nữ mang thai được nghỉ việc để đi khám thai…",
+    "options": [
+      "04 lần, mỗi lần 01 ngày.",
+      "05 lần, mỗi lần 01 ngày.",
+      "06 lần, mỗi lần 01 ngày.",
+      "03 lần, mỗi lần 01 ngày."
+    ],
+    "answer": "05 lần, mỗi lần 01 ngày."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 77: Thế nào là người lao động làm việc không trọn thời gian…",
+    "options": [
+      "Là người lao động có thời gian làm việc linh hoạt hơn so với người làm việc bình thường.",
+      "Là người lao động có thời gian làm việc ngắn hơn so với thời gian làm việc bình thường.",
+      "Là người lao động có thời gian làm việc linh hoạt hơn so với người làm việc bình thường nhưng phải đảm bảo số giờ quy định.",
+      "Là người lao động có thời gian làm việc tự do và khác hơn so với người làm việc bình thường nhưng phải đảm bảo số giờ quy định."
+    ],
+    "answer": "Là người lao động có thời gian làm việc ngắn hơn so với thời gian làm việc bình thường."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 78: Lao động nữ sau khi nghỉ thai sản quay trở lại làm việc nếu việc cũ không còn thì người sử dụng lao động phải…",
+    "options": [
+      "Bố trí việc làm khác cho họ với mức lương thấp hơn không quá 85% mức lương trước khi nghỉ thai sản.",
+      "Bố trí việc làm khác cho họ với mức lương không thấp hơn mức lương trước khi nghỉ thai sản.",
+      "Bố trí việc làm khác cho họ với mức lương không thấp hơn không quá 90% mức lương trước khi nghỉ thai sản tối đa 03 tháng.",
+      "Bố trí việc làm khác cho họ với mức lương không thấp hơn không quá 85% mức lương trước khi nghỉ thai sản tối đa 03 tháng."
+    ],
+    "answer": "Bố trí việc làm khác cho họ với mức lương không thấp hơn mức lương trước khi nghỉ thai sản."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 79: Trường hợp người lao động do thôi việc, bị mất việc làm mà chưa nghỉ hằng năm hoặc chưa nghỉ hết số ngày nghỉ hằng năm…",
+    "options": [
+      "Thì phải nghỉ hết những ngày chưa nghỉ thì mới được cho nghỉ việc.",
+      "Thì được bảo hiểm thất nghiệp thanh toán tiền cho những ngày chưa nghỉ.",
+      "Thì được người sử dụng lao động thanh toán tiền lương cho những ngày chưa nghỉ.",
+      "Thì không được người sử dụng lao động thanh toán tiền lương cho những ngày chưa nghỉ."
+    ],
+    "answer": "Thì được người sử dụng lao động thanh toán tiền lương cho những ngày chưa nghỉ."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 80: Người lao động nhập ngũ…",
+    "options": [
+      "Được tạm ứng ít nhất hai tháng tiền lương.",
+      "Được tạm ứng ít nhất một tháng tiền lương.",
+      "Được tạm ứng nửa tháng tiền lương.",
+      "Không được tạm ứng tiền lương."
+    ],
+    "answer": "Không được tạm ứng tiền lương."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 81: Mức lương tối thiểu do ai công bố?",
+    "options": [
+      "Chính phủ.",
+      "Bộ tài chính.",
+      "Quốc hội.",
+      "Hội đồng tiền lương quốc gia."
+    ],
+    "answer": "Chính phủ."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 82: Nhận định nào sau đây SAI?",
+    "options": [
+      "Lao động nữ trong thời gian hành kinh được nghỉ 30 phút/ngày trong giờ làm việc.",
+      "Lao động nữ vào làm trước khi hết thời gian nghỉ thai sản thì chỉ được hưởng tiền lương.",
+      "Người lao động có thể nghỉ hưu trễ không quá 05 tuổi.",
+      "Người lao động có thể nghỉ hưu trước không qua 05 tuổi."
+    ],
+    "answer": "Lao động nữ vào làm trước khi hết thời gian nghỉ thai sản thì chỉ được hưởng tiền lương."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 83: Thành viên Hội đồng tiền lương quốc gia bao gồm đại diện của…",
+    "options": [
+      "Bộ Lao động – Thương binh và Xã hội, Tổng Liên đoàn Lao động Việt Nam, một số tổ chức đại diện người sử dụng lao động ở trung ương và chuyên gia độc lập.",
+      "Chính phủ, Bộ Lao động – Thương binh và Xã hội, Tổng Liên đoàn Lao động Việt Nam, một số tổ chức đại diện người sử dụng lao động ở trung ương và chuyên gia độc lập.",
+      "Bộ Lao động – Thương binh và Xã hội, Tổng Liên đoàn Lao động Việt Nam, một số tổ chức đại diện người sử dụng lao động ở trung ương, Ủy ban mặt trận tổ quốc và chuyên gia độc lập.",
+      "Chính phủ, Bộ Lao động – Thương binh và Xã hội, Tổng Liên đoàn Lao động Việt Nam, một số tổ chức đại diện người sử dụng lao động ở trung ương, Ủy ban mặt trận tổ quốc và chuyên gia độc lập."
+    ],
+    "answer": "Bộ Lao động – Thương binh và Xã hội, Tổng Liên đoàn Lao động Việt Nam, một số tổ chức đại diện người sử dụng lao động ở trung ương và chuyên gia độc lập."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 84: Người lao động bị xử lý kỷ luật bị sa thải thì…",
+    "options": [
+      "Người lao động phải nghỉ việc và nhận trợ cấp thôi việc.",
+      "Người lao động phải nghỉ việc và nhận trợ cấp mất việc.",
+      "Hợp đồng lao động đương nhiên bị chấm dứt.",
+      "Người lao động phải được chuyển làm công việc khác."
+    ],
+    "answer": "Hợp đồng lao động đương nhiên bị chấm dứt."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 85: Chi phí đào tạo nghề tại doanh nghiệp thuộc trách nhiệm của ai?",
+    "options": [
+      "Nhà nước.",
+      "Cha mẹ hoặc người giám hộ người lao động.",
+      "Người lao động.",
+      "Người sử dụng lao động."
+    ],
+    "answer": "Người sử dụng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 86: Các nhận định sau đây sai, ngoại trừ?",
+    "options": [
+      "Đình công dự kiến tổ chức tại địa bàn đang diễn ra các hoạt động nhằm phòng ngừa, khắc phục hậu quả thiên tai thì bắt buộc phải ngừng đình công.",
+      "Đình công diễn ra trên địa bàn xuất hiện thiên tai thì bắt buộc phải ngừng đình công.",
+      "Người sử dụng lao động không có quyền yêu cầu cơ quan có thẩm quyền tuyên bố cuộc đình công là bất hợp pháp.",
+      "Người lao động tham gia đình công vẫn được trả lương."
+    ],
+    "answer": "Đình công dự kiến tổ chức tại địa bàn đang diễn ra các hoạt động nhằm phòng ngừa, khắc phục hậu quả thiên tai thì bắt buộc phải ngừng đình công."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 87: Quyền nào đúng dành cho công đoàn viên?",
+    "options": [
+      "Bảo đảm, hỗ trợ, tạo điều kiện cho công đoàn thực hiện chức năng, quyền, trách nhiệm.",
+      "Chất vấn cán bộ lãnh đạo công đoàn.",
+      "Đoàn kết, giúp đỡ đồng nghiệp nâng cao trình độ, kỹ năng nghề nghiệp, lao động có hiệu quả.",
+      "Phối hợp với Công đoàn tổ chức đối thoại, thương lượng."
+    ],
+    "answer": "Chất vấn cán bộ lãnh đạo công đoàn."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 88: Tranh chấp lao động gồm có những loại nào?",
+    "options": [
+      "Tranh chấp lao động cá nhân, tranh chấp lao động tập thể về quyền hoặc lợi ích.",
+      "Tranh chấp lao động cá nhân.",
+      "Tranh chấp lao động tập thể về lợi ích.",
+      "Tranh chấp lao động tập thể về quyền."
+    ],
+    "answer": "Tranh chấp lao động cá nhân, tranh chấp lao động tập thể về quyền hoặc lợi ích."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 89: Các nhận định sau đây đúng, ngoại trừ?",
+    "options": [
+      "Hòa giải viên lao động bị miễn nhiệm khi có 02 năm bị đánh giá không hoàn thành nhiệm vụ.",
+      "Thư ký Hội đồng trọng tài là đại diện của Liên đoàn lao động tỉnh.",
+      "Hòa giải viên lao động mỗi ngày thực tế thực hiện nhiệm vụ của hòa giải viên được hưởng tiền bồi dưỡng mức 5% tiền lương tối thiểu.",
+      "Chủ tịch Hội đồng trọng tài là lãnh đạo Sở Lao động – Thương binh và Xã hội."
+    ],
+    "answer": "Thư ký Hội đồng trọng tài là đại diện của Liên đoàn lao động tỉnh."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 90: Người sử dụng lao động không được đóng cửa tạm thời nơi làm việc trong trường hợp…",
+    "options": [
+      "Người lao động đang đình công.",
+      "Trước khi người lao động ngừng đình công 10 giờ.",
+      "Trước khi người lao động ngừng đình công 12 giờ.",
+      "Trước 12 giờ so với thời điểm bắt đầu đình công ghi trong quyết định đình công."
+    ],
+    "answer": "Trước 12 giờ so với thời điểm bắt đầu đình công ghi trong quyết định đình công."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 91: Trình tự đình công được thực hiện theo thứ tự là…",
+    "options": [
+      "Ra quyết định đình công và thông báo đình công, lấy ý kiến về đình công, tiến hành đình công.",
+      "Xin ý kiến ủy ban nhân dân cấp tỉnh, ra quyết định đình công và thông báo đình công, tiến hành đình công.",
+      "Xin ý kiến sở lao động thương binh và xã hội, ra quyết định đình công và thông báo đình công, tiến hành đình công.",
+      "Lấy ý kiến về đình công, ra quyết định đình công và thông báo đình công, tiến hành đình công."
+    ],
+    "answer": "Lấy ý kiến về đình công, ra quyết định đình công và thông báo đình công, tiến hành đình công."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 92: Chọn quyền của tổ chức công đoàn?",
+    "options": [
+      "Được Công đoàn tư vấn pháp luật, trợ giúp pháp lý miễn phí pháp luật về lao động.",
+      "Không được cản trở người lao động tiến hành các hoạt động hợp pháp nhằm tham gia các hoạt động của tổ chức đại diện người lao động tại cơ sở.",
+      "Phân biệt đối xử về tiền lương, thời giờ làm việc.",
+      "Được người sử dụng lao động bố trí nơi làm việc."
+    ],
+    "answer": "Được người sử dụng lao động bố trí nơi làm việc."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 93: Nơi nào KHÔNG ĐƯỢC đình công?",
+    "options": [
+      "Các công ty vận tải đường thủy và bộ.",
+      "Công ty Nhiệt điện Duyên Hải thuộc Tổng Công ty Phát điện 1.",
+      "Ngân hàng thuộc vốn đầu tư nhà nước.",
+      "Hợp tác sản xuất nông nghiệp."
+    ],
+    "answer": "Công ty Nhiệt điện Duyên Hải thuộc Tổng Công ty Phát điện 1."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 94: Doanh nghiệp phải đóng góp cho kinh phí công đoàn là bao nhiêu?",
+    "options": [
+      "3% quỹ tiền lương làm căn cứ đóng bảo hiểm xã hội cho người lao động.",
+      "1% quỹ tiền lương làm căn cứ đóng bảo hiểm xã hội cho người lao động.",
+      "4% quỹ tiền lương làm căn cứ đóng bảo hiểm xã hội cho người lao động.",
+      "2% quỹ tiền lương làm căn cứ đóng bảo hiểm xã hội cho người lao động."
+    ],
+    "answer": "2% quỹ tiền lương làm căn cứ đóng bảo hiểm xã hội cho người lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 95: Thời hiệu yêu cầu Hội đồng trọng tài lao động giải quyết tranh chấp lao động cá nhân là…",
+    "options": [
+      "06 tháng",
+      "12 tháng",
+      "09 tháng",
+      "18 tháng"
+    ],
+    "answer": "09 tháng"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 96: Hòa giải viên lao động do ai bổ nhiệm?",
+    "options": [
+      "Chủ tịch Tổng liên đoàn lao động.",
+      "Chủ tịch Liên đoàn lao động cấp tỉnh.",
+      "Giám đốc sở Lao động Thương binh và Xã hội.",
+      "Chủ tịch Ủy ban nhân dân cấp tỉnh."
+    ],
+    "answer": "Chủ tịch Ủy ban nhân dân cấp tỉnh."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 97: Các hành vi bị nghiêm cấm trước, trong và sau khi đình công?",
+    "options": [
+      "Tham gia hoạt động đình công.",
+      "Dùng bạo lực; hủy hoại máy, thiết bị, tài sản của người sử dụng lao động.",
+      "Không tham gia hoạt động đình công.",
+      "Họp, thảo luận, lấy ý kiến về việc tổ chức đình công."
+    ],
+    "answer": "Dùng bạo lực; hủy hoại máy, thiết bị, tài sản của người sử dụng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 98: Số lượng trọng tài viên lao động của Hội đồng trọng tài lao động…",
+    "options": [
+      "Ít nhất là 11 người.",
+      "Ít nhất là 15 người.",
+      "Ít nhất là 09 người.",
+      "Ít nhất là 13 người."
+    ],
+    "answer": "Ít nhất là 15 người."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 99: Người sử dụng lao động khi xây dựng nội quy không lấy ý kiến của Ban chấp hành công đoàn cơ sở thì bị xử phạt tiền…",
+    "options": [
+      "Từ 5.000.000 – 10.000.000 đồng.",
+      "Từ 500.000 – 1.000.000 đồng.",
+      "Từ 20.000.000 – 25.000.000 đồng.",
+      "Từ 10.000.000 – 15.000.000 đồng."
+    ],
+    "answer": "Từ 5.000.000 – 10.000.000 đồng."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 100: Khoản chi nào KHÔNG PHẢI là chi phí đào tạo trong học nghề?",
+    "options": [
+      "Lương giáo viên.",
+      "Tiền đóng bảo hiểm xã hội.",
+      "Tiền khám chữa bệnh.",
+      "Tiền đóng bảo hiểm xã hội và tiền thuê nhà."
+    ],
+    "answer": "Tiền khám chữa bệnh."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 101: Trong xây dựng quan hệ lao động, công đoàn tham gia cùng với cơ quan nhà nước có thẩm quyền để…",
+    "options": [
+      "Hỗ trợ xây dựng quan hệ lao động tiến bộ, hài hòa và ổn định. Giám sát việc thi hành quy định của pháp luật về lao động. Bảo vệ quyền và lợi ích hợp pháp, chính đáng của người lao động.",
+      "Giám sát việc thi hành quy định của pháp luật về lao động.",
+      "Hỗ trợ xây dựng quan hệ lao động tiến bộ, hài hòa và ổn định.",
+      "Bảo vệ quyền và lợi ích hợp pháp, chính đáng của người lao động."
+    ],
+    "answer": "Hỗ trợ xây dựng quan hệ lao động tiến bộ, hài hòa và ổn định. Giám sát việc thi hành quy định của pháp luật về lao động. Bảo vệ quyền và lợi ích hợp pháp, chính đáng của người lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 102: Giải quyết tranh chấp về quyền công đoàn được thực hiện như sau:",
+    "options": [
+      "Tranh chấp thuộc phạm vi quyền, trách nhiệm của Công đoàn thì thực hiện theo Bộ luật tố tụng hình sự.",
+      "Tranh chấp thuộc phạm vi quyền, trách nhiệm của Công đoàn thì thẩm quyền, trình tự, thủ tục giải quyết theo pháp luật về xử phạt hành chính.",
+      "Tranh chấp thuộc phạm vi quyền, trách nhiệm của Công đoàn thì thẩm quyền, trình tự, thủ tục giải quyết theo pháp luật tương ứng có liên quan.",
+      "Tranh chấp thuộc phạm vi quyền, trách nhiệm của Công đoàn thì thẩm quyền, trình tự, thủ tục giải quyết theo pháp luật về giải quyết tranh chấp lao động."
+    ],
+    "answer": "Tranh chấp thuộc phạm vi quyền, trách nhiệm của Công đoàn thì thẩm quyền, trình tự, thủ tục giải quyết theo pháp luật về giải quyết tranh chấp lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 103: Ai có quyền yêu cầu tuyên bố cuộc đình công là hợp pháp?",
+    "options": [
+      "Tòa án.",
+      "Tổ chức đại diện người lao động.",
+      "Người lao động.",
+      "Người sử dụng lao động."
+    ],
+    "answer": "Người sử dụng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 104: Chọn nhận định đúng?",
+    "options": [
+      "Quyết định đình công được ban hành khi có 50% số người được lấy ý kiến đồng ý với nội dung lấy ý kiến đình công.",
+      "Người sử dụng lao động có quyền đóng cửa tạm thời nơi làm việc sau khi người lao động ngừng đình công.",
+      "Đình công chỉ được tiến hành để giải quyết tranh chấp lao động tập thể về lợi ích.",
+      "Việc lấy ý kiến về đình công chỉ được thực hiện dưới hình thức trực tiếp bằng phiếu."
+    ],
+    "answer": "Đình công chỉ được tiến hành để giải quyết tranh chấp lao động tập thể về lợi ích."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 105: Tranh chấp lao động là gì?",
+    "options": [
+      "Sự bất đồng, mâu thuẫn hay xung đột về lợi ích, về quyền và nghĩa vụ giữa các chủ thể khi tham gia vào quan hệ pháp luật.",
+      "Tranh chấp phát sinh khi quyền và lợi ích hợp pháp của một trong các bên bị xâm phạm.",
+      "Tranh chấp về quyền và nghĩa vụ, lợi ích phát sinh giữa các bên trong quá trình xác lập, thực hiện hoặc chấm dứt quan hệ lao động; tranh chấp giữa các tổ chức đại diện người lao động với nhau.",
+      "Tranh chấp xảy ra giữa các chủ thể tham gia vào quan hệ pháp luật nhân thân và tài sản được pháp luật bảo vệ."
+    ],
+    "answer": "Tranh chấp về quyền và nghĩa vụ, lợi ích phát sinh giữa các bên trong quá trình xác lập, thực hiện hoặc chấm dứt quan hệ lao động; tranh chấp giữa các tổ chức đại diện người lao động với nhau."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 106: Tranh chấp nào sau đây là tranh chấp lao động tập thể về lợi ích?",
+    "options": [
+      "Có sự khác nhau trong việc hiểu và thực hiện quy định của pháp luật về lao động.",
+      "Có sự khác nhau trong việc hiểu và thực hiện quy định của thỏa ước lao động tập thể.",
+      "Khi người sử dụng lao động có hành vi can thiệp, thao túng tổ chức đại diện người lao động; vi phạm nghĩa vụ về thương lượng thiện chí.",
+      "Tranh chấp lao động phát sinh trong quá trình thương lượng tập thể."
+    ],
+    "answer": "Tranh chấp lao động phát sinh trong quá trình thương lượng tập thể."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 107: Quyền công đoàn là gì?",
+    "options": [
+      "Quyền được thông tin, thảo luận, đề xuất và biểu quyết công việc của Công đoàn.",
+      "Quyền được yêu cầu Công đoàn đại diện, bảo vệ quyền, lợi ích hợp pháp, chính đáng khi bị xâm phạm và thông tin, thảo luận, đề xuất và biểu quyết công việc của Công đoàn.",
+      "Quyền được yêu cầu Công đoàn đại diện, bảo vệ quyền, lợi ích hợp pháp, chính đáng khi bị xâm phạm.",
+      "Quyền thành lập, gia nhập và hoạt động công đoàn của người lao động, đoàn viên công đoàn."
+    ],
+    "answer": "Quyền thành lập, gia nhập và hoạt động công đoàn của người lao động, đoàn viên công đoàn."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 108: Trong xã hội hiện đại Luật lao động là công cụ hữu hiệu của nhà nước trong việc…",
+    "options": [
+      "Xử lý người lao động và người sử dụng lao động khi không tuân thủ mệnh lệnh của nhà nước.",
+      "Ổn định sản xuất của từng doanh nghiệp và sự phát triển của toàn xã hội.",
+      "Cai trị đất nước thông qua đàn áp người lao động và người sử dụng lao động.",
+      "Đàn áp người lao động và người sử dụng lao động."
+    ],
+    "answer": "Ổn định sản xuất của từng doanh nghiệp và sự phát triển của toàn xã hội."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 109: Chọn chủ thể KHÔNG thuộc đối tượng điều chỉnh của Luật lao động?",
+    "options": [
+      "Người công chức, viên chức.",
+      "Người học nghề.",
+      "Người tập nghề.",
+      "Người lao động nước ngoài làm việc tại Việt Nam."
+    ],
+    "answer": "Người công chức, viên chức."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 110: Quan hệ lao động…",
+    "options": [
+      "Quan hệ lao động tập thể.",
+      "Quan hệ lao động cá nhân, quan hệ lao động tập thể và cơ quan quản lý nhà nước.",
+      "Quan hệ lao động cá nhân và quan hệ lao động tập thể.",
+      "Quan hệ lao động cá nhân."
+    ],
+    "answer": "Quan hệ lao động cá nhân và quan hệ lao động tập thể."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 111: Quan hệ việc làm là gì?",
+    "options": [
+      "Những quan hệ phát sinh giữa cá nhân có nhu cầu tìm kiếm việc làm với doanh nghiệp hoặc tổ chức dịch vụ việc làm.",
+      "Những quan hệ phát sinh giữa cá nhân có nhu cầu tìm kiếm việc làm với người sử dụng lao động.",
+      "Những quan hệ phát sinh giữa cá nhân có nhu cầu tìm kiếm việc làm với nhà tuyển dụng.",
+      "Những quan hệ phát sinh giữa cá nhân có nhu cầu tìm kiếm việc làm với cơ quan quản lý nhà nước về việc làm."
+    ],
+    "answer": "Những quan hệ phát sinh giữa cá nhân có nhu cầu tìm kiếm việc làm với doanh nghiệp hoặc tổ chức dịch vụ việc làm."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 112: Luật lao động thuộc lĩnh vực nào?",
+    "options": [
+      "Tư pháp và công pháp",
+      "Quản lý nhà nước",
+      "Tư pháp",
+      "Công pháp"
+    ],
+    "answer": "Tư pháp và công pháp"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 113: Cơ quan nào chịu trách nhiệm trước Chính phủ thực hiện quản lý nhà nước về bảo hiểm xã hội?",
+    "options": [
+      "Bộ Tài chính",
+      "Bảo hiểm xã hội Việt Nam",
+      "Ủy ban nhân dân cấp tỉnh",
+      "Bộ Lao động – Thương binh và Xã hội"
+    ],
+    "answer": "Bộ Lao động – Thương binh và Xã hội"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 114: Nguồn của pháp luật lao động bao gồm:",
+    "options": [
+      "Các văn bản quy phạm pháp luật điều chỉnh các quan hệ lao động và các quan hệ xã hội khác có liên quan trực tiếp đến quan hệ lao động xảy ra trong và ngoài nước.",
+      "Các văn bản quy phạm pháp luật do các cơ quan nhà nước có thẩm quyền ban hành để điều chỉnh các quan hệ lao động và các quan hệ xã hội khác có liên quan trực tiếp đến quan hệ lao động xảy ra trong và ngoài nước.",
+      "Các văn bản quy phạm pháp luật điều chỉnh các quan hệ lao động và các quan hệ xã hội khác có liên quan trực tiếp đến quan hệ lao động.",
+      "Các văn bản quy phạm pháp luật do các cơ quan nhà nước có thẩm quyền ban hành để điều chỉnh các quan hệ lao động và các quan hệ xã hội khác có liên quan trực tiếp đến quan hệ lao động."
+    ],
+    "answer": "Các văn bản quy phạm pháp luật do các cơ quan nhà nước có thẩm quyền ban hành để điều chỉnh các quan hệ lao động và các quan hệ xã hội khác có liên quan trực tiếp đến quan hệ lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 115: Chức năng nào sau đây KHÔNG phải chức năng của Luật lao động?",
+    "options": [
+      "Bảo đảm ổn định xã hội",
+      "Bảo vệ người tiêu dùng",
+      "Bảo vệ người lao động và người sử dụng lao động",
+      "Kinh tế và giáo dục"
+    ],
+    "answer": "Bảo vệ người tiêu dùng"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 116: Nếu người lao động đóng bảo hiểm xã hội không liên tục thì thời gian đóng bảo hiểm xã hội được tính…",
+    "options": [
+      "Tổng thời gian đã đóng bảo hiểm xã hội trừ đi thời gian không đóng.",
+      "Từ khi người lao động bắt đầu đóng bảo hiểm xã hội cho đến khi dừng đóng",
+      "Tổng thời gian từ khi bắt đầu đóng bảo hiểm xã hội cho đến khi dừng đóng",
+      "Tổng thời gian đã đóng bảo hiểm xã hội"
+    ],
+    "answer": "Tổng thời gian đã đóng bảo hiểm xã hội"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 117: Chế độ nào mà bảo hiểm xã hội bắt buộc có nhưng bảo hiểm xã hội tự nguyện không có?",
+    "options": [
+      "Ốm đau, thai sản, tai nạn lao động, bệnh nghề nghiệp",
+      "Ốm đau, thai sản",
+      "Ốm đau, thai sản, tai nạn lao động",
+      "Ốm đau, thai sản, tai nạn lao động, bệnh nghề nghiệp, hưu trí bổ sung"
+    ],
+    "answer": "Ốm đau, thai sản, tai nạn lao động, bệnh nghề nghiệp"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 118: Thời hạn tập nghề tại doanh nghiệp tối đa là bao lâu?",
+    "options": [
+      "120 ngày",
+      "30 ngày",
+      "90 ngày",
+      "60 ngày"
+    ],
+    "answer": "90 ngày"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 119: Nhận định nào sau đây CHƯA ĐÚNG về thời gian học nghề?",
+    "options": [
+      "Thời gian học nghề theo chương trình đào tạo nhưng không quá 06 tháng.",
+      "Thời gian học nghề theo chương trình đào tạo.",
+      "Thời gian học nghề theo chương trình đào tạo nhưng không quá 01 năm.",
+      "Thời gian học nghề theo chương trình đào tạo nhưng không quá 03 tháng."
+    ],
+    "answer": "Thời gian học nghề theo chương trình đào tạo."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 120: Chọn đối tượng KHÔNG phải tham gia BHXH bắt buộc?",
+    "options": [
+      "Người đi làm việc ở nước ngoài theo hợp đồng",
+      "Người làm việc theo hợp đồng lao động có thời hạn từ đủ 01 tháng",
+      "Cán bộ không chuyên trách ở xã, phường, thị trấn.",
+      "Người làm việc theo hợp đồng có thời hạn 12 tháng đang hưởng lương hưu"
+    ],
+    "answer": "Người làm việc theo hợp đồng có thời hạn 12 tháng đang hưởng lương hưu"
+  },
+  {
+    "type": "mc",
+    "question": "Câu 121: Quan hệ học nghề là…",
+    "options": [
+      "Quan hệ phát sinh giữa người học nghề, tập thể với cá nhân, tổ chức dạy nghề.",
+      "Quan hệ phát sinh giữa người học nghề, tập thể với các trường nghề.",
+      "Quan hệ phát sinh giữa người học nghề, tập thể với các trường nghề hoặc tổ chức dạy nghề.",
+      "Quan hệ phát sinh giữa người học nghề, tập thể với các trường nghề hoặc cá nhân, tổ chức dạy nghề."
+    ],
+    "answer": "Quan hệ phát sinh giữa người học nghề, tập thể với các trường nghề hoặc cá nhân, tổ chức dạy nghề."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 122: Chọn nhận định đúng về chế độ thai sản?",
+    "options": [
+      "Lao động nam đang đóng bảo hiểm xã hội khi vợ sinh con được nghỉ việc hưởng chế độ thai sản 07 ngày làm việc nếu vợ sinh thường.",
+      "Lao động nữ sinh con nhưng chỉ có cha tham gia bảo hiểm xã hội thì cha được trợ cấp một lần bằng 02 lần mức lương cơ sở tại tháng sinh con cho mỗi con.",
+      "Lao động nữ sinh con thì được trợ cấp một lần cho mỗi con bằng 01 lần mức lương cơ sở tại tháng lao động nữ sinh con.",
+      "Lao động nữ sinh con thì được trợ cấp một lần cho mỗi con bằng 03 lần mức lương cơ sở tại tháng lao động nữ sinh con."
+    ],
+    "answer": "Lao động nữ sinh con nhưng chỉ có cha tham gia bảo hiểm xã hội thì cha được trợ cấp một lần bằng 02 lần mức lương cơ sở tại tháng sinh con cho mỗi con."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 123: Nhận định nào sau đây SAI về học nghề?",
+    "options": [
+      "Người tập nghề phải đủ 14 tuổi trở lên, trong một số trường hợp phải đủ 18 tuổi trở lên.",
+      "Người sử dụng lao động không thu học phí của người học nghề.",
+      "Người học nghề phải ký hợp đồng đào tạo nghề với người sử dụng lao động.",
+      "Người sử dụng lao động tuyển người vào học nghề, tập nghề để làm việc cho mình thì phải đăng ký hoạt động giáo dục nghề nghiệp."
+    ],
+    "answer": "Người sử dụng lao động tuyển người vào học nghề, tập nghề để làm việc cho mình thì phải đăng ký hoạt động giáo dục nghề nghiệp."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 124: Sự bình đẳng trong pháp luật lao động và pháp luật Dân sự khác nhau như thế nào?",
+    "options": [
+      "Trong luật lao động yếu tố bình đẳng chủ yếu thể hiện tại thời điểm xác lập quan hệ, còn trong quan hệ dân sự tồn tại từ thời điểm xác lập đến khi chấm dứt quan hệ.",
+      "Trong luật lao động yếu tố bình đẳng chủ yếu thể hiện tại từ thời điểm xác lập đến khi thực hiện quan hệ, còn trong quan hệ dân sự tồn tại ngay thời điểm xác lập quan hệ.",
+      "Trong luật Lao động yếu tố bình đẳng chủ yếu thể hiện tại từ thời điểm xác lập đến khi chấm dứt quan hệ, còn trong quan hệ dân sự tồn tại ngay thời điểm xác lập quan hệ.",
+      "Trong luật lao động yếu tố bình đẳng chủ yếu thể hiện tại thời điểm xác lập quan hệ, còn trong quan hệ dân sự tồn tại từ thời điểm xác lập đến khi thực hiện quan hệ."
+    ],
+    "answer": "Trong luật lao động yếu tố bình đẳng chủ yếu thể hiện tại thời điểm xác lập quan hệ, còn trong quan hệ dân sự tồn tại từ thời điểm xác lập đến khi chấm dứt quan hệ."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 125: Nghề, công việc nào sau đây người từ đủ 15 tuổi đến chưa đủ 18 tuổi có thể được làm việc vào ban đêm?",
+    "options": [
+      "Công việc văn phòng: photo.",
+      "Thu hoạch rau, củ, quả sạch theo mùa.",
+      "Bán hàng trong siêu thị.",
+      "Vận động viên thể thao."
+    ],
+    "answer": "Vận động viên thể thao."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 126: Người làm việc không có quan hệ lao động là gì?",
+    "options": [
+      "Người làm việc cho người sử dụng lao động theo thỏa thuận, được trả lương và chịu sự quản lý, điều hành, giám sát của người sử dụng lao động.",
+      "Người làm việc cho người sử dụng lao động theo thỏa thuận, được trả lương và chịu sự quản lý, điều hành.",
+      "Người làm việc không trên cơ sở thuê mướn bằng hợp đồng lao động.",
+      "Người làm việc cho người sử dụng lao động theo thỏa thuận, được trả lương bởi người sử dụng lao động."
+    ],
+    "answer": "Người làm việc không trên cơ sở thuê mướn bằng hợp đồng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 127: Năng lực pháp luật của người sử dụng lao động được hiểu như thế nào?",
+    "options": [
+      "Là năng lực hành vi dân sự của người sử dụng lao động được quy định cụ thể trong bộ luật dân sự.",
+      "Là khả năng người sử dụng lao động thực hiện các quyền và nghĩa vụ theo quy định của pháp luật hiện hành.",
+      "Là khả năng được pháp luật quy định cho các quyền nhất định để có thể tham gia quan hệ pháp luật lao động.",
+      "Là khả của người sử dụng lao động trong việc tạo lập – gánh vác các quyền và nghĩa vụ trong quá trình tuyển dụng lao động."
+    ],
+    "answer": "Là khả năng được pháp luật quy định cho các quyền nhất định để có thể tham gia quan hệ pháp luật lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 128: Nơi làm việc nào sau đây gây tổn hại đến sự phát triển thể lực, trí lực, nhân cách của người chưa thành niên?",
+    "options": [
+      "Chăn thả gia súc tại nông trại.",
+      "Làm tranh hàng trống.",
+      "Bụi bông.",
+      "Làm bún gạo."
+    ],
+    "answer": "Bụi bông."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 129: Những công việc KHÔNG được sử dụng lao động từ đủ 13 tuổi làm việc?",
+    "options": [
+      "Thêu ren, làm tranh đông hồ.",
+      "Phục vụ bàn.",
+      "Vận động viên bơi lội.",
+      "Đan lát, làm các đồ gia dụng."
+    ],
+    "answer": "Phục vụ bàn."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 130: Việc dùng vũ lực, đe dọa dùng vũ lực hoặc các thủ đoạn khác để ép buộc người lao động phải làm việc trái ý muốn của họ là hành vi gì?",
+    "options": [
+      "Cưỡng bức lao động.",
+      "Phân biệt đối xử trong lao động.",
+      "Bóc lột tại nơi làm việc.",
+      "Quấy rối tại nơi làm việc."
+    ],
+    "answer": "Cưỡng bức lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 131: Khả năng lao động của người lao động được thể hiện qua…",
+    "options": [
+      "Năng lực pháp luật và năng lực hành vi dân sự.",
+      "Năng lực hành vi dân sự và năng lực hành vi.",
+      "Năng lực pháp luật, năng lực hành vi dân sự và năng lực hành vi.",
+      "Năng lực pháp luật và năng lực hành vi."
+    ],
+    "answer": "Năng lực pháp luật và năng lực hành vi."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 132: Học nghề để làm việc cho người sử dụng là gì?",
+    "options": [
+      "Việc người sử dụng lao động tuyển người vào để đào tạo nghề nghiệp tại nơi làm việc không quá 03 tháng.",
+      "Việc người sử dụng lao động tuyển người vào để hướng dẫn thực hành công việc theo vị trí việc làm tại nơi làm việc không quá 03 tháng.",
+      "Việc người sử dụng lao động tuyển người vào để đào tạo nghề nghiệp tại nơi làm việc.",
+      "Việc người sử dụng lao động tuyển người vào để hướng dẫn thực hành công việc theo vị trí việc làm tại nơi làm việc."
+    ],
+    "answer": "Việc người sử dụng lao động tuyển người vào để đào tạo nghề nghiệp tại nơi làm việc."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 133: Hết thời hạn học nghề…",
+    "options": [
+      "Người học nghề có quyền chuyển sang làm việc cho người sử dụng lao động khác mà không cần bồi thường bất kỳ chi phí nào.",
+      "Người học nghề và người sử dụng lao động phải ký kết hợp đồng lao động.",
+      "Người học nghề không phải chịu trách nhiệm gì với người sử dụng lao động.",
+      "Người sử dụng lao động không có quyền ràng buộc người học nghề làm việc cho mình."
+    ],
+    "answer": "Người học nghề và người sử dụng lao động phải ký kết hợp đồng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 134: Chọn các văn bản là nguồn của Luật lao động?",
+    "options": [
+      "Luật bảo vệ quyền lợi người tiêu dùng, Luật các tổ chức tín dụng.",
+      "Luật đất đai, Luật dạy nghề.",
+      "Luật tố tụng dân sự, Luật thương mại.",
+      "Luật công đoàn, Luật đầu tư."
+    ],
+    "answer": "Luật công đoàn, Luật đầu tư."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 135: Người tham gia bảo hiểm xã hội tự nguyện là công dân Việt Nam từ đủ…",
+    "options": [
+      "15 tuổi.",
+      "14 tuổi.",
+      "13 tuổi.",
+      "18 tuổi."
+    ],
+    "answer": "15 tuổi."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 136: Đặc điểm nào sau đây đúng về Bảo hiểm hưu trí bổ sung, ngoại trừ?",
+    "options": [
+      "Cơ chế tạo lập quỹ từ sự đóng góp của người lao động và người sử dụng lao động dưới hình thức tài khoản tiết kiệm cá nhân.",
+      "Tích lũy thông qua hoạt động đầu tư.",
+      "Chính sách bảo hiểm xã hội mang tính chất bắt buộc.",
+      "Chính sách bảo hiểm xã hội mang tính chất tự nguyện."
+    ],
+    "answer": "Chính sách bảo hiểm xã hội mang tính chất bắt buộc."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 137: Nghề, công việc nào sau đây người từ đủ 15 tuổi đến chưa đủ 18 tuổi có thể được làm thêm giờ?",
+    "options": [
+      "Tháo dỡ giàn giáo.",
+      "Phân loại phế liệu.",
+      "Đơm nút.",
+      "Tiếp xúc với các vi sinh vật gây bệnh."
+    ],
+    "answer": "Đơm nút."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 138: Quan hệ lao động được thiết lập dựa trên cơ sở?",
+    "options": [
+      "Phong tục tập quán.",
+      "Hợp đồng.",
+      "Quy định pháp luật.",
+      "Uy tín cá nhân."
+    ],
+    "answer": "Hợp đồng."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 139: Quan hệ quản lý nhà nước về lao động là…",
+    "options": [
+      "Quan hệ giữa cơ quan nhà nước có thẩm quyền với người lao động và người sử dụng lao động.",
+      "Quan hệ giữa cơ quan nhà nước có thẩm quyền với người sử dụng lao động.",
+      "Quan hệ giữa công đoàn với người sử dụng lao động.",
+      "Quan hệ giữa công đoàn với người sử dụng lao động và người lao động."
+    ],
+    "answer": "Quan hệ giữa cơ quan nhà nước có thẩm quyền với người lao động và người sử dụng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 140: Người sử dụng lao động là…",
+    "options": [
+      "Doanh nghiệp, cá nhân, tổ chức, hợp tác xã, hộ gia đình.",
+      "Doanh nghiệp, cá nhân có thuê mướn lao động, tổ chức, hợp tác xã, hộ gia đình.",
+      "Doanh nghiệp, cá nhân, cơ quan, tổ chức, hợp tác xã.",
+      "Doanh nghiệp, cơ quan, cá nhân có đầy đủ năng lực hành vi dân sự, tổ chức, hợp tác xã, hộ gia đình."
+    ],
+    "answer": "Doanh nghiệp, cá nhân có thuê mướn lao động, tổ chức, hợp tác xã, hộ gia đình."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 141: Khách thể của quan hệ lao động là?",
+    "options": [
+      "Sức lao động.",
+      "Tiền lương tiền công.",
+      "Công việc cần hoàn thành.",
+      "Sự quản lý của các bên tham gia quan hệ."
+    ],
+    "answer": "Sức lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 142: Tiêu chuẩn lao động là gì?",
+    "options": [
+      "Tập hợp những điều kiện lao động và sử dụng lao động tối thiểu được công nhận trong một phạm vi áp dụng nhất định.",
+      "Tập hợp những điều kiện và yếu tố tác động vào lao động và sử dụng lao động tối thiểu được công nhận trong một phạm vi áp dụng nhất định.",
+      "Tổng hợp các yếu tố tác động đến người lao động trong quá trình lao động ở không gian nhất định.",
+      "Tổng hợp các điều kiện và yếu tố tác động đến người lao động trong quá trình lao động ở không gian nhất định."
+    ],
+    "answer": "Tập hợp những điều kiện lao động và sử dụng lao động tối thiểu được công nhận trong một phạm vi áp dụng nhất định."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 143: Nếu hai bên thống nhất việc sửa đổi, bổ sung nội dung hợp đồng thì…",
+    "options": [
+      "Ký kết phụ lục hợp đồng lao động.",
+      "Ký kết phụ lục hợp đồng lao động và giao kết hợp đồng lao động mới.",
+      "Ký kết phụ lục hợp đồng lao động hoặc giao kết hợp đồng lao động mới.",
+      "Giao kết hợp đồng lao động mới."
+    ],
+    "answer": "Ký kết phụ lục hợp đồng lao động hoặc giao kết hợp đồng lao động mới."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 144: Nếu hai bên không thống nhất được nội dung sửa đổi, bổ sung của hợp đồng thì…",
+    "options": [
+      "Hai bên tạm hoãn thực hiện hợp đồng cho đến khi thống nhất.",
+      "Tiếp tục thực hiện hợp đồng lao động đã giao kết.",
+      "Hai bên ngừng thực hiện hợp đồng.",
+      "Hai bên tạm hoãn hợp đồng cho đến khi thống nhất nhưng tối đa không quá 30 ngày."
+    ],
+    "answer": "Tiếp tục thực hiện hợp đồng lao động đã giao kết."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 145: Công việc theo mùa vụ, công việc nhất định có thời hạn dưới 12 tháng thì nhóm người lao động từ đủ 18 tuổi trở lên có thể ủy quyền cho một người lao động trong nhóm để giao kết hợp đồng lao động…",
+    "options": [
+      "Hợp đồng lao động được giao kết bằng văn bản và có hiệu lực đối với người đại diện ký.",
+      "Hợp đồng lao động được giao kết bằng lời nói hoặc văn bản và có hiệu lực đối với người đại diện ký.",
+      "Hợp đồng lao động phải được giao kết bằng văn bản và có hiệu lực như giao kết với từng người lao động.",
+      "Hợp đồng lao động được giao kết bằng lời nói hoặc văn bản và có hiệu lực như giao kết với từng người lao động."
+    ],
+    "answer": "Hợp đồng lao động phải được giao kết bằng văn bản và có hiệu lực như giao kết với từng người lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 146: Chọn câu SAI về giao kết hợp đồng?",
+    "options": [
+      "Người sử dụng lao động có thể giao kết hợp đồng trước hoặc sau khi nhận người lao động vào làm việc.",
+      "Hợp đồng lao động được giao kết thông qua phương tiện điện tử dưới hình thức thông điệp dữ liệu có giá trị như hợp đồng lao động bằng văn bản.",
+      "Người lao động và người sử dụng lao động có thể thỏa thuận hợp đồng bằng tên gọi khác nhưng có nội dung thể hiện về việc làm có trả công, tiền lương và sự quản lý, điều hành, giám sát của một bên thì vẫn được coi là hợp đồng lao động.",
+      "Người lao động và người sử dụng lao động có thể giao kết hợp đồng lao động bằng lời nói đối với hợp đồng có thời hạn dưới 01 tháng."
+    ],
+    "answer": "Người sử dụng lao động có thể giao kết hợp đồng trước hoặc sau khi nhận người lao động vào làm việc."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 147: Người sử dụng lao động được ký bao nhiêu lần hợp đồng xác định thời hạn với người lao động?",
+    "options": [
+      "01 lần.",
+      "03 lần.",
+      "02 lần.",
+      "Không giới hạn."
+    ],
+    "answer": "02 lần."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 148: Điều nào CHƯA ĐÚNG về phụ lục hợp đồng…",
+    "options": [
+      "Phụ lục hợp đồng lao động sửa đổi, bổ sung một số điều, khoản của hợp đồng lao động thì phải ghi rõ nội dung điều, khoản sửa đổi, bổ sung và thời điểm có hiệu lực.",
+      "Là bộ phận của hợp đồng lao động và có hiệu lực như hợp đồng lao động.",
+      "Quy định chi tiết, sửa đổi, bổ sung một số điều, khoản của hợp đồng lao động nhưng không được sửa đổi thời hạn của hợp đồng lao động.",
+      "Là bộ phận của hợp đồng lao động và có hiệu lực thấp hơn hợp đồng lao động."
+    ],
+    "answer": "Là bộ phận của hợp đồng lao động và có hiệu lực thấp hơn hợp đồng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 149: Hành vi nào sau đây của người sử dụng lao động không đúng khi chuyển người lao động sang làm công việc khác so với hợp đồng lao động?",
+    "options": [
+      "Trả lương theo công việc cũ cho đến hết thời gian làm công việc mới nếu tiền lương công việc mới thấp hơn công việc cũ.",
+      "Trả lương không được thấp 85% công việc cũ và không thấp hơn mức lương tối thiểu.",
+      "Phải thông báo với người lao động trước khi chuyển họ làm công việc mới.",
+      "Trả lương theo công việc mới nếu công việc mới lương cao hơn công việc cũ."
+    ],
+    "answer": "Trả lương theo công việc mới nếu công việc mới lương cao hơn công việc cũ."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 150: Người sử dụng lao động có thể đơn phương chấm dứt hợp đồng lao động mà không phải báo trước cho người lao động nếu…",
+    "options": [
+      "Người lao động không có mặt tại nơi làm việc sau khi hết hạn tạm hoãn hợp đồng.",
+      "Người lao động đang nghỉ việc riêng.",
+      "Người lao động cung cấp không trung thực thông tin khi giao kết hợp đồng làm ảnh hưởng đến việc tuyển dụng người lao động.",
+      "Người lao động đủ tuổi nghỉ hưu."
+    ],
+    "answer": "Người lao động không có mặt tại nơi làm việc sau khi hết hạn tạm hoãn hợp đồng."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 151: Người giao kết hợp đồng lao động bên phía người lao động là người…",
+    "options": [
+      "Người lao động từ đủ 15 tuổi trở lên.",
+      "Người lao động từ đủ 14 tuổi trở lên.",
+      "Người lao động từ đủ 18 tuổi trở lên.",
+      "Người được ủy quyền lại từ người được ủy quyền giao kết hợp đồng lao động."
+    ],
+    "answer": "Người lao động từ đủ 18 tuổi trở lên."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 152: Chọn nhận định đúng về chi phí tuyển dụng?",
+    "options": [
+      "Người lao động không phải trả chi phí cho việc tuyển dụng.",
+      "Người lao động phải trả một khoản chi phí cho việc tuyển dụng.",
+      "Người lao động có thể phải trả một khoản chi phí nhỏ cho việc tuyển dụng.",
+      "Người lao động chỉ trả một khoản chi phí nhỏ cho việc tuyển dụng khi được yêu cầu."
+    ],
+    "answer": "Người lao động không phải trả chi phí cho việc tuyển dụng."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 153: Hành vi người sử dụng lao động KHÔNG được làm khi giao kết, thực hiện hợp đồng lao động…",
+    "options": [
+      "Giữ bản sao y giấy tờ tùy thân, văn bằng, chứng chỉ của người lao động.",
+      "Yêu cầu người lao động phải thực hiện biện pháp bảo đảm bằng tiền hoặc tài sản cho việc thực hiện hợp đồng lao động.",
+      "Ký hợp đồng với nhiều người lao động để thực hiện một công việc.",
+      "Yêu cầu người lao động bảo vệ bí mật kinh doanh, bảo vệ bí mật công nghệ."
+    ],
+    "answer": "Yêu cầu người lao động phải thực hiện biện pháp bảo đảm bằng tiền hoặc tài sản cho việc thực hiện hợp đồng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 154: Công việc nào KHÔNG được thực hiện cho thuê lại lao động?",
+    "options": [
+      "Giúp việc gia đình.",
+      "Biên tập tài liệu.",
+      "Lái xe và thư ký.",
+      "Hỗ trợ bán hàng và lễ tân."
+    ],
+    "answer": "Giúp việc gia đình."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 155: Khi thỏa ước lao động tập thể hết hạn mà các bên vẫn tiếp tục thương lượng thì…",
+    "options": [
+      "Quyền và nghĩa vụ của người lao động được thực hiện theo quy định của pháp luật.",
+      "Quyền và nghĩa vụ của người lao động được thực hiện theo thỏa ước lao động tập thể ngành.",
+      "Quyền và nghĩa vụ của người lao động được thực hiện theo thỏa ước lao động tập thể cũ nhưng không quá 90 ngày.",
+      "Quyền và nghĩa vụ của người lao động được thực hiện theo thỏa ước lao động tập thể có nhiều doanh nghiệp."
+    ],
+    "answer": "Quyền và nghĩa vụ của người lao động được thực hiện theo thỏa ước lao động tập thể cũ nhưng không quá 90 ngày."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 156: Nội dung nào sau đây CHƯA ĐÚNG về Thỏa ước lao động tập thể?",
+    "options": [
+      "Thỏa ước lao động tập thể vô hiệu từng phần khi một hoặc một số nội dung trong thỏa ước lao động tập thể vi phạm pháp luật.",
+      "Doanh nghiệp thành viên của thỏa ước lao động tập thể ngành, thỏa ước lao động tập thể có nhiều doanh nghiệp được rút khỏi thỏa ước lao động tập thể khi có khó khăn đặc biệt trong hoạt động sản xuất, kinh doanh.",
+      "Thỏa ước lao động tập thể vô hiệu toàn bộ khi không tuân thủ đúng quy trình thương lượng, ký kết thỏa ước lao động tập thể.",
+      "Thỏa ước lao động tập thể vô hiệu từng phần khi người ký kết không đúng thẩm quyền."
+    ],
+    "answer": "Thỏa ước lao động tập thể vô hiệu từng phần khi người ký kết không đúng thẩm quyền."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 157: Thẩm quyền tuyên bố thỏa ước lao động tập thể vô hiệu?",
+    "options": [
+      "Ủy ban nhân dân nơi doanh nghiệp đóng trụ sở.",
+      "Tòa án nhân dân.",
+      "Sở Lao động – Thương binh và Xã hội nơi doanh nghiệp đóng trụ sở.",
+      "Liên đoàn lao động nơi doanh nghiệp đóng trụ sở."
+    ],
+    "answer": "Tòa án nhân dân."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 158: Khi hợp đồng lao động xác định thời hạn hết hạn mà người lao động vẫn tiếp tục làm việc nếu quá 30 ngày kể từ ngày hợp đồng lao động hết hạn mà hai bên không ký kết hợp đồng lao động mới thì…",
+    "options": [
+      "Người sử dụng lao động có thể chấm dứt hợp đồng với người lao động.",
+      "Hợp đồng đã giao kết hết hiệu lực.",
+      "Hợp đồng đã giao kết tiếp tục có hiệu lực theo thời hạn đã giao kết.",
+      "Hợp đồng đã giao kết trở thành hợp đồng lao động không xác định thời hạn."
+    ],
+    "answer": "Hợp đồng đã giao kết trở thành hợp đồng lao động không xác định thời hạn."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 159: Nhận định nào sau đây đúng về ký kết hợp đồng?",
+    "options": [
+      "Người lao động chỉ được ký hợp đồng với một người sử dụng lao động.",
+      "Người lao động có thể ký hợp đồng với nhiều người sử dụng lao động nhưng tối đa không quá 03 người.",
+      "Người lao động có thể ký hợp đồng với nhiều người sử dụng lao động nhưng tối đa không quá 02 người nhằm đảm bảo đủ thời gian để thực hiện hợp đồng.",
+      "Người lao động có thể ký hợp đồng với nhiều người sử dụng lao động."
+    ],
+    "answer": "Người lao động có thể ký hợp đồng với nhiều người sử dụng lao động."
+  },
+  {
+    "type": "mc",
+    "question": "Câu 160: Phương án sử dụng lao động phải có những nội dung chủ yếu như…",
+    "options": [
+      "Cơ sở vật chất cần để triển khai phương án.",
+      "Mục tiêu của phương án.",
+      "Thời hạn thực hiện phương án.",
+      "Số lượng và danh sách người lao động nghỉ hưu."
+    ],
+    "answer": "Số lượng và danh sách người lao động nghỉ hưu."
+  }
+]
