@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Generator - Tự Động Tạo Bài Tập</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .option-btn { transition: all 0.2s; }
+        .option-btn:disabled { cursor: not-allowed; opacity: 0.9; }
+        .correct {
+            background-color: #dcfce7 !important; 
+            border-color: #22c55e !important;
+            color: #15803d; 
+            font-weight: 600;
+        }
+        .incorrect {
+            background-color: #fee2e2 !important; 
+            border-color: #ef4444 !important;
+            color: #b91c1c; 
+            font-weight: 600;
+        }
+        .tf-input { display: none; }
+        .tf-label {
+            cursor: pointer; 
+            padding: 0.75rem 1.5rem; 
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem; 
+            transition: all 0.2s;
+        }
+        .tf-input:checked + .tf-label {
+            background-color: #dbeafe; 
+            border-color: #3b82f6; 
+            font-weight: 600;
+        }
+        .quiz-card {
+            background-color: white; 
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem; 
+            padding: 1.5rem;
+        }
+        .input-section {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .tab-btn {
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            transition: all 0.3s;
+        }
+        .tab-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-7xl mx-auto">
+        <!-- HEADER + TABS - STICKY -->
+        <div class="sticky top-0 z-50 bg-gradient-to-r from-purple-600 to-blue-600 pb-3">
+            <!-- Header -->
+            <div class="text-center mb-3 pt-3">
+                <h1 class="text-2xl md:text-3xl font-bold text-white">
+                    <i class="fas fa-magic"></i> Quiz Generator
+                </h1>
+            </div>
+
+            <!-- Tabs -->
+            <div class="flex gap-2 flex-wrap justify-center">
+                <button id="tab-input" class="tab-btn active bg-white text-gray-700 text-sm py-2 px-3">
+                    <i class="fas fa-keyboard"></i> Nhập Dữ Liệu
+                </button>
+                <button id="tab-saved" class="tab-btn bg-white bg-opacity-20 text-white text-sm py-2 px-3">
+                    <i class="fas fa-folder-open"></i> Lưu Data
+                </button>
+                <button id="tab-quiz" class="tab-btn bg-white bg-opacity-20 text-white text-sm py-2 px-3">
+                    <i class="fas fa-graduation-cap"></i> Làm Bài Tập
+                </button>
+                <button id="tab-wrong" class="tab-btn bg-white bg-opacity-20 text-white text-sm py-2 px-3">
+                    <i class="fas fa-exclamation-triangle"></i> Câu Hay Sai
+                </button>
+                <button id="tab-redo" class="tab-btn bg-white bg-opacity-20 text-white text-sm py-2 px-3">
+                    <i class="fas fa-redo"></i> Làm Lại Câu Sai
+                </button>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+
+        <!-- Tab 1: Input Section -->
+        <div id="panel-input" class="input-section p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                <i class="fas fa-edit"></i> Nhập Dữ Liệu Câu Hỏi
+            </h2>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold mb-2">Tên Môn Học:</label>
+                <input type="text" id="subject-name" 
+                    class="w-full p-3 border-2 border-gray-300 rounded-lg"
+                    placeholder="Ví dụ: Lịch Sử 6, Địa Lí 6, KHTN 6...">
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold mb-2">Dán dữ liệu vào đây:</label>
+                <textarea id="input-data" 
+                    class="w-full h-96 p-4 border-2 border-gray-300 rounded-lg font-mono text-sm resize-y"
+                    placeholder="Paste code JavaScript hoặc text..."></textarea>
+            </div>
+
+            <div class="flex gap-3 flex-wrap">
+                <button id="btn-parse" class="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all">
+                    <i class="fas fa-cogs"></i> Phân Tích & Tạo Quiz
+                </button>
+                <button id="btn-clear" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all">
+                    <i class="fas fa-trash"></i> Xóa
+                </button>
+            </div>
+
+            <div id="parse-result" class="mt-4 hidden">
+                <div class="bg-green-50 border-l-4 border-green-500 p-4">
+                    <p class="font-semibold text-green-900">✅ Thành công!</p>
+                    <p class="text-green-800 text-sm mt-1" id="parse-stats"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 2: Quiz Section -->
+        <div id="panel-quiz" class="input-section p-6 md:p-8 hidden">
+            <!-- HEADER + TIẾN ĐỘ - STICKY -->
+            <div class="sticky top-[100px] z-10 bg-white pb-3 mb-4 shadow-md">
+                <div class="flex justify-between items-center mb-2 flex-wrap gap-2 pt-2">
+                    <h2 class="text-lg font-bold text-gray-800">
+                        <i class="fas fa-graduation-cap"></i> Bài Tập
+                    </h2>
+                    <div class="flex gap-2">
+                        <button id="btn-shuffle" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-1.5 px-3 rounded text-sm">
+                            <i class="fas fa-random"></i> Xáo trộn
+                        </button>
+                        <button id="btn-reset" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-1.5 px-3 rounded text-sm">
+                            <i class="fas fa-sync-alt"></i> Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- KHUNG TIẾN ĐỘ -->
+                <div class="bg-gradient-to-r from-blue-50 to-green-50 p-2.5 rounded border border-blue-300">
+                    <span id="progress-text" class="text-sm font-semibold text-gray-700">Đã hoàn thành: 0 / 0 | Câu sai: 0</span>
+                </div>
+            </div>
+
+            <div id="quiz-container">
+                <p class="text-center text-gray-500 italic">Chưa có câu hỏi.</p>
+            </div>
+        </div>
+
+        <!-- Tab 2: Saved Data -->
+        <div id="panel-saved" class="input-section p-6 md:p-8 hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                <i class="fas fa-folder-open"></i> Các Môn Đã Lưu
+            </h2>
+            
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 mb-4 flex justify-between items-center flex-wrap gap-2">
+                <p class="text-sm font-medium text-green-900">
+                    📚 Tổng cộng: <strong id="saved-count" class="text-green-600">0</strong> môn học
+                </p>
+                <div class="flex gap-2 flex-wrap">
+                    <button id="btn-import-url" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg text-sm">
+                        <i class="fas fa-sync-alt"></i> Load URL
+                    </button>
+                    <button id="btn-backup" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg text-sm">
+                        <i class="fas fa-download"></i> Tải Backup
+                    </button>
+                </div>
+            </div>
+            
+            <div id="saved-container" class="space-y-3">
+                <p class="text-center text-gray-500 italic">Chưa có môn nào được lưu.</p>
+            </div>
+        </div>
+
+        <!-- Tab 3: Wrong History -->
+        <div id="panel-wrong" class="input-section p-6 md:p-8 hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                <i class="fas fa-exclamation-triangle"></i> Những Câu Hay Sai
+            </h2>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4">
+                <p class="text-sm font-medium text-blue-900 mb-2">
+                    Đây là danh sách <strong id="wrong-count" class="text-red-600">0</strong> câu bạn đã từng làm sai.
+                </p>
+                <button id="btn-clear-history" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg shadow transition">
+                    <i class="fas fa-trash-alt"></i> Xóa Lịch Sử
+                </button>
+            </div>
+            
+            <div id="wrong-container">
+                <p class="text-center text-gray-500 italic">Chưa có câu nào sai.</p>
+            </div>
+        </div>
+
+        <!-- Tab 4: Redo Wrong Answers -->
+        <div id="panel-redo" class="input-section p-6 md:p-8 hidden">
+            <!-- HEADER + TIẾN ĐỘ - STICKY -->
+            <div class="sticky top-[100px] z-10 bg-white pb-3 mb-4 shadow-md">
+                <div class="flex justify-between items-center mb-2 flex-wrap gap-2 pt-2">
+                    <h2 class="text-lg font-bold text-gray-800">
+                        <i class="fas fa-redo"></i> Làm Lại Câu Sai
+                    </h2>
+                    <div class="flex gap-2">
+                        <button id="btn-shuffle-redo" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-1.5 px-3 rounded text-sm">
+                            <i class="fas fa-random"></i> Xáo trộn
+                        </button>
+                        <button id="btn-reset-redo" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-1.5 px-3 rounded text-sm">
+                            <i class="fas fa-sync-alt"></i> Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- KHUNG TIẾN ĐỘ -->
+                <div class="bg-gradient-to-r from-blue-50 to-green-50 p-2.5 rounded border border-blue-300">
+                    <span id="progress-text-redo" class="text-sm font-semibold text-gray-700">Đã hoàn thành: 0 / 0 | Câu sai: 0</span>
+                </div>
+            </div>
+
+            <div id="quiz-container-redo">
+                <p class="text-center text-gray-500 italic">Chưa có câu sai để làm lại.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let quizData = [];
+        let originalQuizData = []; // Lưu bản gốc để reset
+        let questionStatus = [];
+        let selectedAnswers = []; // LƯU ĐÁP ÁN ĐÃ CHỌN
+        let wrongHistory = new Set(); // Lưu index câu sai
+        let redoQuiz = null;
+        let currentSubject = ''; // Tên môn đang làm
+
+        function showTab(tabName) {
+            console.log('🔄 Chuyển sang tab:', tabName);
+            
+            document.getElementById('panel-input').classList.add('hidden');
+            document.getElementById('panel-saved').classList.add('hidden');
+            document.getElementById('panel-quiz').classList.add('hidden');
+            document.getElementById('panel-wrong').classList.add('hidden');
+            document.getElementById('panel-redo').classList.add('hidden');
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                btn.classList.add('bg-white', 'bg-opacity-20', 'text-white');
+            });
+
+            document.getElementById(`panel-${tabName}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`tab-${tabName}`);
+            activeBtn.classList.add('active');
+            activeBtn.classList.remove('bg-white', 'bg-opacity-20', 'text-white');
+
+            if (tabName === 'saved') {
+                renderSavedSubjects();
+            } else if (tabName === 'quiz') {
+                console.log('📝 Render quiz với', quizData.length, 'câu');
+                renderQuiz();
+            } else if (tabName === 'wrong') {
+                renderWrongHistory();
+            } else if (tabName === 'redo') {
+                renderRedoQuiz();
+            }
+        }
+        
+        function renderSavedSubjects() {
+            console.log('🎨 RENDER SAVED SUBJECTS...');
+            const container = document.getElementById('saved-container');
+            const subjects = JSON.parse(localStorage.getItem('savedSubjects') || '{}');
+            const count = Object.keys(subjects).length;
+            
+            console.log('📊 Có', count, 'môn học:', Object.keys(subjects));
+            
+            document.getElementById('saved-count').textContent = count;
+            
+            container.innerHTML = '';
+            
+            if (count === 0) {
+                container.innerHTML = '<p class="text-center text-gray-500 italic">Chưa có môn nào được lưu.</p>';
+                return;
+            }
+            
+            Object.keys(subjects).forEach(subjectName => {
+                console.log('➕ Tạo card cho môn:', subjectName);
+                
+                const card = document.createElement('div');
+                card.className = 'bg-white p-4 rounded-lg border-2 border-gray-200 hover:border-blue-500 cursor-pointer transition-all flex justify-between items-center';
+                
+                const info = document.createElement('div');
+                info.className = 'flex-1 cursor-pointer';
+                info.onclick = () => {
+                    console.log('🖱️ CLICK VÀO MÔN:', subjectName);
+                    loadSubject(subjectName);
+                };
+                info.innerHTML = `
+                    <h3 class="text-lg font-bold text-gray-800">📚 ${subjectName}</h3>
+                    <p class="text-sm text-gray-600">${subjects[subjectName].length} câu hỏi</p>
+                `;
+                
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg';
+                deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
+                deleteBtn.onclick = (e) => {
+                    console.log('🗑️ CLICK XÓA MÔN:', subjectName);
+                    e.stopPropagation();
+                    if (confirm(`Xóa môn "${subjectName}"?`)) {
+                        delete subjects[subjectName];
+                        localStorage.setItem('savedSubjects', JSON.stringify(subjects));
+                        renderSavedSubjects();
+                    }
+                };
+                
+                card.appendChild(info);
+                card.appendChild(deleteBtn);
+                container.appendChild(card);
+            });
+            
+            console.log('✅ Render xong', count, 'cards');
+        }
+        
+        function loadSubject(subjectName) {
+            console.log('🔵 Click vào môn:', subjectName);
+            
+            const subjects = JSON.parse(localStorage.getItem('savedSubjects') || '{}');
+            console.log('📂 Danh sách môn:', Object.keys(subjects));
+            
+            if (!subjects[subjectName]) {
+                alert('Môn học không tồn tại!');
+                console.error('❌ Không tìm thấy môn:', subjectName);
+                return;
+            }
+            
+            currentSubject = subjectName;
+            quizData = subjects[subjectName];
+            originalQuizData = JSON.parse(JSON.stringify(quizData));
+            localStorage.setItem('originalQuizData', JSON.stringify(originalQuizData));
+            
+            console.log('✅ Loaded:', quizData.length, 'câu hỏi');
+            console.log('📝 Câu đầu tiên:', quizData[0]);
+            
+            localStorage.setItem('quizData', JSON.stringify(quizData));
+            
+            // CHỈ RESET TIẾN ĐỘ NẾU LOAD MÔN MỚI (khác môn hiện tại)
+            const previousSubject = localStorage.getItem('currentSubject');
+            if (previousSubject !== subjectName) {
+                console.log('🆕 Load môn mới, reset tiến độ');
+                questionStatus = new Array(quizData.length).fill(null);
+                selectedAnswers = new Array(quizData.length).fill(null);
+                localStorage.removeItem('quizProgress');
+                localStorage.removeItem('selectedAnswers');
+                wrongHistory.clear();
+                localStorage.removeItem('wrongHistory');
+            } else {
+                console.log('♻️ Load lại môn đang làm, giữ nguyên tiến độ');
+            }
+            
+            localStorage.setItem('currentSubject', subjectName);
+            
+            console.log('📖 Đã load môn:', subjectName, '(' + quizData.length + ' câu)');
+            console.log('� Chuyển sang tab Quiz và render...');
+            
+            // Đảm bảo chuyển tab VÀ render
+            showTab('quiz');
+        }
+
+        // Thêm originalIndex để track câu sai
+        function addOriginalIndex(questions) {
+            return questions.map((q, idx) => ({
+                ...q,
+                originalIndex: idx
+            }));
+        }
+
+        function parseQuizData(text) {
+            console.log('🔍 Bắt đầu phân tích...');
+            console.log('📄 Dữ liệu gốc (50 ký tự đầu):', text.substring(0, 50));
+            
+            let trimmedText = text.trim();
+            
+            // Bước 1: Loại bỏ comments
+            console.log('📝 Loại bỏ comments...');
+            trimmedText = trimmedText.split('\n').map(line => {
+                const idx = line.indexOf('//');
+                if (idx !== -1) {
+                    const before = line.substring(0, idx);
+                    const sq = (before.match(/'/g) || []).length;
+                    const dq = (before.match(/"/g) || []).length;
+                    if (sq % 2 === 0 && dq % 2 === 0) return before;
+                }
+                return line;
+            }).join('\n');
+            
+            // Bước 2: Xử lý JavaScript format
+            if (trimmedText.includes("type:")) {
+                console.log('✅ Phát hiện format JavaScript');
+                
+                try {
+                    let js = trimmedText.trim();
+                    
+                    // Chuẩn hóa code
+                    console.log('🔧 Chuẩn hóa code...');
+                    
+                    // Xóa dấu chấm phẩy và ngoặc vuông thừa ở cuối
+                    js = js.replace(/\]\s*;?\s*$/g, '');  // Xóa ]; hoặc ] ở cuối
+                    js = js.replace(/;+\s*$/g, '');       // Xóa ; ở cuối
+                    
+                    // Xóa dấu phẩy thừa cuối mảng/object
+                    js = js.replace(/,(\s*[\]}])/g, '$1');
+                    
+                    // Thêm dấu phẩy thiếu giữa các object
+                    js = js.replace(/\}\s*\{/g, '},{');
+                    
+                    // Wrap thành array nếu chưa có
+                    if (!js.startsWith('[')) {
+                        console.log('📦 Wrap thành array...');
+                        js = '[' + js;
+                    }
+                    
+                    // Đóng ngoặc vuông nếu thiếu
+                    if (!js.endsWith(']')) {
+                        js = js + ']';
+                    }
+                    
+                    // Xử lý dấu ngoặc kép trong string
+                    js = js.replace(/(['"])(.*?)\1/g, function(match, quote, content) {
+                        // Escape các ký tự đặc biệt trong string
+                        return quote + content + quote;
+                    });
+                    
+                    console.log('🚀 Đang parse...');
+                    let parsed = eval('(' + js + ')');
+                    
+                    console.log('📦 Kết quả parse:', parsed.length, 'câu');
+                    if (parsed.length > 0) {
+                        console.log('🔍 Câu đầu tiên:', JSON.stringify(parsed[0], null, 2));
+                    }
+                    
+                    if (Array.isArray(parsed) && parsed.length > 0) {
+                        console.log('✅ Thành công! Parsed ' + parsed.length + ' câu hỏi');
+                        return addOriginalIndex(parsed);
+                    }
+                } catch (e) {
+                    console.error('❌ Lỗi eval():', e.message);
+                    console.log('🔄 Thử phương pháp dự phòng...');
+                    
+                    // Phương pháp dự phòng: Parse từng object riêng lẻ
+                    try {
+                        const objects = [];
+                        const regex = /\{\s*type:\s*['"]mc['"],[\s\S]*?\}/g;
+                        const tfRegex = /\{\s*type:\s*['"]tf['"],[\s\S]*?\]\s*\}/g;
+                        const fillRegex = /\{\s*type:\s*['"]fill['"],[\s\S]*?\]\s*\}/g;
+                        const shortRegex = /\{\s*type:\s*['"]short['"],[\s\S]*?\}/g;
+                        
+                        let matches = trimmedText.match(regex) || [];
+                        let tfMatches = trimmedText.match(tfRegex) || [];
+                        let fillMatches = trimmedText.match(fillRegex) || [];
+                        let shortMatches = trimmedText.match(shortRegex) || [];
+                        
+                        console.log('📊 Tìm thấy ' + matches.length + ' MC + ' + tfMatches.length + ' TF + ' + fillMatches.length + ' FILL + ' + shortMatches.length + ' SHORT');
+                        
+                        [...matches, ...tfMatches, ...fillMatches, ...shortMatches].forEach((objStr, idx) => {
+                            try {
+                                // Chuẩn hóa từng object
+                                objStr = objStr.replace(/,(\s*[\]}])/g, '$1');
+                                const obj = eval('(' + objStr + ')');
+                                objects.push(obj);
+                            } catch (err) {
+                                console.warn('⚠️ Bỏ qua object #' + (idx+1) + ':', err.message);
+                            }
+                        });
+                        
+                        if (objects.length > 0) {
+                            console.log('✅ Parsed ' + objects.length + ' câu qua phương pháp dự phòng');
+                            return addOriginalIndex(objects);
+                        }
+                    } catch (fallbackErr) {
+                        console.error('❌ Phương pháp dự phòng thất bại:', fallbackErr.message);
+                    }
+                    
+                    alert('❌ Không thể parse!\n\n' + e.message + '\n\nVui lòng:\n1. Mở Console (F12)\n2. Kiểm tra lỗi chi tiết\n3. Sửa cú pháp JavaScript');
+                    return [];
+                }
+            }
+            
+            // Text format fallback
+            console.log('📝 Thử parse text format...');
+            
+            // Tách câu hỏi dựa trên pattern "số. Câu số."
+            const questionPattern = /(\d+\.\s*Câu\s*\d+\..*?)(?=\d+\.\s*Câu\s*\d+\.|$)/gs;
+            let textMatches = text.match(questionPattern);
+            
+            if (!textMatches) {
+                // Fallback: tách theo dòng trống
+                textMatches = text.split(/\n\s*\n+/).filter(b => b.trim());
+            }
+            
+            console.log('📊 Tìm thấy', textMatches ? textMatches.length : 0, 'block text');
+            
+            const questions = [];
+
+            (textMatches || []).forEach((block, blockIdx) => {
+                console.log(`\n🔍 Block ${blockIdx + 1}:`, block.substring(0, 100));
+                
+                const lines = block.split('\n').map(l => l.trim()).filter(l => l);
+                if (lines.length === 0) return;
+
+                // KHÔNG XÓA SỐ NỮA - giữ nguyên câu hỏi
+                let question = lines[0];  // GIỮ NGUYÊN
+                
+                // Tách câu hỏi và đáp án dựa trên uppercase letters liên tiếp
+                const optionsMatch = block.match(/([A-D][^A-D]+)/g);
+                
+                if (optionsMatch && optionsMatch.length >= 2) {
+                    const options = optionsMatch.map(o => o.trim());
+                    // Đáp án đầu tiên (giả định)
+                    const answer = options[0];
+                    
+                    console.log('✅ Tìm thấy MC:', question);
+                    console.log('   Options:', options.length);
+                    
+                    questions.push({ type: 'mc', question, options, answer });
+                }
+                
+                const hasStmt = lines.some(l => /^[a-z][\.\)]\s*.+\((Đúng|Sai)\)/i.test(l));
+                const hasAns = lines.some(l => /^(Đáp án|Answer):/i.test(l));
+                const hasOpt = lines.some(l => /^[A-D][\.\)]\s+/i.test(l));
+
+                if (hasStmt) {
+                    const statements = [];
+                    lines.slice(1).forEach(line => {
+                        const m = line.match(/^[a-z][\.\)]\s*(.+?)\s*\((Đúng|Sai)\)/i);
+                        if (m) {
+                            statements.push({
+                                text: m[1].trim(),
+                                answer: m[2].toLowerCase() === 'đúng'
+                            });
+                        }
+                    });
+                    if (statements.length > 0) {
+                        questions.push({ type: 'tf', question, statements });
+                    }
+                } else if (hasOpt && hasAns) {
+                    const options = [];
+                    let answerText = '';
+                    lines.slice(1).forEach(line => {
+                        const om = line.match(/^([A-D])[\.\)]\s+(.+)/i);
+                        if (om) options.push(om[2].trim());
+                        const am = line.match(/^(Đáp án|Answer):\s*(.+)/i);
+                        if (am) answerText = am[2].trim();
+                    });
+                    let answer = answerText;
+                    const al = answerText.match(/^([A-D])/i);
+                    if (al) {
+                        const idx = al[1].toUpperCase().charCodeAt(0) - 65;
+                        answer = options[idx] || answerText;
+                    }
+                    if (options.length > 0) {
+                        questions.push({ type: 'mc', question, options, answer });
+                    }
+                } else {
+                    questions.push({ type: 'short', question, keywords: [], explanation: 'Tự luận' });
+                }
+            });
+
+            return questions;
+        }
+
+        function renderWrongHistory() {
+            const container = document.getElementById('wrong-container');
+            container.innerHTML = '';
+            document.getElementById('wrong-count').textContent = wrongHistory.size;
+            
+            if (wrongHistory.size === 0) {
+                container.innerHTML = '<p class="text-center text-gray-500 italic">Tuyệt vời! Bạn chưa làm sai câu nào.</p>';
+                return;
+            }
+
+            Array.from(wrongHistory).forEach(idx => {
+                const q = quizData[idx];
+                if (!q) return;
+
+                const card = document.createElement('div');
+                card.className = 'quiz-card';
+                
+                const title = document.createElement('h3');
+                title.className = 'text-xl font-semibold mb-4 text-gray-800';
+                title.textContent = q.question;
+                card.appendChild(title);
+
+                if (q.type === 'mc') {
+                    q.options.forEach(opt => {
+                        const div = document.createElement('div');
+                        div.className = 'p-3 border rounded-lg mb-2';
+                        if (opt === q.answer) {
+                            div.className += ' border-green-500 bg-green-50 font-semibold text-green-900';
+                            div.innerHTML = `✓ ${opt}`;
+                        } else {
+                            div.textContent = opt;
+                        }
+                        card.appendChild(div);
+                    });
+                } else if (q.type === 'tf') {
+                    q.statements.forEach(s => {
+                        const div = document.createElement('div');
+                        div.className = 'p-3 border rounded-lg mb-2';
+                        div.innerHTML = `<strong>${s.text}:</strong> ${s.answer ? '✓ Đúng' : '✗ Sai'}`;
+                        card.appendChild(div);
+                    });
+                }
+                
+                container.appendChild(card);
+            });
+        }
+
+        function renderRedoQuiz() {
+            const container = document.getElementById('quiz-container-redo');
+            container.innerHTML = '';
+            
+            // Lấy câu sai và sắp xếp theo thứ tự ban đầu (originalIndex)
+            const redoData = quizData
+                .map((q, idx) => ({...q, currentIndex: idx}))
+                .filter((q) => wrongHistory.has(q.currentIndex))
+                .sort((a, b) => a.originalIndex - b.originalIndex); // Sắp xếp theo thứ tự gốc
+            
+            if (redoData.length === 0) {
+                container.innerHTML = '<p class="text-center text-gray-500 italic">Chưa có câu sai để làm lại.</p>';
+                return;
+            }
+
+            redoQuiz = {
+                data: JSON.parse(JSON.stringify(redoData)),
+                originalData: JSON.parse(JSON.stringify(redoData)), // Lưu bản gốc để reset
+                status: new Array(redoData.length).fill(null),
+                score: 0
+            };
+
+            redoQuiz.data.forEach((q, i) => {
+                const card = document.createElement('div');
+                card.className = 'quiz-card';
+                
+                const title = document.createElement('h3');
+                title.className = 'text-xl font-semibold mb-4 text-gray-800';
+                title.textContent = q.question;
+                card.appendChild(title);
+
+                if (q.type === 'mc') {
+                    q.options.forEach(opt => {
+                        const btn = document.createElement('button');
+                        btn.textContent = opt;
+                        btn.className = 'option-btn w-full text-left p-4 my-2 rounded-lg border border-gray-300 hover:bg-gray-100';
+                        btn.onclick = () => {
+                            if (redoQuiz.status[i] !== null) return;
+                            card.querySelectorAll('.option-btn').forEach(b => {
+                                b.disabled = true;
+                                if (b.textContent === q.answer) b.classList.add('correct');
+                            });
+                            if (opt === q.answer) {
+                                btn.classList.add('correct');
+                                redoQuiz.status[i] = 'correct';
+                                redoQuiz.score++;
+                            } else {
+                                btn.classList.add('incorrect');
+                                redoQuiz.status[i] = 'incorrect';
+                            }
+                            updateRedoProgress();
+                        };
+                        card.appendChild(btn);
+                    });
+                } else if (q.type === 'tf') {
+                    q.statements.forEach((s, si) => {
+                        const g = document.createElement('div');
+                        g.className = 'p-4 border rounded-lg mb-3';
+                        g.innerHTML = `<p class="mb-3 font-medium">${s.text}</p>
+                        <div class="flex gap-4">
+                            <input type="radio" id="redo-tf-${i}-${si}-t" name="redo-tf-${i}-${si}" value="true" class="tf-input">
+                            <label for="redo-tf-${i}-${si}-t" class="tf-label">Đúng</label>
+                            <input type="radio" id="redo-tf-${i}-${si}-f" name="redo-tf-${i}-${si}" value="false" class="tf-input">
+                            <label for="redo-tf-${i}-${si}-f" class="tf-label">Sai</label>
+                        </div>`;
+                        card.appendChild(g);
+                    });
+                    const btn = document.createElement('button');
+                    btn.textContent = 'Kiểm tra';
+                    btn.className = 'mt-4 bg-blue-600 text-white font-bold py-2 px-6 rounded-lg';
+                    btn.onclick = () => {
+                        if (redoQuiz.status[i] !== null) return;
+                        let ok = true;
+                        q.statements.forEach((s, si) => {
+                            const sel = card.querySelector(`input[name='redo-tf-${i}-${si}']:checked`);
+                            const tl = card.querySelector(`label[for='redo-tf-${i}-${si}-t']`);
+                            const fl = card.querySelector(`label[for='redo-tf-${i}-${si}-f']`);
+                            if (s.answer) {
+                                tl.classList.add('correct');
+                                if (sel && sel.value === 'false') { fl.classList.add('incorrect'); ok = false; }
+                            } else {
+                                fl.classList.add('correct');
+                                if (sel && sel.value === 'true') { tl.classList.add('incorrect'); ok = false; }
+                            }
+                        });
+                        redoQuiz.status[i] = ok ? 'correct' : 'incorrect';
+                        if (ok) redoQuiz.score++;
+                        btn.style.display = 'none';
+                        updateRedoProgress();
+                    };
+                    card.appendChild(btn);
+                } else if (q.type === 'fill') {
+                    // ĐIỀN VÀO CHỖ TRỐNG (REDO)
+                    const fillContainer = document.createElement('div');
+                    fillContainer.className = 'space-y-4';
+                    
+                    q.fills.forEach((fillItem, fi) => {
+                        const fillRow = document.createElement('div');
+                        fillRow.className = 'flex items-center gap-3 p-3 bg-gray-50 rounded-lg';
+                        
+                        const questionText = document.createElement('span');
+                        questionText.className = 'font-medium flex-shrink-0';
+                        questionText.textContent = fillItem.q;
+                        fillRow.appendChild(questionText);
+                        
+                        const input = document.createElement('input');
+                        input.type = 'text';
+                        input.className = 'fill-input flex-1 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500';
+                        input.placeholder = '___';
+                        input.dataset.answer = fillItem.a;
+                        input.dataset.fillIndex = fi;
+                        fillRow.appendChild(input);
+                        
+                        if (fillItem.s) {
+                            const suffix = document.createElement('span');
+                            suffix.className = 'font-medium flex-shrink-0';
+                            suffix.textContent = fillItem.s;
+                            fillRow.appendChild(suffix);
+                        }
+                        
+                        fillContainer.appendChild(fillRow);
+                    });
+                    
+                    card.appendChild(fillContainer);
+                    
+                    const btn = document.createElement('button');
+                    btn.textContent = 'Kiểm tra';
+                    btn.className = 'mt-4 bg-blue-600 text-white font-bold py-2 px-6 rounded-lg';
+                    btn.onclick = () => {
+                        if (redoQuiz.status[i] !== null) return;
+                        
+                        let allCorrect = true;
+                        const inputs = card.querySelectorAll('.fill-input');
+                        
+                        inputs.forEach(input => {
+                            const userAnswer = input.value.trim();
+                            const correctAnswer = input.dataset.answer;
+                            
+                            input.disabled = true;
+                            
+                            if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                                input.classList.add('border-green-500', 'bg-green-50');
+                            } else {
+                                input.classList.add('border-red-500', 'bg-red-50');
+                                allCorrect = false;
+                                
+                                const correctLabel = document.createElement('span');
+                                correctLabel.className = 'text-sm text-green-600 font-medium ml-2';
+                                correctLabel.textContent = `(Đáp án: ${correctAnswer})`;
+                                input.parentElement.appendChild(correctLabel);
+                            }
+                        });
+                        
+                        redoQuiz.status[i] = allCorrect ? 'correct' : 'incorrect';
+                        if (allCorrect) redoQuiz.score++;
+                        btn.style.display = 'none';
+                        updateRedoProgress();
+                    };
+                    card.appendChild(btn);
+                } else if (q.type === 'short') {
+                    // TỰ LUẬN (REDO)
+                    const ta = document.createElement('textarea');
+                    ta.className = 'w-full h-32 p-3 border rounded-lg';
+                    ta.placeholder = 'Nhập câu trả lời của bạn...';
+                    card.appendChild(ta);
+                    
+                    const resultDiv = document.createElement('div');
+                    resultDiv.className = 'mt-3 hidden';
+                    card.appendChild(resultDiv);
+                    
+                    const btn = document.createElement('button');
+                    btn.textContent = 'Kiểm tra';
+                    btn.className = 'mt-4 bg-blue-600 text-white font-bold py-2 px-6 rounded-lg';
+                    btn.onclick = () => {
+                        if (redoQuiz.status[i] !== null) return;
+                        
+                        const userAnswer = ta.value.trim().toLowerCase();
+                        ta.disabled = true;
+                        btn.disabled = true;
+                        
+                        if (q.keywords && q.keywords.length > 0) {
+                            const foundKeywords = q.keywords.filter(kw => 
+                                userAnswer.includes(kw.toLowerCase())
+                            );
+                            
+                            const score = foundKeywords.length;
+                            const total = q.keywords.length;
+                            const percentage = (score / total) * 100;
+                            
+                            resultDiv.classList.remove('hidden');
+                            
+                            if (percentage >= 60) {
+                                resultDiv.className = 'mt-3 p-4 bg-green-50 border border-green-300 rounded-lg';
+                                resultDiv.innerHTML = `
+                                    <p class="text-green-700 font-semibold mb-2">✅ Câu trả lời tốt! (${score}/${total} từ khóa)</p>
+                                    ${q.explanation ? `<p class="text-sm text-gray-700"><strong>Đáp án mẫu:</strong><br>${q.explanation}</p>` : ''}
+                                `;
+                                redoQuiz.status[i] = 'correct';
+                                redoQuiz.score++;
+                            } else {
+                                resultDiv.className = 'mt-3 p-4 bg-yellow-50 border border-yellow-300 rounded-lg';
+                                resultDiv.innerHTML = `
+                                    <p class="text-yellow-700 font-semibold mb-2">⚠️ Câu trả lời chưa đầy đủ (${score}/${total} từ khóa)</p>
+                                    <p class="text-sm text-gray-700 mb-2"><strong>Từ khóa cần có:</strong> ${q.keywords.join(', ')}</p>
+                                    ${q.explanation ? `<p class="text-sm text-gray-700"><strong>Đáp án mẫu:</strong><br>${q.explanation}</p>` : ''}
+                                `;
+                                redoQuiz.status[i] = 'incorrect';
+                            }
+                        } else {
+                            resultDiv.classList.remove('hidden');
+                            resultDiv.className = 'mt-3 p-4 bg-blue-50 border border-blue-300 rounded-lg';
+                            resultDiv.innerHTML = `
+                                <p class="text-blue-700 font-semibold mb-2">📝 Đã hoàn thành</p>
+                                ${q.explanation ? `<p class="text-sm text-gray-700"><strong>Đáp án mẫu:</strong><br>${q.explanation}</p>` : ''}
+                            `;
+                            redoQuiz.status[i] = 'completed';
+                        }
+                        
+                        btn.style.display = 'none';
+                        updateRedoProgress();
+                    };
+                    card.appendChild(btn);
+                }
+                
+                container.appendChild(card);
+            });
+
+            updateRedoProgress();
+        }
+
+        function updateRedoProgress() {
+            if (!redoQuiz) return;
+            const done = redoQuiz.status.filter(s => s !== null).length;
+            const wrong = redoQuiz.status.filter(s => s === 'incorrect').length;
+            document.getElementById('progress-text-redo').textContent = `Đã hoàn thành: ${done} / ${redoQuiz.data.length} | Câu sai: ${wrong}`;
+        }
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = '';
+            if (quizData.length === 0) {
+                container.innerHTML = '<p class="text-center text-gray-500 italic">Chưa có câu hỏi.</p>';
+                return;
+            }
+            
+            // Load tiến độ đã lưu
+            const savedProgress = localStorage.getItem('quizProgress');
+            const savedAnswers = localStorage.getItem('selectedAnswers');
+            
+            if (savedProgress) {
+                questionStatus = JSON.parse(savedProgress);
+                console.log('📥 Đã load tiến độ:', questionStatus.length, 'câu');
+            } else {
+                questionStatus = new Array(quizData.length).fill(null);
+            }
+            
+            if (savedAnswers) {
+                selectedAnswers = JSON.parse(savedAnswers);
+                console.log('📥 Đã load đáp án:', selectedAnswers.length, 'câu');
+            } else {
+                selectedAnswers = new Array(quizData.length).fill(null);
+            }
+            
+            quizData.forEach((q, i) => {
+                const card = document.createElement('div');
+                card.className = 'quiz-card';
+                const title = document.createElement('h3');
+                title.className = 'text-xl font-semibold mb-4 text-gray-800';
+                title.textContent = q.question;  // KHÔNG thêm số nữa
+                card.appendChild(title);
+                
+                if (q.type === 'mc') {
+                    q.options.forEach(opt => {
+                        const btn = document.createElement('button');
+                        btn.textContent = opt;
+                        btn.className = 'option-btn w-full text-left p-4 my-2 rounded-lg border border-gray-300 hover:bg-gray-100';
+                        
+                        // KHÔI PHỤC TRẠNG THÁI ĐÃ CHỌN
+                        if (questionStatus[i] !== null) {
+                            btn.disabled = true;
+                            
+                            // Hiển thị đáp án đúng (luôn hiện)
+                            if (opt === q.answer) {
+                                btn.classList.add('correct');
+                            }
+                            
+                            // Hiển thị đáp án đã chọn SAI (chỉ khi chọn sai)
+                            if (opt === selectedAnswers[i] && opt !== q.answer) {
+                                btn.classList.add('incorrect');
+                            }
+                        }
+                        
+                        btn.onclick = () => {
+                            if (questionStatus[i] !== null) return;
+                            card.querySelectorAll('.option-btn').forEach(b => {
+                                b.disabled = true;
+                                if (b.textContent === q.answer) b.classList.add('correct');
+                            });
+                            
+                            // LƯU ĐÁP ÁN ĐÃ CHỌN
+                            selectedAnswers[i] = opt;
+                            
+                            if (opt === q.answer) {
+                                btn.classList.add('correct');
+                                questionStatus[i] = 'correct';
+                            } else {
+                                btn.classList.add('incorrect');
+                                questionStatus[i] = 'incorrect';
+                                wrongHistory.add(i); // Thêm vào lịch sử sai
+                                localStorage.setItem('wrongHistory', JSON.stringify(Array.from(wrongHistory)));
+                            }
+                            updateProgress();
+                        };
+                        card.appendChild(btn);
+                    });
+                } else if (q.type === 'tf') {
+                    q.statements.forEach((s, si) => {
+                        const g = document.createElement('div');
+                        g.className = 'p-4 border rounded-lg mb-3';
+                        g.innerHTML = `<p class="mb-3 font-medium">${s.text}</p>
+                        <div class="flex gap-4">
+                            <input type="radio" id="tf-${i}-${si}-t" name="tf-${i}-${si}" value="true" class="tf-input">
+                            <label for="tf-${i}-${si}-t" class="tf-label">Đúng</label>
+                            <input type="radio" id="tf-${i}-${si}-f" name="tf-${i}-${si}" value="false" class="tf-input">
+                            <label for="tf-${i}-${si}-f" class="tf-label">Sai</label>
+                        </div>`;
+                        card.appendChild(g);
+                        
+                        // KHÔI PHỤC LỰA CHỌN ĐÃ CHỌN
+                        if (questionStatus[i] !== null && selectedAnswers[i] && Array.isArray(selectedAnswers[i])) {
+                            const userChoice = selectedAnswers[i][si];
+                            if (userChoice !== undefined) {
+                                const radio = card.querySelector(`input[name='tf-${i}-${si}'][value='${userChoice}']`);
+                                if (radio) {
+                                    radio.checked = true;
+                                    radio.disabled = true;
+                                    card.querySelector(`input[name='tf-${i}-${si}'][value='${!userChoice}']`).disabled = true;
+                                }
+                            }
+                            
+                            const tl = card.querySelector(`label[for='tf-${i}-${si}-t']`);
+                            const fl = card.querySelector(`label[for='tf-${i}-${si}-f']`);
+                            
+                            if (s.answer) {
+                                tl.classList.add('correct');
+                                if (userChoice === false) {
+                                    fl.classList.add('incorrect');
+                                }
+                            } else {
+                                fl.classList.add('correct');
+                                if (userChoice === true) {
+                                    tl.classList.add('incorrect');
+                                }
+                            }
+                        }
+                    });
+                    const btn = document.createElement('button');
+                    btn.textContent = 'Kiểm tra';
+                    btn.className = 'mt-4 bg-blue-600 text-white font-bold py-2 px-6 rounded-lg';
+                    
+                    // ẨN NÚT NẾU ĐÃ HOÀN THÀNH
+                    if (questionStatus[i] !== null) {
+                        btn.style.display = 'none';
+                    }
+                    
+                    btn.onclick = () => {
+                        if (questionStatus[i] !== null) return;
+                        
+                        let ok = true;
+                        const userAnswers = [];
+                        
+                        q.statements.forEach((s, si) => {
+                            const sel = card.querySelector(`input[name='tf-${i}-${si}']:checked`);
+                            const tl = card.querySelector(`label[for='tf-${i}-${si}-t']`);
+                            const fl = card.querySelector(`label[for='tf-${i}-${si}-f']`);
+                            
+                            // LƯU LỰA CHỌN
+                            userAnswers.push(sel ? sel.value === 'true' : null);
+                            
+                            if (s.answer) {
+                                tl.classList.add('correct');
+                                if (sel && sel.value === 'false') { fl.classList.add('incorrect'); ok = false; }
+                            } else {
+                                fl.classList.add('correct');
+                                if (sel && sel.value === 'true') { tl.classList.add('incorrect'); ok = false; }
+                            }
+                            
+                            // Disable inputs
+                            if (sel) {
+                                card.querySelectorAll(`input[name='tf-${i}-${si}']`).forEach(r => r.disabled = true);
+                            }
+                        });
+                        
+                        selectedAnswers[i] = userAnswers; // LƯU ĐÁP ÁN
+                        questionStatus[i] = ok ? 'correct' : 'incorrect';
+                        if (!ok) {
+                            wrongHistory.add(i);
+                            localStorage.setItem('wrongHistory', JSON.stringify(Array.from(wrongHistory)));
+                        }
+                        btn.style.display = 'none';
+                        updateProgress();
+                    };
+                    card.appendChild(btn);
+                } else if (q.type === 'fill') {
+                    // ĐIỀN VÀO CHỖ TRỐNG
+                    const fillContainer = document.createElement('div');
+                    fillContainer.className = 'space-y-4';
+                    
+                    q.fills.forEach((fillItem, fi) => {
+                        const fillRow = document.createElement('div');
+                        fillRow.className = 'flex items-center gap-3 p-3 bg-gray-50 rounded-lg';
+                        
+                        // Phần câu hỏi
+                        const questionText = document.createElement('span');
+                        questionText.className = 'font-medium flex-shrink-0';
+                        questionText.textContent = fillItem.q;
+                        fillRow.appendChild(questionText);
+                        
+                        // Input điền đáp án
+                        const input = document.createElement('input');
+                        input.type = 'text';
+                        input.className = 'fill-input flex-1 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500';
+                        input.placeholder = '___';
+                        input.dataset.answer = fillItem.a;
+                        input.dataset.fillIndex = fi;
+                        
+                        // KHÔI PHỤC GIÁ TRỊ ĐÃ NHẬP
+                        if (questionStatus[i] !== null && selectedAnswers[i] && Array.isArray(selectedAnswers[i])) {
+                            input.value = selectedAnswers[i][fi] || '';
+                            input.disabled = true;
+                            
+                            const userAnswer = input.value.trim();
+                            const correctAnswer = fillItem.a;
+                            
+                            if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                                input.classList.add('border-green-500', 'bg-green-50');
+                            } else {
+                                input.classList.add('border-red-500', 'bg-red-50');
+                                
+                                const correctLabel = document.createElement('span');
+                                correctLabel.className = 'text-sm text-green-600 font-medium ml-2';
+                                correctLabel.textContent = `(Đáp án: ${correctAnswer})`;
+                                fillRow.appendChild(correctLabel);
+                            }
+                        }
+                        
+                        fillRow.appendChild(input);
+                        
+                        // Phần đơn vị (nếu có)
+                        if (fillItem.s) {
+                            const suffix = document.createElement('span');
+                            suffix.className = 'font-medium flex-shrink-0';
+                            suffix.textContent = fillItem.s;
+                            fillRow.appendChild(suffix);
+                        }
+                        
+                        fillContainer.appendChild(fillRow);
+                    });
+                    
+                    card.appendChild(fillContainer);
+                    
+                    // Nút kiểm tra
+                    const btn = document.createElement('button');
+                    btn.textContent = 'Kiểm tra';
+                    btn.className = 'mt-4 bg-blue-600 text-white font-bold py-2 px-6 rounded-lg';
+                    
+                    // ẨN NÚT NẾU ĐÃ HOÀN THÀNH
+                    if (questionStatus[i] !== null) {
+                        btn.style.display = 'none';
+                    }
+                    
+                    btn.onclick = () => {
+                        if (questionStatus[i] !== null) return;
+                        
+                        let allCorrect = true;
+                        const inputs = card.querySelectorAll('.fill-input');
+                        const userAnswers = [];
+                        
+                        inputs.forEach(input => {
+                            const userAnswer = input.value.trim();
+                            userAnswers.push(userAnswer); // Lưu đáp án người dùng
+                            const correctAnswer = input.dataset.answer;
+                            
+                            input.disabled = true;
+                            
+                            if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                                input.classList.add('border-green-500', 'bg-green-50');
+                            } else {
+                                input.classList.add('border-red-500', 'bg-red-50');
+                                allCorrect = false;
+                                
+                                // Hiển thị đáp án đúng
+                                const correctLabel = document.createElement('span');
+                                correctLabel.className = 'text-sm text-green-600 font-medium ml-2';
+                                correctLabel.textContent = `(Đáp án: ${correctAnswer})`;
+                                input.parentElement.appendChild(correctLabel);
+                            }
+                        });
+                        
+                        selectedAnswers[i] = userAnswers; // LƯU ĐÁP ÁN
+                        questionStatus[i] = allCorrect ? 'correct' : 'incorrect';
+                        if (!allCorrect) {
+                            wrongHistory.add(i);
+                            localStorage.setItem('wrongHistory', JSON.stringify(Array.from(wrongHistory)));
+                        }
+                        btn.style.display = 'none';
+                        updateProgress();
+                    };
+                    card.appendChild(btn);
+                } else {
+                    // TỰ LUẬN (SHORT ANSWER)
+                    const ta = document.createElement('textarea');
+                    ta.className = 'w-full h-32 p-3 border rounded-lg';
+                    ta.placeholder = 'Nhập câu trả lời của bạn...';
+                    
+                    // KHÔI PHỤC CÂU TRẢ LỜI ĐÃ NHẬP
+                    if (questionStatus[i] !== null && selectedAnswers[i]) {
+                        ta.value = selectedAnswers[i];
+                        ta.disabled = true;
+                    }
+                    
+                    card.appendChild(ta);
+                    
+                    // Container cho kết quả
+                    const resultDiv = document.createElement('div');
+                    resultDiv.className = 'mt-3 hidden';
+                    
+                    // KHÔI PHỤC KẾT QUẢ
+                    if (questionStatus[i] !== null) {
+                        const userAnswer = selectedAnswers[i] || '';
+                        
+                        if (q.keywords && q.keywords.length > 0) {
+                            const foundKeywords = q.keywords.filter(kw => 
+                                userAnswer.toLowerCase().includes(kw.toLowerCase())
+                            );
+                            const score = foundKeywords.length;
+                            const total = q.keywords.length;
+                            const percentage = (score / total) * 100;
+                            
+                            resultDiv.classList.remove('hidden');
+                            
+                            if (percentage >= 60) {
+                                resultDiv.className = 'mt-3 p-4 bg-green-50 border border-green-300 rounded-lg';
+                                resultDiv.innerHTML = `
+                                    <p class="text-green-700 font-semibold mb-2">✅ Câu trả lời tốt! (${score}/${total} từ khóa)</p>
+                                    ${q.explanation ? `<p class="text-sm text-gray-700"><strong>Đáp án mẫu:</strong><br>${q.explanation}</p>` : ''}
+                                `;
+                            } else {
+                                resultDiv.className = 'mt-3 p-4 bg-yellow-50 border border-yellow-300 rounded-lg';
+                                resultDiv.innerHTML = `
+                                    <p class="text-yellow-700 font-semibold mb-2">⚠️ Câu trả lời chưa đầy đủ (${score}/${total} từ khóa)</p>
+                                    <p class="text-sm text-gray-700 mb-2"><strong>Từ khóa cần có:</strong> ${q.keywords.join(', ')}</p>
+                                    ${q.explanation ? `<p class="text-sm text-gray-700"><strong>Đáp án mẫu:</strong><br>${q.explanation}</p>` : ''}
+                                `;
+                            }
+                        } else {
+                            resultDiv.classList.remove('hidden');
+                            resultDiv.className = 'mt-3 p-4 bg-blue-50 border border-blue-300 rounded-lg';
+                            resultDiv.innerHTML = `
+                                <p class="text-blue-700 font-semibold mb-2">📝 Đã hoàn thành</p>
+                                ${q.explanation ? `<p class="text-sm text-gray-700"><strong>Đáp án mẫu:</strong><br>${q.explanation}</p>` : ''}
+                            `;
+                        }
+                    }
+                    
+                    card.appendChild(resultDiv);
+                    
+                    const btn = document.createElement('button');
+                    btn.textContent = 'Kiểm tra';
+                    btn.className = 'mt-4 bg-blue-600 text-white font-bold py-2 px-6 rounded-lg';
+                    
+                    // ẨN NÚT NẾU ĐÃ HOÀN THÀNH
+                    if (questionStatus[i] !== null) {
+                        btn.style.display = 'none';
+                    }
+                    
+                    btn.onclick = () => {
+                        if (questionStatus[i] !== null) return;
+                        
+                        const userAnswer = ta.value.trim();
+                        selectedAnswers[i] = userAnswer; // LƯU ĐÁP ÁN
+                        
+                        ta.disabled = true;
+                        btn.disabled = true;
+                        
+                        if (q.keywords && q.keywords.length > 0) {
+                            // Kiểm tra keywords
+                            const foundKeywords = q.keywords.filter(kw => 
+                                userAnswer.toLowerCase().includes(kw.toLowerCase())
+                            );
+                            
+                            const score = foundKeywords.length;
+                            const total = q.keywords.length;
+                            const percentage = (score / total) * 100;
+                            
+                            resultDiv.classList.remove('hidden');
+                            
+                            if (percentage >= 60) {
+                                // Đạt >= 60% keywords
+                                resultDiv.className = 'mt-3 p-4 bg-green-50 border border-green-300 rounded-lg';
+                                resultDiv.innerHTML = `
+                                    <p class="text-green-700 font-semibold mb-2">✅ Câu trả lời tốt! (${score}/${total} từ khóa)</p>
+                                    ${q.explanation ? `<p class="text-sm text-gray-700"><strong>Đáp án mẫu:</strong><br>${q.explanation}</p>` : ''}
+                                `;
+                                questionStatus[i] = 'correct';
+                            } else {
+                                // < 60% keywords
+                                resultDiv.className = 'mt-3 p-4 bg-yellow-50 border border-yellow-300 rounded-lg';
+                                resultDiv.innerHTML = `
+                                    <p class="text-yellow-700 font-semibold mb-2">⚠️ Câu trả lời chưa đầy đủ (${score}/${total} từ khóa)</p>
+                                    <p class="text-sm text-gray-700 mb-2"><strong>Từ khóa cần có:</strong> ${q.keywords.join(', ')}</p>
+                                    ${q.explanation ? `<p class="text-sm text-gray-700"><strong>Đáp án mẫu:</strong><br>${q.explanation}</p>` : ''}
+                                `;
+                                questionStatus[i] = 'incorrect';
+                                wrongHistory.add(i);
+                                localStorage.setItem('wrongHistory', JSON.stringify(Array.from(wrongHistory)));
+                            }
+                        } else {
+                            // Không có keywords - chỉ hiển thị đáp án mẫu
+                            resultDiv.classList.remove('hidden');
+                            resultDiv.className = 'mt-3 p-4 bg-blue-50 border border-blue-300 rounded-lg';
+                            resultDiv.innerHTML = `
+                                <p class="text-blue-700 font-semibold mb-2">📝 Đã hoàn thành</p>
+                                ${q.explanation ? `<p class="text-sm text-gray-700"><strong>Đáp án mẫu:</strong><br>${q.explanation}</p>` : ''}
+                            `;
+                            questionStatus[i] = 'completed';
+                        }
+                        
+                        btn.style.display = 'none';
+                        updateProgress();
+                    };
+                    card.appendChild(btn);
+                }
+                container.appendChild(card);
+            });
+            
+            // Khôi phục trạng thái đã trả lời
+            if (savedProgress) {
+                quizData.forEach((q, i) => {
+                    if (questionStatus[i] !== null) {
+                        const card = container.children[i];
+                        if (q.type === 'mc') {
+                            const buttons = card.querySelectorAll('.option-btn');
+                            buttons.forEach(btn => {
+                                btn.disabled = true;
+                                if (btn.textContent === q.answer) {
+                                    btn.classList.add('correct');
+                                }
+                            });
+                            if (questionStatus[i] === 'incorrect') {
+                                // Tìm nút đã chọn sai (cần lưu thêm thông tin)
+                                // Tạm thời chỉ disable
+                            }
+                        }
+                    }
+                });
+            }
+            
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const done = questionStatus.filter(s => s !== null).length;
+            const wrong = questionStatus.filter(s => s === 'incorrect').length;
+            document.getElementById('progress-text').textContent = `Đã hoàn thành: ${done} / ${quizData.length} | Câu sai: ${wrong}`;
+            
+            // Lưu tiến độ vào localStorage
+            localStorage.setItem('quizProgress', JSON.stringify(questionStatus));
+            localStorage.setItem('selectedAnswers', JSON.stringify(selectedAnswers));
+            localStorage.setItem('wrongHistory', JSON.stringify(Array.from(wrongHistory)));
+            console.log('💾 Đã lưu tiến độ');
+        }
+
+        document.getElementById('tab-input').onclick = () => {
+            console.log('🔘 Click tab: Input');
+            showTab('input');
+        };
+        document.getElementById('tab-saved').onclick = () => {
+            console.log('🔘 Click tab: Saved');
+            showTab('saved');
+        };
+        document.getElementById('tab-quiz').onclick = () => {
+            console.log('🔘 Click tab: Quiz');
+            showTab('quiz');
+        };
+        document.getElementById('tab-wrong').onclick = () => {
+            console.log('🔘 Click tab: Wrong');
+            showTab('wrong');
+        };
+        document.getElementById('tab-redo').onclick = () => {
+            console.log('🔘 Click tab: Redo');
+            showTab('redo');
+        };
+
+        document.getElementById('btn-parse').onclick = () => {
+            const text = document.getElementById('input-data').value;
+            const subjectName = document.getElementById('subject-name').value.trim();
+            
+            if (!text.trim()) { 
+                alert('Vui lòng nhập dữ liệu!'); 
+                return; 
+            }
+            
+            if (!subjectName) {
+                alert('Vui lòng nhập tên môn học!');
+                return;
+            }
+            
+            console.log('🔄 Parse dữ liệu mới...');
+            quizData = parseQuizData(text);
+            
+            if (quizData.length === 0) { 
+                alert('Không parse được! Xem Console (F12)'); 
+                return; 
+            }
+            
+            console.log('💾 Lưu môn học:', subjectName);
+            
+            // LƯU VÀO DANH SÁCH CÁC MÔN
+            const subjects = JSON.parse(localStorage.getItem('savedSubjects') || '{}');
+            subjects[subjectName] = quizData;
+            localStorage.setItem('savedSubjects', JSON.stringify(subjects));
+            
+            // TỰ ĐỘNG TẠO BACKUP
+            autoBackup(subjects);
+            
+            // LƯU BẢN GỐC để reset sau này (lưu riêng không bị ghi đè khi shuffle)
+            currentSubject = subjectName;
+            originalQuizData = JSON.parse(JSON.stringify(quizData));
+            localStorage.setItem('originalQuizData', JSON.stringify(originalQuizData));
+            
+            localStorage.setItem('quizData', JSON.stringify(quizData));
+            localStorage.setItem('currentSubject', subjectName);
+            
+            // Reset tiến độ cũ
+            localStorage.removeItem('quizProgress');
+            wrongHistory.clear();
+            localStorage.removeItem('wrongHistory');
+            
+            const mc = quizData.filter(q => q.type === 'mc').length;
+            const tf = quizData.filter(q => q.type === 'tf').length;
+            const sh = quizData.filter(q => q.type === 'short').length;
+            document.getElementById('parse-stats').textContent = `${quizData.length} câu (${mc} MC, ${tf} TF, ${sh} Short)`;
+            document.getElementById('parse-result').classList.remove('hidden');
+            
+            console.log('✅ Đã lưu! Chuyển sang tab Làm Bài Tập...');
+            setTimeout(() => { showTab('quiz'); renderQuiz(); }, 1000);
+        };
+
+        document.getElementById('btn-clear').onclick = () => {
+            if (confirm('Xóa?')) document.getElementById('input-data').value = '';
+        };
+
+        // ===== AUTO BACKUP =====
+        function autoBackup(subjects) {
+            // Chỉ lưu vào localStorage (không cần GitHub nữa)
+            localStorage.setItem('savedSubjects', JSON.stringify(subjects));
+            console.log('� Đã lưu vào localStorage:', Object.keys(subjects).length, 'môn');
+        }
+        
+        document.getElementById('btn-backup').onclick = () => {
+            const subjects = JSON.parse(localStorage.getItem('savedSubjects') || '{}');
+            if (Object.keys(subjects).length === 0) {
+                alert('Không có môn nào để backup!');
+                return;
+            }
+            
+            // TẠO NỘI DUNG DẠNG TEXT - Y CHANG FORMAT KHI NHẬP
+            let textContent = '';
+            
+            Object.keys(subjects).forEach((subjectName, index) => {
+                // Thêm tên môn
+                textContent += `// ${subjectName}\n`;
+                
+                // Thêm data của môn đó (format JavaScript)
+                const quizArray = subjects[subjectName];
+                textContent += JSON.stringify(quizArray, null, 2);
+                
+                // Thêm dòng trống giữa các môn (trừ môn cuối)
+                if (index < Object.keys(subjects).length - 1) {
+                    textContent += '\n\n';
+                }
+            });
+            
+            // TẢI FILE DẠNG .TXT
+            const blob = new Blob([textContent], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'DuLieuMonHoc.txt';
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            console.log('💾 Đã tải backup:', Object.keys(subjects).length, 'môn');
+            alert(`✅ Đã tải file DuLieuMonHoc.txt (${Object.keys(subjects).length} môn)`);
+        };
+
+        document.getElementById('btn-import-url').onclick = async () => {
+            const url = 'https://raw.githubusercontent.com/luckat224/Quiz-Generator-Sync/refs/heads/main/DuLieuMonHoc';
+            
+            const btn = document.getElementById('btn-import-url');
+            const originalText = btn.innerHTML;
+            
+            try {
+                btn.disabled = true;
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang tải...';
+                
+                // FETCH DATA
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                
+                const text = await response.text();
+                console.log('✅ Tải thành công:', text.length, 'ký tự');
+                console.log('📄 Preview:', text.substring(0, 200));
+                
+                // TÌM TÊN MÔN: // TIN HỌC (chấp nhận cả chữ thường, chữ hoa và số)
+                const subjectRegex = /\/\/\s*([A-ZÀ-Ỹa-zà-ỹ][A-ZÀ-Ỹa-zà-ỹ\s\d]*)\s*\n/gm;
+                const matches = [...text.matchAll(subjectRegex)];
+                
+                if (matches.length === 0) {
+                    throw new Error('❌ Không tìm thấy tên môn học!\n\nFormat: // TÊN MÔN');
+                }
+                
+                console.log('📚 Tìm thấy:', matches.map(m => m[1]));
+                
+                const subjects = {};
+                
+                // TÁCH TỪNG MÔN
+                for (let i = 0; i < matches.length; i++) {
+                    const name = matches[i][1].trim();
+                    const start = matches[i].index + matches[i][0].length;
+                    const end = i < matches.length - 1 ? matches[i + 1].index : text.length;
+                    
+                    let subText = text.substring(start, end).trim();
+                    
+                    // CLEAN TEXT
+                    subText = subText.replace(/\}\s*\/\/[^\n]*/g, '}'); // Xóa comment sau }
+                    subText = subText.replace(/\}\s*\n+\s*\{/g, '},\n{'); // Thêm dấu phẩy
+                    subText = subText.replace(/\}\s*\{/g, '},\n{'); // Thêm dấu phẩy
+                    
+                    // PARSE
+                    try {
+                        let arr;
+                        const t = subText.trim();
+
+                        // Nếu section đã là một mảng JSON (bắt đầu bằng '['), parse trực tiếp
+                        if (/^\s*\[/.test(t)) {
+                            arr = eval('(' + subText + ')');
+                        } else {
+                            // Nếu là chuỗi các object nối tiếp (không có []), wrap vào array
+                            arr = eval('[' + subText + ']');
+                        }
+
+                        // Nếu kết quả là mảng lồng (ví dụ [[...]]), flatten 1 cấp
+                        if (Array.isArray(arr) && arr.length === 1 && Array.isArray(arr[0])) {
+                            arr = arr[0];
+                        }
+
+                        const valid = Array.isArray(arr) ? arr.filter(q => q && q.type && q.question) : [];
+
+                        if (valid.length > 0) {
+                            subjects[name] = valid;
+                            console.log('✅', name, ':', valid.length, 'câu');
+                        }
+                    } catch (err) {
+                        console.error('❌ Lỗi parse', name, ':', err.message);
+                        console.log('Text:', subText.substring(0, 500));
+                    }
+                }
+                
+                if (Object.keys(subjects).length === 0) {
+                    throw new Error('❌ Không parse được môn nào!');
+                }
+                
+                // LƯU
+                const local = JSON.parse(localStorage.getItem('savedSubjects') || '{}');
+                const merged = { ...local, ...subjects };
+                localStorage.setItem('savedSubjects', JSON.stringify(merged));
+                localStorage.setItem('lastUpdated', new Date().toISOString());
+                
+                renderSavedSubjects();
+                
+                btn.innerHTML = '<i class="fas fa-check"></i> OK!';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }, 2000);
+                
+                alert(`✅ Load: ${Object.keys(subjects).length} môn`);
+                
+            } catch (error) {
+                console.error('❌', error);
+                btn.innerHTML = '<i class="fas fa-times"></i> Lỗi!';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }, 2000);
+                alert('❌ ' + error.message);
+            }
+        };
+
+        document.getElementById('btn-shuffle').onclick = () => {
+            quizData.sort(() => Math.random() - 0.5);
+            quizData.forEach(q => {
+                if (q.type === 'mc' && q.options) {
+                    q.options.sort(() => Math.random() - 0.5);
+                }
+            });
+            
+            // LƯU TRẠNG THÁI ĐÃ XÁO TRỘN để giữ khi reload
+            localStorage.setItem('quizData', JSON.stringify(quizData));
+            // KHÔNG lưu vào originalQuizData (để Reset vẫn về đúng thứ tự ban đầu)
+            console.log('🔀 Đã xáo trộn và lưu');
+            
+            renderQuiz();
+        };
+
+        document.getElementById('btn-reset').onclick = () => {
+            if (confirm('Reset về thứ tự ban đầu và xóa toàn bộ tiến độ?')) {
+                // Xóa tiến độ đã lưu
+                localStorage.removeItem('quizProgress');
+                localStorage.removeItem('selectedAnswers');
+                console.log('🧹 Đã xóa tiến độ');
+                
+                // Khôi phục về dữ liệu gốc từ localStorage (thứ tự ban đầu khi parse)
+                const originalData = localStorage.getItem('originalQuizData');
+                if (originalData) {
+                    quizData = JSON.parse(originalData);
+                    originalQuizData = JSON.parse(originalData);
+                    console.log('✅ Đã reset về thứ tự ban đầu');
+                } else {
+                    // Fallback: dùng originalQuizData hiện tại
+                    quizData = JSON.parse(JSON.stringify(originalQuizData));
+                    console.log('⚠️ Dùng originalQuizData backup');
+                }
+                
+                // Lưu lại quizData (đã reset)
+                localStorage.setItem('quizData', JSON.stringify(quizData));
+                
+                // Reset questionStatus
+                questionStatus = new Array(quizData.length).fill(null);
+                selectedAnswers = new Array(quizData.length).fill(null);
+                
+                // Render lại từ đầu
+                renderQuiz();
+            }
+        };
+
+        document.getElementById('btn-clear-history').onclick = () => {
+            if (confirm('Xóa toàn bộ lịch sử câu sai?')) {
+                wrongHistory.clear();
+                localStorage.removeItem('wrongHistory');
+                renderWrongHistory();
+                renderRedoQuiz(); // Tự động cập nhật tab "Làm Lại Câu Sai"
+            }
+        };
+
+        document.getElementById('btn-shuffle-redo').onclick = () => {
+            if (redoQuiz && redoQuiz.data) {
+                // Xáo trộn nhưng vẫn giữ originalData để reset về ban đầu
+                redoQuiz.data.sort(() => Math.random() - 0.5);
+                redoQuiz.data.forEach(q => {
+                    if (q.type === 'mc' && q.options) {
+                        q.options.sort(() => Math.random() - 0.5);
+                    }
+                });
+                
+                // Render lại với data đã xáo trộn
+                const container = document.getElementById('quiz-container-redo');
+                container.innerHTML = '';
+                redoQuiz.status = new Array(redoQuiz.data.length).fill(null);
+                redoQuiz.score = 0;
+                
+                redoQuiz.data.forEach((q, i) => {
+                    const card = document.createElement('div');
+                    card.className = 'quiz-card';
+                    
+                    const title = document.createElement('h3');
+                    title.className = 'text-xl font-semibold mb-4 text-gray-800';
+                    title.textContent = q.question;
+                    card.appendChild(title);
+
+                    if (q.type === 'mc') {
+                        q.options.forEach(opt => {
+                            const btn = document.createElement('button');
+                            btn.textContent = opt;
+                            btn.className = 'option-btn w-full text-left p-4 my-2 rounded-lg border border-gray-300 hover:bg-gray-100';
+                            btn.onclick = () => {
+                                if (redoQuiz.status[i] !== null) return;
+                                card.querySelectorAll('.option-btn').forEach(b => {
+                                    b.disabled = true;
+                                    if (b.textContent === q.answer) b.classList.add('correct');
+                                });
+                                if (opt === q.answer) {
+                                    btn.classList.add('correct');
+                                    redoQuiz.status[i] = 'correct';
+                                    redoQuiz.score++;
+                                } else {
+                                    btn.classList.add('incorrect');
+                                    redoQuiz.status[i] = 'incorrect';
+                                }
+                                updateRedoProgress();
+                            };
+                            card.appendChild(btn);
+                        });
+                    } else if (q.type === 'tf') {
+                        q.statements.forEach((s, si) => {
+                            const g = document.createElement('div');
+                            g.className = 'p-4 border rounded-lg mb-3';
+                            g.innerHTML = `<p class="mb-3 font-medium">${s.text}</p>
+                            <div class="flex gap-4">
+                                <input type="radio" id="redo-tf-${i}-${si}-t" name="redo-tf-${i}-${si}" value="true" class="tf-input">
+                                <label for="redo-tf-${i}-${si}-t" class="tf-label">Đúng</label>
+                                <input type="radio" id="redo-tf-${i}-${si}-f" name="redo-tf-${i}-${si}" value="false" class="tf-input">
+                                <label for="redo-tf-${i}-${si}-f" class="tf-label">Sai</label>
+                            </div>`;
+                            card.appendChild(g);
+                        });
+                        const btn = document.createElement('button');
+                        btn.textContent = 'Kiểm tra';
+                        btn.className = 'mt-4 bg-blue-600 text-white font-bold py-2 px-6 rounded-lg';
+                        btn.onclick = () => {
+                            if (redoQuiz.status[i] !== null) return;
+                            let ok = true;
+                            q.statements.forEach((s, si) => {
+                                const sel = card.querySelector(`input[name='redo-tf-${i}-${si}']:checked`);
+                                const tl = card.querySelector(`label[for='redo-tf-${i}-${si}-t']`);
+                                const fl = card.querySelector(`label[for='redo-tf-${i}-${si}-f']`);
+                                if (s.answer) {
+                                    tl.classList.add('correct');
+                                    if (sel && sel.value === 'false') { fl.classList.add('incorrect'); ok = false; }
+                                } else {
+                                    fl.classList.add('correct');
+                                    if (sel && sel.value === 'true') { tl.classList.add('incorrect'); ok = false; }
+                                }
+                            });
+                            redoQuiz.status[i] = ok ? 'correct' : 'incorrect';
+                            if (ok) redoQuiz.score++;
+                            btn.style.display = 'none';
+                            updateRedoProgress();
+                        };
+                        card.appendChild(btn);
+                    }
+                    
+                    container.appendChild(card);
+                });
+                
+                updateRedoProgress();
+            }
+        };
+
+        document.getElementById('btn-reset-redo').onclick = () => {
+            if (confirm('Reset về thứ tự ban đầu?')) {
+                // Reset về data gốc (thứ tự ban đầu chưa xáo trộn)
+                if (redoQuiz && redoQuiz.originalData) {
+                    redoQuiz.data = JSON.parse(JSON.stringify(redoQuiz.originalData));
+                }
+                renderRedoQuiz();
+            }
+        };
+
+        // ===== SYNC TỪ GITHUB =====
+        async function syncFromGitHub() {
+            // ĐÃ VÔ HIỆU HÓA - Không còn dùng auto-sync nữa
+            // User giờ import thủ công bằng nút "Load URL"
+            console.log('ℹ️ Auto-sync đã tắt - Dùng nút "Load URL" để import');
+            return;
+        }
+
+        window.onload = async () => {
+            console.log('🚀 ========== APP STARTED ==========');
+            
+            // SYNC TỪ GITHUB TRƯỚC
+            await syncFromGitHub();
+            
+            // Load dữ liệu từ localStorage
+            const saved = localStorage.getItem('quizData');
+            const savedWrong = localStorage.getItem('wrongHistory');
+            const savedSubjectName = localStorage.getItem('currentSubject');
+            const savedSubjects = localStorage.getItem('savedSubjects');
+            
+            console.log('💾 localStorage contents:');
+            console.log('  - quizData:', saved ? 'CÓ' : 'KHÔNG');
+            console.log('  - wrongHistory:', savedWrong ? 'CÓ' : 'KHÔNG');
+            console.log('  - currentSubject:', savedSubjectName || 'KHÔNG');
+            console.log('  - savedSubjects:', savedSubjects ? 'CÓ' : 'KHÔNG');
+            
+            if (savedSubjects) {
+                const subjects = JSON.parse(savedSubjects);
+                console.log('📚 Các môn đã lưu:', Object.keys(subjects));
+            }
+            
+            if (savedWrong) {
+                wrongHistory = new Set(JSON.parse(savedWrong));
+                console.log('📥 Load lịch sử sai:', wrongHistory.size, 'câu');
+            }
+            
+            if (saved) {
+                // Load từ localStorage - GIỮ NGUYÊN tiến độ
+                quizData = JSON.parse(saved);
+                
+                // Load bản gốc từ localStorage riêng (không copy từ quizData đã shuffle)
+                const savedOriginal = localStorage.getItem('originalQuizData');
+                if (savedOriginal) {
+                    originalQuizData = JSON.parse(savedOriginal);
+                    console.log('✅ Load originalQuizData từ localStorage');
+                } else {
+                    // Fallback: copy từ quizData (nếu chưa từng lưu original)
+                    originalQuizData = JSON.parse(JSON.stringify(quizData));
+                    localStorage.setItem('originalQuizData', JSON.stringify(originalQuizData));
+                    console.log('⚠️ Không có originalQuizData, copy từ quizData');
+                }
+                
+                currentSubject = savedSubjectName || 'Không rõ';
+                
+                console.log('📦 Load môn:', currentSubject, '(' + quizData.length, 'câu)');
+                
+
+                if (quizData.length > 0) { 
+                    showTab('quiz'); 
+                }
+            } else {
+                console.log('✅ Sẵn sàng! Nhập dữ liệu mới vào tab "Nhập Dữ Liệu"');
+            }
+            
+            console.log('✅ ========== READY ==========');
+        };
+    </script>
+</body>
+</html>
